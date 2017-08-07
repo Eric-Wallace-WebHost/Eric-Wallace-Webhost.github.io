@@ -1226,9 +1226,9 @@
 			}
 
 		#header .logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
+			width: 3.25rem;
+			height: 3.25rem;
+			line-height: 1.6;
 			border: solid 1px #ffffff;
 			border-radius: 100%;
 		}
