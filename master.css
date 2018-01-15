@@ -25,41 +25,40 @@ html {
 }
 
 
+font-family: 'Roboto Slab', serif;
 @font-face {
-	font-family: 'roboto_slab';
-	src: url('../type/RobotoSlab-Light.ttf');
+	font-family: 'Roboto Slab';
 }
 
 @font-face {
-	font-family: 'roboto_bold';
-	src: url('../type/RobotoSlab-Regular.ttf');
+	font-family: 'Roboto Slab';
 }
 
 h1 {
-	font-family: 'roboto_bold';
+	font-family: 'Roboto Slab';
 	font-size:2em;
 	text-transform:uppercase;
-	font-weight: 300;
+	font-weight: 700;
 }
 
 h3 {
-	font-family: 'roboto_bold';
+	font-family: 'Roboto Slab';
 	font-size:1.4em;
 	text-transform:uppercase;
-	font-weight: 300;
+	font-weight: 700;
 	margin-bottom: 3px
 }
 
 h2 {
-	font-family: 'roboto_bold';
+	font-family: 'Roboto Slab';
 	font-size:0.95em;
 	text-transform:uppercase;
-	font-weight: 300;
+	font-weight: 700;
 	display: inline;
 }
 
 body {
-	font-family: 'roboto_slab';
+	font-family: 'Roboto Slab';
 	color: #000;
 
 	height: 100%;
