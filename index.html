@@ -52,6 +52,7 @@
 	<div class="posts-wrapper">
 		<div class="post">
 			<ul class="news">                        
+            <li><strong>Aug 2019: </strong> Three papers accepted to EMNLP.
             <li><strong>Aug 2019: </strong> Began my PhD at UC Berkeley!                        
 			<li><strong>May 2019: </strong> Two papers accepted to ACL.
 			<li><strong>April 2019: </strong> Our paper <a href="https://arxiv.org/abs/1809.02701">Trick Me If You Can</a> was accepted to TACL 2019.
@@ -76,6 +77,53 @@
 		</i>
 		<p>
 		<ul class="pubs">
+                    <li>        
+                (New!) <a href="LINK">Universal Adversarial Triggers for NLP</a><br>
+                Eric Wallace, Shi Feng, Nikhil Kandpal, Matt Gardner, and Sameer Singh<br>
+                <i>EMNLP 2019</i><br>
+                We create sequences of tokens that cause a model to produce a specific prediction when concatenated to <i>any</i> input from a dataset. Triggers cause egregious errors for text classification, reading comprehension (e.g., models predict "to kill american people" for 72% of "why" questions), and text generation (e.g., cause GPT-2 to generate racism).
+                <br> <a href="http://ericswallace.com/triggers">Blog</a> | <a href="https://arxiv.org/abs/1908.07125">Paper</a> | <a href="https://github.com/Eric-Wallace/universal-triggers">Code</a> | <a href="javascript:unhide('triggers19');">Citation</a>
+                <div id="triggers19" class="hidden">
+                    <pre>@inproceedings{Wallace2019Triggers,
+                    Author = {Eric Wallace and Shi Feng and Nikhil Kandpal and Matt Gardner and Sameer Singh},
+                    Booktitle = {Empirical Methods in Natural Language Processing},                            
+                    Year = {2019},
+                    Title = {Universal Adversarial Triggers for NLP}}
+                    </pre>
+                </div>
+            </li>
+            <li>
+                (New!) <a href="LINK">Do Neural NLP Models Know Numbers? Probing Numeracy in Embeddings</a><br>
+                Eric Wallace, Yizhong Wang, Sujian Li, Sameer Singh, and Matt Gardner.<br>
+                <i>EMNLP 2019</i><br>
+                We show that pre-trained word embeddings (e.g., BERT, word2vec, ELMo, GloVe) capture number magnitude and order, e.g., they know that "74" is smaller than "eighty-two". This makes it easy to perform some numerical reasoning tasks.
+                 <br> <!-- <a href="LINK">Paper</a> | <a href="link">Code</a> | <a href="javascript:unhide('numeracy19');">Citation</a> -->
+                 Paper coming soon | <a href="javascript:unhide('numeracy19');">Citation</a>
+                <div id="numeracy19" class="hidden">
+                    <pre>@inproceedings{Wallace2019Numeracy,
+                    Author = {Eric Wallace and Yizhong Wang and Sujian Li and Sameer Singh and Matt Gardner.},
+                    Booktitle = {Empirical Methods in Natural Language Processing},                            
+                    Year = {2019},
+                    Title = {Do Neural NLP Models Know Numbers? Probing Numeracy in Embeddings}}
+                    </pre>
+                </div>
+            </li>
+
+            <li>        
+                (New!) <a href="link">AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models</a><br>
+                Eric Wallace, Jens Tuyls, Junlin Wang, Matt Gardner, and Sameer Singh.<br>
+                <i>Demo at EMNLP 2019</i><br>
+                An open-source toolkit built on top of AllenNLP that makes it easy to interpret NLP models.<br> <!-- <a href="https://demo.allennlp.org">Try it out!</a> | <a href="link">Getting Started Guide</a> | <a href="link">Paper</a> | <a href="javascript:unhide('demo19');">Citation</a> 
+                <div id="demo19" class="hidden"> -->
+                More info coming soon.
+                    <pre>@inproceedings{Wallace2019AllenNLP,
+                    Author = {Eric Wallace and Jens Tuyls and Junlin Wang and Matt Gardner and Sameer Singh},
+                    Booktitle = {Empirical Methods in Natural Language Processing},                            
+                    Year = {2019},
+                    Title = {AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models}}
+                    </pre>
+                </div>
+            </li>
             <li>
                 (New!) <a href="https://arxiv.org/abs/1905.05778">Misleading Failures of Partial-input Baselines</a><br>
                 Shi Feng, Eric Wallace, and Jordan Boyd-Graber.<br>
@@ -92,7 +140,7 @@
             </li>
 			
             <li>
-                (New!) <a href="arxiv.org/abs/1906.02900">Compositional Questions Do Not Necessitate Multi-hop Reasoning</a><br>
+                (New!) <a href="http://arxiv.org/abs/1906.02900">Compositional Questions Do Not Necessitate Multi-hop Reasoning</a><br>
                 Sewon Min* and Eric Wallace* and Sameer Singh and Matt Gardner and Hannaneh Hajishirzi and Luke Zettlemoyer<br>
                 <i>ACL 2019</i><br>
 		We argue that constructing multi-hop QA datasets is non-trivial, and that existing datasets are simpler than expected. For instance, single-hop models can solve most of HotpotQA due to weak distractor paragraphs.<br>
