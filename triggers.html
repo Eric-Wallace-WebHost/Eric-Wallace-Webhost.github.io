@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Universal Adversarial Triggers for Attacking and Analyzing NLP">
+    <meta name="author" content="">
+    <link rel="icon" href="watergun.ico">
+
+    <title>Universal Triggers</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        /* Show it is fixed to the top */
+      
+      .aligncenter {
+        text-align: center;
+      }
+
+        body {
+          padding-top: 4.5rem;
+          position: relative;
+          font-size: 1.7rem;          
+        }
+
+        h1 {
+          width: max-content;
+        }
+        .anchor-target:target::before {
+          display: block;
+          content: " ";
+          margin-top: -60px;
+          padding-top: 60px;
+          visibility: hidden;
+          pointer-events: none;          
+        }
+
+
+      /*https://stackoverflow.com/questions/35647044/boostrap-how-to-stick-a-button-over-an-image-when-re-sizing*/
+        .img-wrapper {
+          position: relative;
+         }
+
+        .img-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: left;
+        }
+
+        .img-overlay:before {
+          content: ' ';
+          display: block;
+          /* adjust 'height' to position overlay content vertically */
+          height: 40%;          
+        }
+
+
+        .jumbotron {
+          margin-bottom: .5rem;
+          padding: 2rem 2rem;
+        }
+
+        .headshot {
+          width: 12rem;
+          margin: 0.8rem;
+        }
+        .card-body {
+          padding: 0.5rem;
+        }
+
+        .citation {
+          display: block;
+          padding: 9.5px;
+          margin: 0 0 10px;
+          font-size: 13px;
+          line-height: 1.42857143;
+          word-break: break-all;
+          word-wrap: break-word;
+          color: #333;
+          background-color: #f5f5f5;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .answerbutton {
+          white-space:normal !important;
+          word-wrap: break-word;
+          text-align: left;
+        }
+    
+
+        .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+        .fig-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15); }
+
+        .navbar-brand {
+          font-family: 'jdfont', cursive;
+          font-size:1.5rem;
+        }
+    
+  }
+                
+
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#navbarCollapse" data-offset="200" style="background-color:#fff">  
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Triggers</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li>
+            <a class="nav-link" href="#about">About</a>
+          </li>          
+          <li>
+            <a class="nav-link" href="#links">Links</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#authors">Authors</a>
+          </li>          
+        </ul>
+      </div>
+    </nav>
+
+<main role="main" class="container"">
+    <div id="about" class="anchor-target" style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>      
+    <br>
+    <h3>Background</h3>
+    <p> NLP models are actively being deployed in production systems such as fake news detectors, home assistants, and machine translators. For many of these systems (e.g., fake news or spam detectors), "bad actors" will look to bypass detection or even manipulate model outputs.</p>
+
+    <p> Adversarial attacks are one way to cause machine learning models to make errors. In NLP, adversarial attacks may swap out words from the input, insert new words, mispell words, etc. Many of these attacks (including ours) look to cause targeted errors, i.e., cause the victim model to output a <i>specific</i>prediction. </p>
+    
+    <br><h3> Our Attack: Universal Adversarial Triggers </h3>
+
+    <p>Our attack concatenates a phrase to the front or end of an input. What makes the attack unique is that it is <a href="https://arxiv.org/abs/1610.08401" target="_blank">universal</a>---the <i>exact same</i> phrase can be appended to <i>any</i> input and cause a specific target prediction. We call these phrases <b>Universal Adversarial Triggers</b>. The universality of the attack has many benefits. Principally, a trigger can be widely distributed on the internet and allow anyone to attack models.</p>
+
+
+    <br><h3> How We Find Triggers </h3>
+
+    <p>We initialize the trigger by repeating the word "the" a number of times. Next, we repeatedly update the words in the trigger to increase the probability of a target prediction for batches of examples. For instance, we try to cause a sentiment analysis model to predict Negative for batches of Positive movie reviews. The iterative updates to the trigger words are based on the model's gradient (see <a href="https://arxiv.org/pdf/1908.07125.pdf#page=3" target="_blank">Equation 2</a> in the paper).</p>
+
+
+    <p class="aligncenter">
+        <img src="search_no_caption.png" align="middle"  style="height:620px">
+    </p>
+
+    
+
+
+
+    <br><h3> Results: Triggers Cause Mayhem </h3>
+
+    <br><h4> <i>Text Classification </i></h4>
+
+    <p>We consider sentiment analysis and natural language inference. We use a wide variety of models, each with different embeddings (e.g., ELMo, GloVe, etc.) and model architectures (e.g., self-attention, LSTM, etc.).</p>
+
+    <p>For sentiment analysis, our algorithm finds the trigger "zoning tapping fiennes". When this trigger is prepended to positive movie reviews, an LSTM model’s accuracy drops from 86% to 29%.</p>
+
+    <p class="aligncenter">
+        <img src="sentiment.png" align="middle"  style="height:160px">
+    </p>
+
+
+    <p>For textual entailment, we find <i>one word</i> triggers that wreak havoc on models. For example, adding the word "nobody" to Entailment examples causes 99% of them to be predicted as Contradiction.</p>
+
+
+    <br><h4> <i> SQuAD Reading Comprehension </i></h4>
+
+
+    <p>For reading comprehension, triggers are concatenated to paragraphs in order to cause arbitrary target predictions from the model. One of our attacks tries to trigger a SQuAD model to predict the vicious phrase "to kill american people" for questions that ask "Why...".</p>
+
+    <p> By concatenating the trigger "why how because to kill american people." to paragraphs, an ELMo-based SQuAD model predicts the exact phrase "to kill american people" for 72% of "why" questions. </p>
+
+
+    <p class="aligncenter">
+          <img src="squad.png" align="middle"  style="height:260px">
+    </p>
+
+    <p>You can play with a live demo here <a class="btn btn-lg btn-secondary" href="https://bit.ly/squad-demo" target="_blank" role="button">SQuAD Demo &raquo;</a></p>
+
+
+    <br><h4> <i> Language Generation </i></h4>
+
+
+        We also consider generation from a language model. Here, triggers are prepended to user inputs in order to maximize the probability of a set of target texts. In our case, the target texts are thirty racist sentences of average legnth ten tokens. 
+
+
+
+        to generate racist outputs using
+        the prompt “TH PEOPLEMan goddreams Blacks”
+        (e.g., bottom of Table 1). 1
+
+
+        <p class="aligncenter">
+              <img src="lm.png" align="middle"  style="height:810px">
+          </p>
+
+
+        You can play with a live demo here <a class="btn btn-lg btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a>
+
+
+      <!-- 
+      Transferability & Model Analysis
+
+      Although we generate triggers assuming white-
+      box (gradient) access to a specific model, they are
+      transferable to other models for all datasets we
+      consider. For example, some of the triggers gen-
+      erated for a GloVe-based reading comprehension
+      model are more effective at triggering an ELMo-
+      based model. Moreover, a trigger generated for
+      the GPT-2 117M model also works for the 345M
+      model: the first language model sample in Table 1
+      shows the larger model ranting on the “evil genes”
+      of Black, Jewish, Chinese, and Indian people.
+      Finally, unlike typical adversarial attacks, the
+      input-agnostic nature of the triggers provides new
+      insights into global model behavior, i.e., general
+      input-output patterns learned by a model. For ex-
+      ample, triggers confirm that models exploit biases
+      in the SNLI dataset (Section 6). Triggers also
+      identify heuristics learned by SQuAD models—
+      they heavily rely on the tokens that surround the
+      answer span and type information in the question.
+
+
+
+      Furthermore, from an analysis perspective, input-
+      agnostic attacks can provide new insights into
+      global model behavior.
+
+
+      Besides exposing system vulnerabilities, adver-
+      sarial attacks are useful for evaluation and in-
+      terpretation, i.e., understanding a model’s capa-
+      bilities by finding its limitations. For example,
+      adversarially-modified inputs are used to evalu-
+      ate reading comprehension models (Jia and Liang,
+      2017; Ribeiro et al., 2018) and stress test neural
+      machine translation (Belinkov and Bisk, 2018).
+      Adversarial attacks also facilitate interpretation,
+      e.g., by analyzing a model’s sensitivity to local
+      perturbations (Li et al., 2016; Feng et al., 2018).
+       -->
+
+
+
+      <br>
+      <br>
+      <div id="links" class="anchor-target">
+      <h3>Links</h3>
+      <a class="btn btn-lg btn-info" href="https://arxiv.org/abs/1908.07125" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
+      <a class="btn btn-lg btn-primary" href="https://github.com/Eric-Wallace/universal-triggers" target="_blank" role="button">Code &raquo;</a>
+      <a class="btn btn-lg btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a>
+      <a class="btn btn-lg btn-secondary" href="https://bit.ly/squad-demo" target="_blank" role="button">SQuAD Demo &raquo;</a>
+        
+
+<!--       <div id="paper" class="anchor-target">      
+        If you find this paper relevant, you can cite us:
+          <pre class="citation">@inproceedings{Wallace2019Triggers, 
+            Author = {Eric Wallace and Shi Feng and Nikhil Kandpal and Matt Gardner and Sameer Singh},
+            Booktitle = {Empirical Methods in Natural Language Processing},
+            Year = {2019},
+            Title = {Universal Adversarial Triggers for Attacking and Analyzing NLP}}
+          </pre>
+        </div>      
+ -->
+  <br><br>
+  <div id="authors" class="anchor-target">
+    <h3>Authors</h3>
+        <div class="row" style="margin: 0 auto;">
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="eric.jpg" alt="eric">
+      <div class="card-body">
+        <p class="card-text"><a href="http://www.ericswallace.com">Eric Wallace</a></p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="shi.jpg" alt="shi">
+      <div class="card-body">
+        <p class="card-text"><a href="http://users.umiacs.umd.edu/~shifeng/">Shi Feng</a></p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="nikhil.jpg" alt="nikhil">
+      <div class="card-body">
+        <p class="card-text">Nikhil Kandpal</p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="matt.jpg" alt="matt">
+      <div class="card-body">
+        <p class="card-text"><a href="https://matt-gardner.github.io/">Matt Gardner</a></p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="sameer.jpg" alt="sameer">
+      <div class="card-body">
+        <p class="card-text"><a href="http://sameersingh.org/">Sameer Singh</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ 
+      <p>    &nbsp;&nbsp; Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
+        </div>
+
+         <div class="row">
+         <div class="col-lg-4 thumb d-flex align-items-center">
+            <a class="thumbnail">
+              <img src="ai2.png" style="height:130px">
+            </a>
+         </div>          
+          
+         </div>
+
+
+      <hr>
+      <div id="contact" class="anchor-target">
+        <p>website credits to <a href="https://rowanzellers.com">Rowan Zellers</a></p>
+      </div>
+  </div>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+
+  </body>
+</html>
