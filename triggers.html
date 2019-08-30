@@ -120,11 +120,8 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li>
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#blog">Blog</a>
           </li>          
-          <li>
-            <a class="nav-link" href="#links">Links</a>
-          </li>
           <li>
             <a class="nav-link" href="#authors">Authors</a>
           </li>          
@@ -133,9 +130,17 @@
     </nav>
 
 <main role="main" class="container"">
-    <div id="about" class="anchor-target" style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>      
+    <div style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>      
+
+    <div>            
+      <a class="btn btn-lg btn-info" href="https://arxiv.org/abs/1908.07125" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
+      <a class="btn btn-lg btn-secondary" href="https://github.com/Eric-Wallace/universal-triggers" target="_blank" role="button">Code &raquo;</a>
+      <a class="btn btn-lg btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a>
+      <a class="btn btn-lg btn-primary" href="https://bit.ly/squad-demo" target="_blank" role="button">SQuAD Demo &raquo;</a>
+      <br>
+
     <br>
-    <h3>Background</h3>
+    <h3 id="blog" class="anchor-target">Background</h3>
     <p> Neural NLP models are deployed in a wide range of production systems, including fake news filters, home assistants, and machine translators. For many of these systems (e.g., fake news or spam detection), "bad actors" will look to bypass machine learning systems or even manipulate model outputs.</p>
 
     <p> Adversarial attacks are one technique for causing machine learning models to make errors. In NLP, these attacks may swap out words from the input, insert new words, misspell words, etc. Many of these attacks (including ours) look to inflict targeted errors, i.e., they cause the victim model to output a specific wrong prediction.</p>
@@ -207,29 +212,14 @@
 
     <br><h3> Summary: </h3>
 
-    <p>Universal adversarial triggers frequently cause targeted model failures when concatenated to any input from a dataset. These attacks have caused us to rethink how NLP models work under the hood, as well as raised concerns over the security and robustness of currently deployed language systems. To learn more, check out our paper, code, and demos:</p>
-              
-      <div id="links" class="anchor-target">
-      <h3>Links</h3>
-      <a class="btn btn-lg btn-info" href="https://arxiv.org/abs/1908.07125" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
-      <a class="btn btn-lg btn-secondary" href="https://github.com/Eric-Wallace/universal-triggers" target="_blank" role="button">Code &raquo;</a>
-      <a class="btn btn-lg btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a>
-      <a class="btn btn-lg btn-primary" href="https://bit.ly/squad-demo" target="_blank" role="button">SQuAD Demo &raquo;</a>
-        
+    <p>Universal adversarial triggers frequently cause targeted model failures when concatenated to any input from a dataset. These attacks have caused us to rethink how NLP models work under the hood, as well as raised concerns over the security and robustness of currently deployed language systems. To learn more, check out our paper, code, and demos.</p>
 
-<!--       <div id="paper" class="anchor-target">      
-        If you find this paper relevant, you can cite us:
-          <pre class="citation">@inproceedings{Wallace2019Triggers, 
-            Author = {Eric Wallace and Shi Feng and Nikhil Kandpal and Matt Gardner and Sameer Singh},
-            Booktitle = {Empirical Methods in Natural Language Processing},
-            Year = {2019},
-            Title = {Universal Adversarial Triggers for Attacking and Analyzing NLP}}
-          </pre>
-        </div>      
- -->
-  <br><br>
+    <br>
+    <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
+                        
+  <br>
   <div id="authors" class="anchor-target">
-    <h3>Authors</h3>
+    <h3>Paper Authors</h3>
         <div class="row" style="margin: 0 auto;">
     <div class="card headshot box-shadow">
       <img class="card-img-top" src="eric.jpg" alt="eric">
@@ -264,8 +254,7 @@
   </div>
 </div>
 </div>
- 
-      <p>    &nbsp;&nbsp; Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
+       
         </div>
 
          <div class="row">
@@ -280,7 +269,7 @@
 
       <hr>
       <div id="contact" class="anchor-target">
-        <p>Credits to <a href="https://rowanzellers.com">Rowan Zellers</a></p>
+        <p style="font-size:1.0rem">Website credits to <a href="https://rowanzellers.com">Rowan Zellers</a></p>
       </div>
   </div>
 
