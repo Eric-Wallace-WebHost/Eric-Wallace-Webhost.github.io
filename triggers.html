@@ -116,7 +116,19 @@
     </nav>
 
 <main role="main" class="container"">
-    <div style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>      
+    <div style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>  
+
+    <font color="gray"> We create short phrases that cause a specific model prediction when concatenated to 𝘢𝘯𝘺 input from a dataset. Triggers cause:
+
+    <ul>
+      <li>GPT-2 to spew racism</li>
+      <li>SQuAD models to answer "to kill american people" for 72% of questions asking "Why..."</li>
+      <li>Classification models to drop from 90% accuracy to 1%</li>
+    </ul>
+  
+    </font>
+
+    
     <div>            
       <a class="btn btn-lg btn-info" href="https://arxiv.org/abs/1908.07125" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
       <a class="btn btn-lg btn-secondary" href="https://github.com/Eric-Wallace/universal-triggers" target="_blank" role="button">Code &raquo;</a>
@@ -126,7 +138,7 @@
     <br>
     <h3 id="blog" class="anchor-target">Background</h3>
     <p> Neural NLP models are deployed in a wide range of production systems, including fake news filters, home assistants, and machine translators. For many of these systems (e.g., fake news or spam detection), "bad actors" will look to bypass machine learning systems or even manipulate model outputs.</p>
-    <p> Those "bad actors" might use adversarial attacks to cause machine learning models to make errors. In NLP, these attacks may swap out words from the input, insert new words, misspell words, etc. Many of these attacks (including ours) look to inflict targeted errors, i.e., they cause the victim model to output a specific wrong prediction.</p>
+    <p> These bad actors might use adversarial attacks to cause machine learning models to make errors. In NLP, these attacks may swap out words from the input, insert new words, misspell words, etc. Many of these attacks (including ours) look to inflict targeted errors, i.e., they cause the victim model to output a specific wrong prediction.</p>
     
     <br><h3> Our Attack: Universal Adversarial Triggers </h3>
     <p>Our attack concatenates a short phrase to the front or end of an input. What makes our attack unique is that it is <a href="https://arxiv.org/abs/1610.08401" target="_blank">universal</a>---the <i>exact same phrase</i> can be appended to <i>any</i> input from a dataset to consistently cause an arbitrary target prediction. We call these phrases Universal Adversarial Triggers. Universal attacks have numerous benefits. Principally, once a universal trigger is found, it can be widely distributed on the internet and allow anyone to attack machine learning models (i.e., lowering the adversary’s barrier of entry).</p>
