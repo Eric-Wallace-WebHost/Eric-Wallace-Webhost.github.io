@@ -21,13 +21,11 @@
       .aligncenter {
         text-align: center;
       }
-
         body {
           padding-top: 4.5rem;
           position: relative;
           font-size: 1.7rem;          
         }
-
         h1 {
           width: max-content;
         }
@@ -39,13 +37,10 @@
           visibility: hidden;
           pointer-events: none;          
         }
-
-
       /*https://stackoverflow.com/questions/35647044/boostrap-how-to-stick-a-button-over-an-image-when-re-sizing*/
         .img-wrapper {
           position: relative;
          }
-
         .img-overlay {
           position: absolute;
           top: 0;
@@ -54,20 +49,16 @@
           right: 0;
           text-align: left;
         }
-
         .img-overlay:before {
           content: ' ';
           display: block;
           /* adjust 'height' to position overlay content vertically */
           height: 40%;          
         }
-
-
         .jumbotron {
           margin-bottom: .5rem;
           padding: 2rem 2rem;
         }
-
         .headshot {
           width: 12rem;
           margin: 0.8rem;
@@ -75,7 +66,6 @@
         .card-body {
           padding: 0.5rem;
         }
-
         .citation {
           display: block;
           padding: 9.5px;
@@ -89,17 +79,14 @@
           border: 1px solid #ccc;
           border-radius: 4px;
         }
-
         .answerbutton {
           white-space:normal !important;
           word-wrap: break-word;
           text-align: left;
         }
     
-
         .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
         .fig-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15); }
-
         .navbar-brand {
           font-family: 'jdfont', cursive;
           font-size:1.5rem;
@@ -107,7 +94,6 @@
     
   }
                 
-
     </style>
   </head>
   <body data-spy="scroll" data-target="#navbarCollapse" data-offset="200" style="background-color:#fff">  
@@ -131,54 +117,35 @@
 
 <main role="main" class="container"">
     <div style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>      
-
     <div>            
       <a class="btn btn-lg btn-info" href="https://arxiv.org/abs/1908.07125" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
       <a class="btn btn-lg btn-secondary" href="https://github.com/Eric-Wallace/universal-triggers" target="_blank" role="button">Code &raquo;</a>
       <a class="btn btn-lg btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a>
-      <a class="btn btn-lg btn-primary" href="https://bit.ly/squad-demo" target="_blank" role="button">SQuAD Demo &raquo;</a>
+      <a class="btn btn-lg btn-primary" href="https://demo.allennlp.org/reading-comprehension/MTAwODU2MA==" target="_blank" role="button">SQuAD Demo &raquo;</a>
       <br>
-
     <br>
     <h3 id="blog" class="anchor-target">Background</h3>
     <p> Neural NLP models are deployed in a wide range of production systems, including fake news filters, home assistants, and machine translators. For many of these systems (e.g., fake news or spam detection), "bad actors" will look to bypass machine learning systems or even manipulate model outputs.</p>
-
-    <p> Adversarial attacks are one technique for causing machine learning models to make errors. In NLP, these attacks may swap out words from the input, insert new words, misspell words, etc. Many of these attacks (including ours) look to inflict targeted errors, i.e., they cause the victim model to output a specific wrong prediction.</p>
+    <p> Those "bad actors" might use adversarial attacks to cause machine learning models to make errors. In NLP, these attacks may swap out words from the input, insert new words, misspell words, etc. Many of these attacks (including ours) look to inflict targeted errors, i.e., they cause the victim model to output a specific wrong prediction.</p>
     
     <br><h3> Our Attack: Universal Adversarial Triggers </h3>
-
-    <p>Our attack concatenates a short phrase to the front or end of an input. What makes our attack unique is that it is <a href="https://arxiv.org/abs/1610.08401" target="_blank">universal</a>---the <i>exact same</i> phrase can be appended to <i>any</i> input from a dataset to frequently cause an arbitrary target prediction. We call these phrases Universal Adversarial Triggers. “Universal” attacks have numerous benefits. Principally, once a universal trigger is found, it can be widely distributed on the internet and allow anyone to attack machine learning models (i.e., lowering the adversary’s barrier of entry).</p>
-
+    <p>Our attack concatenates a short phrase to the front or end of an input. What makes our attack unique is that it is <a href="https://arxiv.org/abs/1610.08401" target="_blank">universal</a>---the <i>exact same phrase</i> can be appended to <i>any</i> input from a dataset to consistently cause an arbitrary target prediction. We call these phrases Universal Adversarial Triggers. Universal attacks have numerous benefits. Principally, once a universal trigger is found, it can be widely distributed on the internet and allow anyone to attack machine learning models (i.e., lowering the adversary’s barrier of entry).</p>
     <br><h3> How We Find Triggers </h3>
-
-    <p>We initialize the trigger by repeating the word "the" a chosen number of times (e.g., “the the the”). Next, we repeatedly update the words in the trigger in order to increase the probability of a specific target prediction. For instance, a trigger for sentiment analysis is optimized to increase the probability of the Negative class for various Positive movie reviews. We perform the iterative updates based on the model's gradient (see <a href="https://arxiv.org/pdf/1908.07125.pdf#page=3" target="_blank">Equation 2</a> in the paper). The Figure below summarizes the trigger search algorithm.</p>
-
+    <p>We initialize the trigger by repeating the word "the" multiple times as a placeholder. Next, we iteratively update the words in the trigger in order to increase the probability of a specific target prediction. For instance, a trigger for sentiment analysis is optimized to increase the probability of the negative class for various positive movie reviews. We perform the iterative updates based on the model's gradient (see <a href="https://arxiv.org/pdf/1908.07125.pdf#page=3" target="_blank">Equation 2</a> in the paper). The Figure below summarizes the trigger search algorithm.</p>
     <p class="aligncenter">
         <img src="search_no_caption.png" align="middle"  style="height:620px">
     </p>
-
     
-
     <br><h3> Results: Triggers Cause Mayhem </h3>
-
     <br><h4> <i>Text Classification </i></h4>
-
-    <p>For text classification, we consider the tasks of sentiment analysis and natural language inference. We use a wide variety of neural models, each with different embedding methods (e.g., ELMo, GloVe, etc.) and model architectures (e.g., self-attention, LSTM, etc.).</p>
-
-    <p>One of the triggers we find for sentiment analysis is  "zoning tapping fiennes". When this trigger is prepended to positive movie reviews, an LSTM model’s accuracy drops from 86% to 29%. Two examples are shown in the Figure below.</p>
-
+    <p>For text classification, we consider two tasks: sentiment analysis and natural language inference. We use a wide variety of models, each with different embedding types (e.g., ELMo, GloVe, etc.) and architectures (e.g., self-attention, LSTM, etc.).</p>
+    <p>One of the triggers we find for sentiment analysis is <font color="red">zoning tapping fiennes</font>. When this trigger is prepended to positive movie reviews, an LSTM model’s accuracy drops from 86% to 29%. Two examples are shown in the Figure below.</p>
     <p class="aligncenter">
         <img src="sentiment.png" align="middle"  style="height:160px">
     </p>
-
-    <p>For textual entailment, we find one word triggers that completely break models. For instance, adding the word "nobody" to the hypothesis sentence of Entailment examples causes 99% of them to be predicted as Contradiction.</p>
-
-
+    <p>For textual entailment, we find one word triggers that completely break models. For instance, adding the word <font color="red">nobody</font> to the hypothesis sentence of Entailment examples causes 99% of them to be predicted as Contradiction.</p>
     <br><h4> <i> SQuAD Reading Comprehension </i></h4>
-
-
     <p>For reading comprehension, triggers are concatenated to paragraphs in order to cause arbitrary target predictions from the model. In one of our attacks, we search for a trigger that will cause a model trained on the SQuAD dataset to predict the phrase "to kill american people" for questions that ask about "Why...".</p>
-
     <p>Our algorithm finds the trigger "why how because to kill american people.”---prepending this trigger to paragraphs causes an ELMo-based SQuAD model to predict the exact answer "to kill american people" for <i><b>72%</b></i> of "why" questions. Two examples are shown below; the model originally predicts the <u>correct answer</u> but changes its answer <font color="red"><u>to kill american people</u></font>.</p>
 
 
@@ -208,7 +175,7 @@
 
     <p> Our paper studies other aspects of the triggers. First, we find that triggers are transferable across models. For example, the trigger generated for the GPT-2 117M model also works (in fact, even better) for the 345M model. The fact that triggers are transferable increases their adversarial threat: the adversary does not need gradient access to the target model. Instead, they can generate the attack using their own local model and transfer it to the target model. </p>
 
-    <p>Finally, since triggers are input-agnostic, they  provide new insights into “global” model behavior, i.e., general input-output patterns learned from a dataset. For example, triggers confirm that textual entailment models “cheat” by exploiting dataset biases. Triggers also identify heuristics learned by SQuAD models—they rely heavily on the tokens that surround the answer span and type information in the question. See the paper for more details.</p>
+    <p>Finally, since triggers are input-agnostic, they provide new insights into “global” model behavior, i.e., general input-output patterns learned from a dataset. For example, triggers confirm that textual entailment models “cheat” by exploiting dataset biases. Triggers also identify heuristics learned by SQuAD models—they rely heavily on the tokens that surround the answer span and type information in the question. See the paper for more details.</p>
 
     <br><h3> Summary: </h3>
 
