@@ -74,7 +74,7 @@ img {
 
 a {
 	padding-bottom: 5px;
-	color: firebrick;
+	color: darkred;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -157,7 +157,7 @@ ul.pubs > li{
 	margin-left: 40px; 
 	padding:5px;
 	border-width:1px;
-	border-color:firebrick;
+	border-color:darkred;
 	border-style: solid solid solid solid;
  	height: 192px; width: 800px; overflow: auto;
  	font-size:0.8em;
