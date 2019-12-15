@@ -74,9 +74,11 @@ img {
 
 a {
 	padding-bottom: 5px;
-	color: darkred;
+	color: #064f9a;
 	text-decoration: none;
 	cursor: pointer;
+	font-size: 0.9em;
+	font-weight: 400;
 }
 
 a:hover {
