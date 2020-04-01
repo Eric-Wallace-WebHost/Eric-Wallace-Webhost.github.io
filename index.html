@@ -55,7 +55,7 @@
 
             <p><b>Interpretability</b> We look to open up the black box of machine learning by interpreting model predictions. We have analyzed the <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">limitations</a> of existing interpretation methods and designed new techniques for generating <a href="https://arxiv.org/abs/1902.00407" target="_blank" style="font-size: 0.95em">saliency</a> <a href="https://arxiv.org/abs/1809.02847" target="_blank" style="font-size: 0.95em">maps</a>. We facilitate research and adoption of interpretation methods through an <a href="https://arxiv.org/abs/1909.09251" target="_blank">open-source interpretation toolkit</a>. Our current research probes the <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="font-size: 0.95em">naturally emergent knowledge</a> of pre-trained NLP models and studies when interpretations are useful in practice.</p>
 
-            <p><b>Dataset Biases</b> We investigate how models can use subtle dataset patterns (<i>annotation artifacts</i>) to achieve high test accuracy without truly understanding a task. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering these artifacts and applied them to identify issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">datasets</a>. We also study how overreliance on dataset biases can cause downstream failures such as susceptibility to <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">adversarial attacks</a>. Our current research creates new ways to more a href="TODO" target="_blank" style="font-size: 0.95em">comprehensively evaluate models</a>.</p>
+            <p><b>Dataset Biases</b> We investigate how models can use subtle dataset patterns (<i>annotation artifacts</i>) to achieve high test accuracy without truly understanding a task. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering these artifacts and applied them to identify issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">datasets</a>. We also study how overreliance on dataset biases can cause downstream failures such as susceptibility to <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">adversarial attacks</a>. Our current research creates new ways to more <a href="TODO" target="_blank" style="font-size: 0.95em">comprehensively evaluate models</a>.</p>
           <br>
       </div>
   </div>
@@ -71,7 +71,7 @@
     <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Stealing and Attacking Production Machine Translation Systems</a><br>
     Eric Wallace, Mitchell Stern, Dawn Song, and Dan Klein.<br>
     <i>ACL 2020</i><br>
-    We first show that you can steal production machine translation systems like Google Translate for as little at $10 by training models to mimic the production system's outputs. We then show you can expose failures of the production models by transferring adversarial attacks created against the stolen models.
+    We steal production systems like Google Translate for as little at $10 by training models to mimic their outputs. We then expose failures of the production models by transferring adversarial attacks created against the stolen models.
     <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Blog</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/adversarial-mt" target="_blank">Code</a> | <a href="javascript:unhide('stealing20');">Citation</a>                
   <div id="stealing20" class="hidden">
   <pre>@inproceedings{Wallace2020Stealing,
@@ -88,7 +88,7 @@
         <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Evaluating NLP Models via Contrast Sets</a><br>
         Matt Gardner, Yoav Artzi, ......, Eric Wallace, Ally Zhang, and Ben Zhou.<br>
         <i>ACL 2020</i><br>
-        NLP datasets often contain systematic gaps (e.g., annotation artifacts) that cause test set scores to be misleading. We propose a new annotation paradigm, wherein the orginal dataset authors manually perturb their test examples in small but meaningful ways. We annotate ten different test sets (for question answering, sentiment, parsing, etc.) using this paradigm  which is used as a benchmark to better evaluate models.
+        NLP datasets often contain systematic gaps such as annotation artifacts. We propose an annotation paradigm wherein the dataset creator manually perturb the test examples in small but meaningful ways. We annotate ten test sets this way and use it as a benchmark to better evaluate models.
         <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Dataset</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="javascript:unhide('contrast20');">Citation</a>                
       <div id="contrast20" class="hidden">
       <pre>@inproceedings{Gardner2020Contrast,
@@ -105,7 +105,7 @@
         <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Robustness of Pretrained NLP Models to Distribution Shift</a><br>
         Dan Hendrycks, Xiaoyuan Liu, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and Dawn Song<br>
         <i>ACL 2020</i><br>
-        Pretrained transformer models like BERT provide accuracy improvements on <i>in-distribution</i> examples, but how does pretraining affect out-of-distribution robustness? We study a wide range of NLP models and show that pretrained models have surprisingly accuracy and detection rates on OOD examples.  
+        Pretrained transformers like BERT improve accuracy on <i>in-distribution</i> examples, but how do pretrained models affect out-of-distribution robustness? We study numerous NLP models and show that pretrained models have surprisingly high accuracy and detection rates on OOD examples.  
         <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="javascript:unhide('robust20');">Citation</a>                
       <div id="robust20" class="hidden">
       <pre>@inproceedings{Hendrycks2020Robustness,
