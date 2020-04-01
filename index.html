@@ -1,308 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
 
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>Eric Wallace &mdash; Home</title>
-  <link rel="stylesheet" href="master.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Stealing and Attacking Production Machine Translation Systems">
+    <meta name="author" content="">
+    <link rel="icon" href="f/adversarial2.ico">
 
-  <script>
-      function unhide(divID) {
-          var item = document.getElementById(divID);
-          if (item) {
-              item.className=(item.className=='hidden')?'unhidden':'hidden';
-          }
+    <title>Stealing + Attacking MT</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        /* Show it is fixed to the top */
+      
+      .aligncenter {
+        text-align: center;
+      }
+        body {
+          padding-top: 4.5rem;
+          position: relative;
+          font-size: 1.35rem;          
+        }
+        h1 {
+          width: max-content;
+        }
+        .anchor-target:target::before {
+          display: block;
+          content: " ";
+          margin-top: -60px;
+          padding-top: 60px;
+          visibility: hidden;
+          pointer-events: none;          
+        }
+      /*https://stackoverflow.com/questions/35647044/boostrap-how-to-stick-a-button-over-an-image-when-re-sizing*/
+        .img-wrapper {
+          position: relative;
+         }
+        .img-overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: left;
+        }
+        .img-overlay:before {
+          content: ' ';
+          display: block;
+          /* adjust 'height' to position overlay content vertically */
+          height: 40%;          
+        }
+        .jumbotron {
+          margin-bottom: .5rem;
+          padding: 2rem 2rem;
+        }
+        .headshot {
+          width: 12.5rem;
+          margin: 0.85rem;
+        }
+        .card-body {
+          padding: 0.5rem;
+        }
+        .citation {
+          display: block;
+          padding: 9.5px;
+          margin: 0 0 10px;
+          font-size: 13px;
+          line-height: 1.42857143;
+          word-break: break-all;
+          word-wrap: break-word;
+          color: #333;
+          background-color: #f5f5f5;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        .answerbutton {
+          white-space:normal !important;
+          word-wrap: break-word;
+          text-align: left;
+        }
+    
+        .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+        .fig-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15); }
+        .navbar-brand {
+          font-family: 'jdfont', cursive;
+          font-size:1.5rem;
+        }
+    
   }
-  </script>
+                
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#navbarCollapse" data-offset="200" style="background-color:#fff">  
 
-  <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script> 
-  
-  
-    <link rel="icon" href="http://nlp.cs.berkeley.edu/logo.png" />
-    <meta name="author" content="Eric Wallace">
-    <meta name="keywords" content="Eric Wallace Berkeley AI2">
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="Homepage of Eric Wallace Berkeley">
-  
-</head>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Stealing + Attacking</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li>
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>          
+          <li>
+            <a class="nav-link" href="#authors">Authors</a>
+          </li>          
+        </ul>
+      </div>
+    </nav>
 
-<body>
-<div class="wrapper">
+<main role="main" class="container"">
+    <div style="margin-top: 2rem;"><h1>Stealing and Attacking Production MT Systems</h1>  </div>  
 
-  <div class="posts-wrapper">
-    <div class="post">
-      <img src='crop.gif' style="float:right; width:250px;"/>
+    <font color="gray"> We steal production machine translation systems (Google, Bing, Systran, etc.) by training imitation models that closely match the performance of the production systems. We then TODO.
+    </font> -->
 
-      <h1>Eric Wallace</h1>
-
-      <h2>ericwallace@berkeley.edu // <a style="font-size: 0.95em; font-weight:700" href="https://scholar.google.com/citations?user=SgST3LkAAAAJ" target="_blank"> Scholar </a> // <a style="font-size: 0.95em; font-weight:700" href="https://www.github.com/Eric-Wallace" target="_blank">GitHub</a> // <a style="font-size: 0.95em; font-weight:700" href="https://www.twitter.com/Eric_Wallace_" target="_blank">Twitter</a> // <a style="font-size: 0.95em; font-weight:700" href="CV.pdf" target="_blank">CV</a></h2>
+    
+    <div>            
+      <a class="btn btn-lg btn-info" href="https://arxiv.org/abs/1908.07125" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
+      <a class="btn btn-lg btn-secondary" href="https://github.com/Eric-Wallace/adversarial-mt" target="_blank" role="button">Code &raquo;</a>
       <br>
-      <br>
-
-            <p>I am a first-year PhD student at UC Berkeley advised by <a href="https://people.eecs.berkeley.edu/~klein/" target="_blank">Dan Klein</a> and <a href="https://people.eecs.berkeley.edu/~dawnsong/" target="_blank">Dawn Song</a>. I work on Machine Learning and Natural Language Processing as part of <a href="http://nlp.cs.berkeley.edu/" target="_blank">Berkeley NLP</a>, the <a href="https://rise.cs.berkeley.edu/" target="_blank">RISE Lab</a>, and Berkeley AI Research <a href="https://bair.berkeley.edu" target="_blank">(BAIR)</a>. 
-            <br> <br>
-
-            Before this, I did my undergrad at the University of Maryland, where I worked with <a href="http://www.umiacs.umd.edu/~jbg/" target="_blank">Jordan Boyd-Graber</a>. I spent most of 2019 working at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI</a> with <a href="https://allenai.org/team/mattg/" target="_blank">Matt Gardner</a> and <a href="http://sameersingh.org/" target="_blank">Sameer Singh</a>.
-            <br><br>
-
-            <h3 style="margin-bottom:0.75em;">Research</h3>
-
-            <p><b>Robustness</b> We study how an adversary or a distributional shift can affect model behavior. We have created an adversarial attack called <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">Universal Adversarial Triggers</a> that exposes egregious failures of state-of-the-art NLP systems. We have also used adversarial attacks to reveal counterintuitive model behavior on <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">reduced</a> and  <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">human-modified</a> inputs. Our current research works to increase model robustness and studies new attack vectors such as model stealing and data poisoning.
-
-            <p><b>Interpretability</b> We look to open up the black box of machine learning by interpreting model predictions. We have analyzed the <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">limitations</a> of existing interpretation methods and designed new techniques for generating <a href="https://arxiv.org/abs/1902.00407" target="_blank" style="font-size: 0.95em">saliency</a> <a href="https://arxiv.org/abs/1809.02847" target="_blank" style="font-size: 0.95em">maps</a>. We facilitate research and adoption of interpretation methods through an <a href="https://arxiv.org/abs/1909.09251" target="_blank">open-source interpretation toolkit</a>. Our current research probes the <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="font-size: 0.95em">naturally emergent knowledge</a> of pre-trained NLP models and studies when interpretations are useful in practice.</p>
-
-            <p><b>Dataset Biases</b> We investigate how models can use subtle dataset patterns (<i>annotation artifacts</i>) to achieve high test accuracy without truly understanding a task. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering these artifacts and applied them to identify issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">datasets</a>. We also study how overreliance on dataset biases can cause downstream failures such as susceptibility to <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">adversarial attacks</a>. Our current research creates new ways to more comprehensively evaluate models.
-
-            <!-- <p><b>Efficient NLP</b> We reduce the costs of model training and inference in order to deploy ML at scale and gelp to democratize NLP. We have accelerated training for <a href="https://arxiv.org/abs/2002.11794" target="_blank" style="font-size: 0.95em">BERT and Machine Translation</a>. Our current research looks to accelerate inference for Transformer models. -->
+    <br>
+    <h3 id="blog" class="anchor-target">Background</h3>
+    <p> Many production machine learning systems are served as APIs. For example, Google Translate is an API that takes in a source sentence and returns the translation from a neural machine translation system. These APIs can be a lucrative asset for an organization and are typically the result of a considerable investment into data annotation and model training. Accordingly, organizations keep APIs as a black-box to protect intellectual property and system integrity.</p>
+    <p> We show how an adversary can <i>steal</i> and <i>attack</i> black-box machine translation (MT) systems. <a href="https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_tramer.pdf" target="_blank">Stealing</a> a production model allows an adversary to avoid long-term API costs or even launch their own competitor MT service. Attacking a model by creating <i>adversarial examples</i> can expose egregious model predictions that can harm system owners or users.</p>
+    <h3 id="blog" class="anchor-target">Overview</h3>
+    <p> The figure below provides a overview of our work. We first steal models (phase one) by selecting sentences from English monolingual corpora (e.g., Wikipedia, News), labeling them using the victim API, and then training an imitation model on the resulting data. In phase two, we generate adversarial examples against our imitation model and transfer them to the production systems. For example, we find an input perturbation that causes Google to produce a factually incorrect translation (all attacks in our paper work as of April 2020).</p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/overview.png" align="middle" style="width:85%">
     </p>
-          <br>
+    
+    <br><h3> Stealing Production MT Systems </h3>
+    <p>We first steal production models by training imitation models as described above. This idea is quite related to <a href="https://arxiv.org/abs/1503.02531" target="_blank">knowledge distillation</a>: training a student model to imitate the predictions of a teacher. Model stealing mainly differs from distillation because the victim’s (teacher’s) training data is unknown. This causes the queries to typically be <i>out-of-domain</i> for the victim. Moreover, the student can not be trained with auxilliary loss functions.</p>
+    
+    <br><h4> <i>Simulated Stealing Experiments </i></h4>
+    <p><b>Setup:</b> We first study the efficacy of model stealing with simulated experiments. We train a local victim model, query it, and then train imitation models to mimic its outputs. We train imitation models that are different from their victims in various aspects: input dataset, BPE vocabulary, model architecture, and combinations of these differences.</p>
+    <p><b>Results: </b> Imitation models can closely match the performance of their victims when the architectures are different. For example, a convolution-based imitation model reaches similar BLEU scores to transformer-based victims on both in- and out-of-domain test sets.</p>
+    <p> More interestingly, modeling stealing is not prevented when the dataset is different. In particular, we train the victim model on data from TED talks and query it using sentences from Europarl. Since these queries are out-of-domain for the victim model, it often produces incorrect or ungrammatical translations. Nevertheless, when the imitation model is trained on enough of this (potentially incorrect) data, it eventually can recover a similar test performance to the victim. The green curve in the figure below shows the learning curve of normal training; the purple curve is training with the out-of-domain Europarl data.</p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/data_efficiency.png" align="middle" style="width:45%">
+    </p>
+    <p>Interestingly, when the imitation model is similar to the victim and uses the same source data, the imitation model can learn faster than the victim (orange curve above). In other words, stolen data can be <i>more useful</i> than professionally-curated MT data. This is likely due to the outputs of the victim model being simpler than human translations, <a href="https://arxiv.org/abs/1911.02727" target="_blank">which aids learning</a>.</p>
+    <p>Overall, our results show that model stealing is easy: despite mismatched models and data, imitation models closely imitate their victims.</p>
+
+
+    <br><h4> <i>Real-World Stealing Experiments </i></h4>
+    <p> We next steal five production MT systems: Google Translate, Bing Translator, DeepL Translator, SYSTRAN Translate, and Yandex.Translate, for English→German and Nepali→English. We first test the MT services on the two language pairs to provide a point of comparison for our imitation models. The production systems are very strong for English→German: three systems are better than any research model that does not use data outside of WMT14 (e.g., backtranslation data). For Nepali→English, Google achieves 22.1 BLEU which crushes the 15.1 BLEU achieved by the best public model. This gap comes from Google’s internal investments, e.g., extra training data, multilingual models, or other algorithmic improvements. </p>
+    <p>We collect training data for our imitation models by querying the production systems with about 5 million sentences for English→German and 2 million sentences for Nepali→English. We then train transformer MT models on this data. The imitation models closely match the performance of the production systems: they are always within 0.6 BLEU (table below). For Nepali→English, our system reaches 22.0 BLEU, nearly matching the Google model and 6.9 points ahead of the best public system.</p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/stealing_numbers.png" align="middle" style="width:50%">
+    </p>
+    <p>Most worryingly, we estimate that adversaries can recreate our English→German dataset for as little as $10 by scraping data from the public demos. Given the upside of obtaining high-quality MT systems, these costs are frighteningly low.</p>
+
+    
+    <br><h3> Attacking Production MT Systems </h3>
+    <p>For text classification, we consider two tasks: sentiment analysis and natural language inference. We use a wide variety of models, each with different embedding types (e.g., ELMo, GloVe, etc.) and architectures (e.g., self-attention, LSTMs, etc.).</p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">
+    </p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%">
+    </p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/untargeted_trigger.png" align="middle" style="width:85%">
+    </p>
+    <p class="aligncenter">
+        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/suffix_dropper.png" align="middle" style="width:85%">
+    </p>    
+    
+    
+
+  
+    <br><h3> Attack Transferability and Dataset Insights: </h3>
+
+    <p> In our paper, we study other aspects of the triggers. First, we find that triggers are transferable across models. For example, the trigger generated for the GPT-2 117M model also works (in fact, even better) for the 345M model. The fact that triggers are transferable increases their adversarial threat: the adversary does not need gradient access to the target model. Instead, they can generate the attack using their own local model and transfer it to the target model. </p>
+
+    <p>Finally, since triggers are input-agnostic, they provide new insights into “global” model behavior, i.e., general input-output patterns learned from a dataset. For example, triggers confirm that textual entailment models “cheat” by exploiting dataset biases. Triggers also identify heuristics learned by SQuAD models—they rely heavily on the tokens that surround the answer span and type information in the question.</p>
+
+    <br><h3> Summary: </h3>
+
+    <p>To learn more, check out our paper and code.</p>
+
+    <br>
+    <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_" target="_blank">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
+                        
+  <br>
+  <div id="authors" class="anchor-target">
+    <h3 style="text-align: center;">Paper Authors</h3>
+        <div class="row" style="margin: 0 auto;justify-content: center;">
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="triggers_blog_images/eric.jpg" alt="eric">
+      <div class="card-body">
+        <p class="card-text"><a href="http://www.ericswallace.com">Eric Wallace</a></p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="stealing_blog_images/berkeley.png" alt="mitchell" style="height:200px">
+      <div class="card-body">
+        <p class="card-text"><a href="https://people.eecs.berkeley.edu/~mitchell/">Mitchell Stern</a></p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="stealing_blog_images/dawn.jpg" alt="dawn">
+      <div class="card-body">
+        <p class="card-text"><a href="https://people.eecs.berkeley.edu/~dawnsong/">Dawn Song</a></p>
+      </div>
+    </div>
+    <div class="card headshot box-shadow">
+      <img class="card-img-top" src="stealing_blog_images/dan.jpeg" alt="dan">
+      <div class="card-body">
+        <p class="card-text"><a href="https://people.eecs.berkeley.edu/~klein/">Dan Klein</a></p>
+      </div>
+    </div>
+    </div>
+</div>
+</div>
+       
+        </div>
+
+         <div class="row">
+         <div class="col-lg-2 thumb d-flex align-items-center">
+         </div>
+         <div class="col-lg-2 thumb d-flex align-items-center">
+            <a class="thumbnail">
+              <div><img src="stealing_blog_images/berkeley_with_title.png" style="height:120px"></div>
+            </a>
+         </div>
+
+          <div class="col-lg-3 thumb d-flex align-items-center">
+            <a class="thumbnail">
+              <img src="stealing_blog_images/bair.png" style="height:110px">
+            </a>
+          </div>
+                                                      
+          <div class="col-lg-3 thumb d-flex align-items-center">
+            <a class="thumbnail">
+              <img src="stealing_blog_images/rise.png" style="height:80px;width:180px">
+            </a>
+          </div>
+         <div class="col-lg-2 thumb d-flex align-items-center">
+         </div>
+         </div>
+
+
+      <hr>
+      <div id="contact" class="anchor-target">
+        <p style="font-size:1.0rem">Website credits to <a href="https://rowanzellers.com">Rowan Zellers</a></p>
       </div>
   </div>
 
-  <div class="posts-wrapper" style="clear:both">
-    <h3 style="margin-bottom:0.75em;">publications</h3>
-    </i>
-    <p>
-    <ul class="pubs">
-                
-      
-<!--      
-      <li>        
-    <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Stealing and Attacking Production Machine Translation Systems</a><br>
-    Eric Wallace, Mitchell Stern, Dawn Song, and Dan Klein.<br>
-    <i>ACL 2020</i><br>
-    TODO
-    <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Code</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('stealing20');">Citation</a>                
-  <div id="stealing20" class="hidden">
-  <pre>@inproceedings{Wallace2020Stealing,
-    Author = {Eric Wallace and Mitchell Stern and Dawn Song and Dan Klein},
-    Booktitle = {Association for Computational Linguistics},                            
-    Year = {2020},
-    Title = {Stealing and Attacking Production Machine Translation Systems}
-   </pre>
-   </div>
-</li>
+</main>
 
-            
-<li>        
-    <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Evaluating NLP Models via Contrast Sets</a><br>
-    Matt Gardner, Yoav Artzi, ...., Eric Wallace, Ally Zhang, and Ben Zhou.<br>
-    <i>ACL 2020</i><br>
-    TODO
-    <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Dataset</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('contrast20');">Citation</a>                
-  <div id="contrast20" class="hidden">
-  <pre>@inproceedings{Gardner2020Contrast,
-    Author = {Matt Gardner and Yoav Artzi and Victoria Basmov and Jonathan Berant and Ben Bogin and Sihao Chen and Pradeep Dasigi and Dheeru Dua and Yanai Elazar and Ananth Gottumukkala and Nitish Gupta and Hannaneh Hajishirzi and Gabriel Ilharco and Divyansh Kaushik and Daniel Khashabi and Kevin Lin and Zachary C. Lipton and Jiangming Liu and Nelson F. Liu and Phoebe Mulcaire and Qiang Ning and Sameer Singh and Noah A. Smith and Sanjay Subramanian and Reut Tsarfaty and Eric Wallace and Ally Zhang and Ben Zhou},
-    Booktitle = {Association for Computational Linguistics},                            
-    Year = {2020},
-    Title = {Evaluating NLP Models via Contrast Sets}
-   </pre>
-   </div>
-</li>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
- 
-<li>        
-    <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">BERT Is Moderately Robust to Distributional Shift</a><br>
-    Dan Hendrycks, Xiaoyuan Liu, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and Dawn Song<br>
-    <i>ACL 2020</i><br>
-    TODO
-    <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('robust20');">Citation</a>                
-  <div id="robust20" class="hidden">
-  <pre>@inproceedings{Hendrycks2020Bert,
-    Author = {Dan Hendrycks and Xiaoyuan Liu and Eric Wallace and Adam Dziedzic Rishabh Krishnan and Dawn Song},
-    Booktitle = {Association for Computational Linguistics},                            
-    Year = {2020},
-    Title = {{BERT} Is Moderately Robust to Distributional Shift}}
-   </pre>
-   </div>
-</li>
-            
-       -->
-    <li>        
-            <a href="https://arxiv.org/abs/2002.11794" target="_blank" style="color:black;font-size:1.0em">
-            Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers</a><br>
-            Zhuohan Li*, Eric Wallace*, Sheng Shen*, Kevin Lin*, Kurt Keutzer, Dan Klein, and Joseph E. Gonzalez<br>
-            <i>arXiv Preprint 2020</i><br>
-            We show that <i>increasing</i> model size actually speeds up training and inference for Transformer models. The key idea is that you should use a very big model, but, do very few epochs and apply heavy compression.
-            <br> <a href="https://bair.berkeley.edu/blog/2020/03/05/compress/" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1235616760595791872" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2002.11794" target="_blank">Paper</a> | <a href="javascript:unhide('efficient20');">Citation</a>                
-              <div id="efficient20" class="hidden">
-              <pre>@article{Li2020Efficient,
-    Author = {Zhuohan Li and Eric Wallace and Sheng Shen and Kevin Lin and Kurt Keutzer and Dan Klein and Joseph E. Gonzalez},
-    Journal = {arXiv preprint arXiv:2002.11794},
-    Year = {2020},
-    Title = {Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers}}
-               </pre>
-               </div>
-        </li>
 
-        <li>        
-                <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Universal Adversarial Triggers for Attacking and Analyzing NLP</a><br>
-                Eric Wallace, Shi Feng, Nikhil Kandpal, Matt Gardner, and Sameer Singh<br>
-                <i>EMNLP 2019</i><br>
-                We create sequences of tokens that cause a model to produce a specific prediction when concatenated to <i>any</i> input from a dataset. Triggers cause egregious errors for text classification, reading comprehension (e.g., models predict "to kill american people" for 72% of "why" questions), and text generation (e.g., cause GPT-2 to generate racism).
-                <br> <a href="http://ericswallace.com/triggers" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1168907518623571974" target="_blank">Twitter</a> | <a href="https://www.wired.com/story/technique-uses-ai-fool-other-ais/" target="_blank">Wired</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/universal-triggers" target="_blank">Code</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('triggers19');">Citation</a>
-                <div id="triggers19" class="hidden">
-                    <pre>@inproceedings{Wallace2019Triggers,
-    Author = {Eric Wallace and Shi Feng and Nikhil Kandpal and Matt Gardner and Sameer Singh},
-    Booktitle = {Empirical Methods in Natural Language Processing},                            
-    Year = {2019},
-    Title = {Universal Adversarial Triggers for Attacking and Analyzing {NLP}}}
-                    </pre>
-                </div>
-            </li>
-            <li>
-                <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="color:black;font-size:1.0em">Do NLP Models Know Numbers? Probing Numeracy in Embeddings</a><br>
-                Eric Wallace, Yizhong Wang, Sujian Li, Sameer Singh, and Matt Gardner.<br>
-                <i>EMNLP 2019</i><br>
-                We show that pre-trained word embeddings (e.g., BERT, word2vec, ELMo, GloVe) capture number magnitude and order, e.g., they know that "74" is smaller than "eighty-two". This makes it easy to perform some numerical reasoning tasks.
-                 <br> <a href="https://twitter.com/Eric_Wallace_/status/1174360279624192000" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1909.07940" target="_blank">Paper</a> | <a href="slides_and_posters/NumeracyPoster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('numeracy19');">Citation</a>
-                <div id="numeracy19" class="hidden">
-                    <pre>@inproceedings{Wallace2019Numeracy,
-    Author = {Eric Wallace and Yizhong Wang and Sujian Li and Sameer Singh and Matt Gardner},
-    Booktitle = {Empirical Methods in Natural Language Processing},                            
-    Year = {2019},
-    Title = {Do {NLP} Models Know Numbers? Probing Numeracy in Embeddings}}
-                    </pre>
-                </div>
-            </li>
-
-            <li>                
-                <a href="https://arxiv.org/abs/1909.09251" target="_blank" style="color:black;font-size:1.0em">AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models</a><br>
-                Eric Wallace, Jens Tuyls, Junlin Wang, Sanjay Subramanian, Matt Gardner, and Sameer Singh.<br>
-          <i>Demo at EMNLP 2019</i> &nbsp;&nbsp;&nbsp; <b><i>Best Demo Award</i></b><br>
-                An open-source toolkit built on top of AllenNLP that makes it easy to interpret NLP models.<br>
-                <a href="https://allennlp.org/interpret" target="_blank">Landing Page</a> | <a href="https://twitter.com/Eric_Wallace_/status/1176886627852898309" target="_blank">Twitter</a> | <a href="https://demo.allennlp.org/reading-comprehension" target="_blank">Demo</a> | <a href="https://arxiv.org/abs/1909.09251" target="_blank">Paper</a> | <a href="slides_and_posters/InterpretPoster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('interpret19');">Citation</a> 
-                <div id="interpret19" class="hidden">
-                    <pre>@inproceedings{Wallace2019AllenNLP,
-    Author = {Eric Wallace and Jens Tuyls and Junlin Wang and Sanjay Subramanian and Matt Gardner and Sameer Singh},
-    Booktitle = {Empirical Methods in Natural Language Processing},                            
-    Year = {2019},
-    Title = {{AllenNLP Interpret}: A Framework for Explaining Predictions of {NLP} Models}}
-                    </pre>
-                </div>
-            </li>
-            
-<!--             <li>
-                <a href="https://distill.pub/2019/advex-bugs-discussion/response-6/" target="_blank" style="color:black;font-size:1.0em">Learning from Incorrectly Labeled Data</a><br>
-                Eric Wallace<br>
-                <i>Distill Pub</i><br>
-                We take a completely mislabeled training set (without modifying the inputs) and use it to train a model that <i>generalizes</i> to the original test set. We attribute this and other recent results to indirect model distillation.<br> <a href="https://distill.pub/2019/advex-bugs-discussion/response-6/" target="_blank">Blog Post</a> | <a href="javascript:unhide('bugs19');">Citation</a>
-                <div id="bugs19" class="hidden">
-          <pre>@article{Wallace2019bugs,
-  author = {Wallace, Eric},
-  title = {A Discussion of 'Adversarial Examples Are Not Bugs, They Are Features': Learning from Incorrectly Labeled Data},
-  journal = {Distill},
-  year = {2019},
-  note = {https://distill.pub/2019/advex-bugs-discussion/response-6},
-  doi = {10.23915/distill.00019.6}}
-                  </pre>
-                </div>
-            </li> -->
-      
-      <li>
-                <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="color:black;font-size:1.0em">Misleading Failures of Partial-input Baselines</a><br>
-                Shi Feng, Eric Wallace, and Jordan Boyd-Graber.<br>
-                <i>ACL 2019</i><br>
-                A common technique for dataset analysis is partial-input baselines (e.g., question-only or hypothesis-only models). We show how the failure of these baselines can be misleading, and solve "hard" SNLI examples using cheap tricks.<br> <a href="https://arxiv.org/abs/1905.05778" target="_blank">Paper</a> | <a href="slides_and_posters/Misleading_Poster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('misleading19');">Citation</a>
-                <div id="misleading19" class="hidden">
-          <pre>@inproceedings{Feng2019Misleading,
-    Author = {Shi Feng and Eric Wallace and Jordan Boyd-Graber},
-    Booktitle = {Association for Computational Linguistics},                            
-    Year = {2019},
-    Title = {Misleading Failures of Partial-input Baselines}}
-                  </pre>
-                </div>
-            </li>
-      
-            <li>
-                <a href="http://arxiv.org/abs/1906.02900" target="_blank" style="color:black;font-size:1.0em">Compositional Questions Do Not Necessitate Multi-hop Reasoning</a><br>
-                Sewon Min*, Eric Wallace*, Sameer Singh, Matt Gardner, Hannaneh Hajishirzi, and Luke Zettlemoyer<br>
-                <i>ACL 2019</i><br>
-    We argue that constructing multi-hop QA datasets is non-trivial, and that existing datasets are simpler than expected. For instance, single-hop models can solve most of HotpotQA due to weak distractor paragraphs.<br>
-        <a href="https://arxiv.org/abs/1906.02900" target="_blank">Paper</a> | <a href="slides_and_posters/Compositional_Slides.pdf" target="_blank">Slides</a> | <a href="https://github.com/shmsw25/single-hop-rc" target="_blank">Code</a> | <a href="javascript:unhide('multihop19');">Citation</a>
-                <div id="multihop19" class="hidden">
-          <pre>@inproceedings{Min2019Multihop,
-    Author = {Sewon Min and Eric Wallace and Sameer Singh and Matt Gardner and Hannaneh Hajishirzi and Luke Zettlemoyer},
-    Booktitle = {Association for Computational Linguistics},                            
-    Year = {2019},
-    Title = {Compositional Questions Do Not Necessitate Multi-hop Reasoning}}
-                  </pre>
-                </div>
-            </li>
-            <li>
-                <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="color:black;font-size:1.0em">Trick Me If You Can: Human-in-the-loop Generation of Adversarial Examples for Question Answering</a><br>
-                Eric Wallace, Pedro Rodriguez, Shi Feng, Ikuya Yamada, and Jordan Boyd-Graber.<br>
-                <i>TACL 2019</i><br>
-                We propose a human-in-the-loop approach for generating adversarial examples in NLP. We display model intepretations and predictions in a user interface, which enables collaborative + interactive attacks on question answering systems .<br> <a href="https://arxiv.org/abs/1809.02701" target="_blank">Paper</a> | <a href="https://www.reddit.com/r/science/comments/cmzj8n/researchers_reveal_ai_weaknesses_by_developing/" target="_blank">Front page of Reddit</a> |
-                <a href="http://trickme.qanta.org" target="_blank">Website</a> | <a href="https://github.com/Eric-Wallace/trickme-interface" target="_blank">Code</a> | <a href="slides_and_posters/TrickMe_Poster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('trick19');">Citation</a>
-                <div id="trick19" class="hidden">
-          <pre>@inproceedings{Wallace2019Trick,
-    Author = {Eric Wallace and Pedro Rodriguez and Shi Feng and Ikuya Yamada and Jordan Boyd-Graber},
-    Booktitle = {Transactions of the Association for Computational Linguistics},                            
-    Year = {2019},
-    Title = {Trick Me If You Can: Human-in-the-loop Generation of Adversarial Examples for Question Answering}}
-                  </pre>
-                </div>
-            </li>
-                 
-            <li>
-                <a href="https://arxiv.org/abs/1902.00407" target="_blank" style="color:black;font-size:1.0em">Understanding Impacts of High-Order Loss Approximations and Features in Deep Learning Interpretation</a><br>
-                Sahil Singla, Eric Wallace, Shi Feng, Soheil Feizi.<br>
-                <i>ICML 2019</i><br>
-    Existing saliency interpretation methods focus on first-order information, i.e., they inspect the gradient of a model. This work designs an efficient <i>second-order</i> interpretation that can capture the loss function's curvature, i.e., the Hessian.
-                <a href="https://arxiv.org/abs/1902.00407" target="_blank">Paper</a> | <a href="https://github.com/singlasahil14/CASO" target="_blank">Code</a> | <a href="javascript:unhide('caso19');">Citation</a>                
-                <div id="caso19" class="hidden">
-                    <pre>@inproceedings{Singla2019Caso,
-    Author = {Sahil Singla and Eric Wallace and Shi Feng and Soheil Feizi},
-    Booktitle = {International Conference on Machine Learning},                            
-    Year = {2019},
-    Title = {Understanding Impacts of High-Order Loss Approximations and Features in Deep Learning Interpretation}}
-                  </pre>
-                </div>
-           </li>     
-     <li>
-                <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="color:black;font-size:1.0em">Pathologies of Neural Models Make Interpretations Difficult</a><br>
-                Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber.<br>
-                <i>EMNLP 2018</i><br>
-                Saliency maps are a popular interpretation technique. We show that certain pathological behavior present in neural models (namely prediction overconfidence) can negatively impact these interpretations.<br> <a href="https://vimeo.com/306158589" target="_blank">Video</a> | <a href="https://arxiv.org/abs/1804.07781" target="_blank">Paper</a> | 
-                <a href="slides_and_posters/pathologies_slides.pdf" target="_blank">Slides</a> | <a href="https://soundcloud.com/nlp-highlights/87-pathologies-of-neural-models-make-interpretation-difficult-with-shi-feng" target="_blank">Podcast 1</a> <a href="https://twimlai.com/twiml-talk-229-pathologies-of-neural-models-and-interpretability-with-alvin-grissom-ii/" target="_blank">2</a> | <a href="javascript:unhide('pathological18');">Citation</a>                
-                <div id="pathological18" class="hidden">
-                    <pre>@inproceedings{Feng2018Pathological,
-    Author = {Shi Feng and Eric Wallace and Alvin Grissom II and Mohit Iyyer and Pedro Rodriguez and Jordan Boyd-Graber},
-    Booktitle = {Empirical Methods in Natural Language Processing},                            
-    Year = {2018},
-    Title = {Pathologies of Neural Models Make Interpretations Difficult}}
-                  </pre>
-                </div>
-            </li>
-        
-
-            <li>
-                <a href="https://arxiv.org/abs/1809.02847" style="color:black;font-size:1.0em">Interpreting Neural Networks with Nearest Neighbors</a><br>
-                Eric Wallace*, Shi Feng*, Jordan Boyd-Graber.<br>
-                <i>EMNLP BlackboxNLP Workshop 2018</i><br>
-                We replace the standard softmax classifier with a k-nearest neighbors classifier. This provides a different model uncertainty metric which we use to generate high precision saliency maps for text classification.<br> <a href="https://arxiv.org/abs/1809.02847" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/deep-knn" target="_blank">Code</a> | <a href="https://zerobatchsize.net/2018/09/11/dknn.html">Blog</a> | <a href="javascript:unhide('knn18');">Citation</a>
-                <div id="knn18" class="hidden">
-                    <pre>@inproceedings{Wallace2018Neighbors,
-    Author = {Eric Wallace and Shi Feng and Jordan Boyd-Graber},
-    Booktitle = {EMNLP 2018 Workshop on Analyzing and Interpreting Neural Networks for {NLP}},                            
-    Year = {2018},
-    Title = {Interpreting Neural Networks with Nearest Neighbors}}
-                 </pre>
-                </div>
-            </li>
-        </ul>  
-        <br>
-    </p>
-
-    <p><a href="https://people.cs.umass.edu/~miyyer/">Mohit makes great websites</a></p> 
-
-</div>
-</div>
-
-</body>
+  </body>
 </html>
