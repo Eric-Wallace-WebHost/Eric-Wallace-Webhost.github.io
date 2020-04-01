@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="description" content="Stealing and Attacking Production Machine Translation Systems">
     <meta name="author" content="">
-    <link rel="icon" href="f/adversarial2.ico">
+    <link rel="icon" href="stealing_blog_images/adversarial2.ico">
 
     <title>Stealing + Attacking MT</title>
 
@@ -133,7 +133,7 @@
     <h3 id="blog" class="anchor-target">Overview</h3>
     <p> The figure below provides a overview of our work. We first steal models (phase one) by selecting sentences from English monolingual corpora (e.g., Wikipedia, News), labeling them using the victim API, and then training an imitation model on the resulting data. In phase two, we generate adversarial examples against our imitation model and transfer them to the production systems. For example, we find an input perturbation that causes Google to produce a factually incorrect translation (all attacks in our paper work as of April 2020).</p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/overview.png" align="middle" style="width:85%">
+        <img class="card-img-top" src="stealing_blog_images/overview.png" align="middle" style="width:85%">
     </p>
     
     <br><h3> Stealing Production MT Systems </h3>
@@ -144,7 +144,7 @@
     <p><b>Results: </b> Imitation models can closely match the performance of their victims when the architectures are different. For example, a convolution-based imitation model reaches similar BLEU scores to transformer-based victims on both in- and out-of-domain test sets.</p>
     <p> More interestingly, modeling stealing is not prevented when the dataset is different. In particular, we train the victim model on data from TED talks and query it using sentences from Europarl. Since these queries are out-of-domain for the victim model, it often produces incorrect or ungrammatical translations. Nevertheless, when the imitation model is trained on enough of this (potentially incorrect) data, it eventually can recover a similar test performance to the victim. The green curve in the figure below shows the learning curve of normal training; the purple curve is training with the out-of-domain Europarl data.</p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/data_efficiency.png" align="middle" style="width:45%">
+        <img class="card-img-top" src="stealing_blog_images/data_efficiency.png" align="middle" style="width:45%">
     </p>
     <p>Interestingly, when the imitation model is similar to the victim and uses the same source data, the imitation model can learn faster than the victim (orange curve above). In other words, stolen data can be <i>more useful</i> than professionally-curated MT data. This is likely due to the outputs of the victim model being simpler than human translations, <a href="https://arxiv.org/abs/1911.02727" target="_blank">which aids learning</a>.</p>
     <p>Overall, our results show that model stealing is easy: despite mismatched models and data, imitation models closely imitate their victims.</p>
@@ -154,7 +154,7 @@
     <p> We next steal five production MT systems: Google Translate, Bing Translator, DeepL Translator, SYSTRAN Translate, and Yandex.Translate, for English→German and Nepali→English. We first test the MT services on the two language pairs to provide a point of comparison for our imitation models. The production systems are very strong for English→German: three systems are better than any research model that does not use data outside of WMT14 (e.g., backtranslation data). For Nepali→English, Google achieves 22.1 BLEU which crushes the 15.1 BLEU achieved by the best public model. This gap comes from Google’s internal investments, e.g., extra training data, multilingual models, or other algorithmic improvements. </p>
     <p>We collect training data for our imitation models by querying the production systems with about 5 million sentences for English→German and 2 million sentences for Nepali→English. We then train transformer MT models on this data. The imitation models closely match the performance of the production systems: they are always within 0.6 BLEU (table below). For Nepali→English, our system reaches 22.0 BLEU, nearly matching the Google model and 6.9 points ahead of the best public system.</p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/stealing_numbers.png" align="middle" style="width:50%">
+        <img class="card-img-top" src="stealing_blog_images/stealing_numbers.png" align="middle" style="width:50%">
     </p>
     <p>Most worryingly, we estimate that adversaries can recreate our English→German dataset for as little as $10 by scraping data from the public demos. Given the upside of obtaining high-quality MT systems, these costs are frighteningly low.</p>
 
@@ -162,16 +162,16 @@
     <br><h3> Attacking Production MT Systems </h3>
     <p>For text classification, we consider two tasks: sentiment analysis and natural language inference. We use a wide variety of models, each with different embedding types (e.g., ELMo, GloVe, etc.) and architectures (e.g., self-attention, LSTMs, etc.).</p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">
+        <img class="card-img-top" src="stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">
     </p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%">
+        <img class="card-img-top" src="stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%">
     </p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/untargeted_trigger.png" align="middle" style="width:85%">
+        <img class="card-img-top" src="stealing_blog_images/untargeted_trigger.png" align="middle" style="width:85%">
     </p>
     <p class="aligncenter">
-        <img class="card-img-top" src="/home/chronos/u-101a3bf693a735baa9e4c9f23d36d1fd08108f62/MyFiles/stealing_blog_images/suffix_dropper.png" align="middle" style="width:85%">
+        <img class="card-img-top" src="stealing_blog_images/suffix_dropper.png" align="middle" style="width:85%">
     </p>    
     
     
@@ -188,12 +188,12 @@
     <p>To learn more, check out our paper and code.</p>
 
     <br>
-    <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
+    <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_" target="_blank">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
                         
   <br>
   <div id="authors" class="anchor-target">
-    <h3>Paper Authors</h3>
-        <div class="row" style="margin: 0 auto;">
+    <h3 style="text-align: center;">Paper Authors</h3>
+        <div class="row" style="margin: 0 auto;justify-content: center;">
     <div class="card headshot box-shadow">
       <img class="card-img-top" src="triggers_blog_images/eric.jpg" alt="eric">
       <div class="card-body">
@@ -201,7 +201,7 @@
       </div>
     </div>
     <div class="card headshot box-shadow">
-      <img class="card-img-top" src="stealing_blog_images/berkeley.png" alt="mitchell">
+      <img class="card-img-top" src="stealing_blog_images/berkeley.png" alt="mitchell" style="height:200px">
       <div class="card-body">
         <p class="card-text"><a href="https://people.eecs.berkeley.edu/~mitchell/">Mitchell Stern</a></p>
       </div>
@@ -268,4 +268,4 @@
 
 
   </body>
-</html>f
+</html>
