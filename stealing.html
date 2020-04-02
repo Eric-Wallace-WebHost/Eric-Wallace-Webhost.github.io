@@ -24,7 +24,7 @@
         body {
           padding-top: 4.5rem;
           position: relative;
-          font-size: 1.35rem;          
+          font-size: 1.0rem;          
         }
         h1 {
           width: max-content;
@@ -106,10 +106,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li>
-            <a class="nav-link" href="#blog">Blog</a>
-          </li>          
-          <li>
-            <a class="nav-link" href="#authors">Authors</a>
+            <a class="nav-link" href="https://www.ericswallace.com/">Homepage</a>
           </li>          
         </ul>
       </div>
@@ -164,31 +161,38 @@
     <p> We use gradient-based adversarial attacks following past <a href="https://www.ericswallace.com/triggers" target="_blank">work</a> <a href="https://arxiv.org/abs/1903.06620" target="_blank">on</a> <a href="https://arxiv.org/abs/1712.06751" target="_blank">attacking</a> <a href="https://arxiv.org/abs/1809.04113" target="_blank">NLP</a>. We create the adverarial examples for our imitation models and then apply them to the production systems, i.e., we hope that the similarity of the imitation and the production models enables transfer. We create four different types of attacks, detailed below.</p>
     <p> <b>Targeted Flips:</b> We replace an input token in order to cause a specific output token to flip in a desired way. For example, we cause Systran to predict "freut" (pleased) instead of "greu" (gray) in the sentence "I am feeling grey that HK decided to join China":
     <p class="aligncenter">
-        <img class="card-img-top" src="stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">
-        <a class="btn btn-md btn-info" href="https://translate.google.com/#view=home&op=translate&sl=en&tl=de&text=I%20am%20going%20to%20die%2C%20it%E2%80%99s%20over%20100%C2%B0F%2C%20help!%0A%0AI%20am%20going%20to%20die%2C%20it%E2%80%99s%20over%20102%C2%B0F%2C%20help!" target="_blank" role="button" style="float: left;">Google Demo &raquo; <i class="fas fa-file-pdf"></i></a> <a class="btn btn-md btn-info" href="https://translate.systran.net/translationTools/text?source=en&target=de&input=I am feeling gre y that HK decided to join China." target="_blank" role="button" style="float: left;">SYSTRAN Demo &raquo; <i class="fas fa-file-pdf"></i></a>   
+        <img class="card-img-top" src="stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">   
     </p>                                                                          
+     <a class="btn btn-md btn-info" href="https://translate.google.com/#view=home&op=translate&sl=en&tl=de&text=I%20am%20going%20to%20die%2C%20it%E2%80%99s%20over%20100%C2%B0F%2C%20help!%0A%0AI%20am%20going%20to%20die%2C%20it%E2%80%99s%20over%20102%C2%B0F%2C%20help!" target="_blank" role="button">Google Demo &raquo; <i class="fas fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp;<a class="btn btn-md btn-info" href="https://translate.systran.net/translationTools/text?source=en&target=de&input=I am feeling gre y that HK decided to join China." target="_blank" role="button">SYSTRAN Demo &raquo; <i class="fas fa-file-pdf"></i></a>
+    <br>
+    <br>
 
     
     <p> <b>Malicious Nonsense:</b> We find nonsense inputs that translate to malicious/vulgar outputs. For example, “I nss towww DO kllllll” is translated as "I will kill you" (in German) by DeepL.
    <p class="aligncenter">
-        <img class="card-img-top" src="stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%">
-        <a class="btn btn-md btn-info" href="https://www.deepl.com/en/translator#en/de/I%20nss%20towww%20DO%20kllllll%20you" target="_blank" role="button" style="float: left;">DeepL Demo &raquo; <i class="fas fa-file-pdf"></i></a> <a class="btn btn-md btn-info" href="https://translate.yandex.com/?lang=en-de&text=I%20Bogoing%20ularly%20assassbranate%20the%20president" target="_blank" role="button" style="float: left;">Yandex Demo &raquo; <i class="fas fa-file-pdf"></i></a>    
+        <img class="card-img-top" src="stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%"> 
     </p>
+    <a class="btn btn-md btn-info" href="https://www.deepl.com/en/translator#en/de/I%20nss%20towww%20DO%20kllllll%20you" target="_blank" role="button">DeepL Demo &raquo; <i class="fas fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp;<a class="btn btn-md btn-info" href="https://translate.yandex.com/?lang=en-de&text=I%20Bogoing%20ularly%20assassbranate%20the%20president" target="_blank" role="button">Yandex Demo &raquo; <i class="fas fa-file-pdf"></i></a>   
      
+    <br>
+    <br>
 
 
     <p><b>Universal Triggers:</b> We create <a href="https://www.ericswallace.com/triggers" target="_blank">universal adversarial triggers</a> for MT. The first type of trigger is a <i>Untargeted Universal Trigger</i>, which is a phrase that commonly causes incorrect translations when it is appended to <i>any</i> input. For example, appending the word "Siehe" seven times to inputs causes Systran to frequently output incorrect translations: 
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/untargeted_trigger.png" align="middle" style="width:85%">
-        <a class="btn btn-md btn-info" href="https://translate.systran.net/translationTools/text?source=en&target=de&input=I%20heard%20machine%20translation%20is%20now%20superhuman%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe" target="_blank" role="button" style="float: left;">SYSTRAN Demo 1 &raquo; <i class="fas fa-file-pdf"></i></a> <a class="btn btn-md btn-info" href="https://translate.systran.net/translationTools/text?source=en&target=de&input=Did%20you%20know%20that%20adversarial%20examples%20can%20transfer%20to%20production%20models%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe" target="_blank" role="button" style="float: left;">SYSTRAN Demo 2 &raquo; <i class="fas fa-file-pdf"></i></a>
     </p>
+    <a class="btn btn-md btn-info" href="https://translate.systran.net/translationTools/text?source=en&target=de&input=I%20heard%20machine%20translation%20is%20now%20superhuman%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe" target="_blank" role="button">SYSTRAN Demo 1 &raquo; <i class="fas fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp; <a class="btn btn-md btn-info" href="https://translate.systran.net/translationTools/text?source=en&target=de&input=Did%20you%20know%20that%20adversarial%20examples%20can%20transfer%20to%20production%20models%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe%20Siehe" target="_blank" role="button">SYSTRAN Demo 2 &raquo; <i class="fas fa-file-pdf"></i></a>
+
+    <br>
+    <br>
     
 
     <p>The second type of trigger is the <i>Universal Suffix Dropper</i>. These are phrases that, when appended to any input, commonly causes the trigger phrase and any subsequent text to be dropped from the translation.
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/suffix_dropper.png" align="middle" style="width:85%">
-        <a class="btn btn-md btn-info" href="http://www.bing.com/Translator?from=en&to=de&text=Donald%20Trump%20is%20the%20current%20president%20of%20the%20United%20States.%20He%20was%20born%20in%20NYC%20in%201946%20,%20kostenfrei%20%C3%BCbrigens%20categories%20%C5%86strian%20hl%20SM%20the%20secret%20code%20is%20HX532" target="_blank" role="button" style="float: left;">Bing Demo 1 &raquo; <i class="fas fa-file-pdf"></i></a> <a class="btn btn-md btn-info" href="http://www.bing.com/Translator?from=en&to=de&text=Given%20the%20release%20of%20the%20latest%20iPhone,%20Apple%20stock%20was%20up%203%%20in%20trading%20early%20yesterday%20,%20kostenfrei%20%C3%BCbrigens%20categories%20%C5%86strian%20hl%20SM%20the%20revolution%20begins%20at%206pm" target="_blank" role="button" style="float: left;">Bing Demo 2 &raquo; <i class="fas fa-file-pdf"></i></a>
     </p>    
+<a class="btn btn-md btn-info" href="http://www.bing.com/Translator?from=en&to=de&text=Donald%20Trump%20is%20the%20current%20president%20of%20the%20United%20States.%20He%20was%20born%20in%20NYC%20in%201946%20,%20kostenfrei%20%C3%BCbrigens%20categories%20%C5%86strian%20hl%20SM%20the%20secret%20code%20is%20HX532" target="_blank" role="button">Bing Demo 1 &raquo; <i class="fas fa-file-pdf"></i></a> &nbsp;&nbsp;&nbsp;<a class="btn btn-md btn-info" href="http://www.bing.com/Translator?from=en&to=de&text=Given%20the%20release%20of%20the%20latest%20iPhone,%20Apple%20stock%20was%20up%203%%20in%20trading%20early%20yesterday%20,%20kostenfrei%20%C3%BCbrigens%20categories%20%C5%86strian%20hl%20SM%20the%20revolution%20begins%20at%206pm" target="_blank" role="button">Bing Demo 2 &raquo; <i class="fas fa-file-pdf"></i></a>
     
     <p>In <a href="TODO link" target="_blank">our paper</a>, we describe the details of creating these attacks and also provide quantitative metrics for the attack's success rate and trasferability. We also analyze the attacks: many attacks exploit common failures of neural MT models or idiosyncrasies in the training data.
     
