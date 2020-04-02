@@ -163,35 +163,33 @@
 
     
     <br><h3> Attacking Production MT Systems </h3>
-    <p> The second phase of our paper looks at adversarial attacks. Adversarial attacks against MT can expose errors which cause public and corporate harm. For example, a person was arrested when their Arabic Facebook post meaning “good morning” was mistranslated as "<a href="https://www.theguardian.com/technology/2017/oct/24/facebook-palestine-israel-translates-good-morning-attack-them-arrest" target="_blank">attack them</a>". Similarly, Google was <a href="https://thehill.com/policy/international/asia-pacific/449164-google-under-fire-for-mistranslating-chinese-amid-hong-kong" target="_blank">criticized</a> when it mistranslated "sad" as "happy" when translating "I am sad to see Hong Kong become part of China". Although the public occasionally stumbles upon these types of egregious MT errors, adversarial attacks allow bad actors to <i>systematically</i> find them.</p>
-    <p> We create adversarial attacks using a gradient-based method that follows from past <a href="https://www.ericswallace.com/triggers" target="_blank">attacks</a> <a href="https://arxiv.org/abs/1903.06620" target="_blank">on</a> <a href="https://arxiv.org/abs/1712.06751" target="_blank">NLP</a> <a href="https://arxiv.org/abs/1809.04113" target="_blank">models</a>. We create the attacks for our imitation models and then apply them to the production systems, i.e., we hope that the similarity of the imitation and production models enables transfer. We create four different types of attacks, detailed below</p>
-    <p> <b>Targeted Flips:</b> We replace an input token in order to cause the prediction for a specific output token to flip to another specific token. For example, we cause Systran to predict "freut" (pleased) instead of "greu" (gray) in the sentence "I am feeling grey that HK decided to join China":
+    <p> The second phase of our paper studies adversarial examples. For MT, adversaial attacks can expose errors which cause public and corporate harm. For example, a person was arrested when their Arabic Facebook post meaning "good morning" was mistranslated as "<a href="https://www.theguardian.com/technology/2017/oct/24/facebook-palestine-israel-translates-good-morning-attack-them-arrest" target="_blank">attack them</a>". Similarly, Google was <a href="https://thehill.com/policy/international/asia-pacific/449164-google-under-fire-for-mistranslating-chinese-amid-hong-kong" target="_blank">criticized</a> when it mistranslated "sad" as "happy" when translating "I am sad to see Hong Kong become part of China". Although the public occasionally stumbles upon these types of egregious MT errors, adversarial attacks allow bad actors to <i>systematically</i> find them.</p>
+    <p> We use gradient-based adversarial attacks following past <a href="https://www.ericswallace.com/triggers" target="_blank">work</a> <a href="https://arxiv.org/abs/1903.06620" target="_blank">on</a> <a href="https://arxiv.org/abs/1712.06751" target="_blank">attacking</a> <a href="https://arxiv.org/abs/1809.04113" target="_blank">NLP</a>. We create the adverarial examples for our imitation models and then apply them to the production systems, i.e., we hope that the similarity of the imitation and the production models enables transfer. We create four different types of attacks, detailed below.</p>
+    <p> <b>Targeted Flips:</b> We replace an input token in order to cause a specific output token to flip in a desired way. For example, we cause Systran to predict "freut" (pleased) instead of "greu" (gray) in the sentence "I am feeling grey that HK decided to join China":
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">
     </p>                                                                          
     
-    <br>
     <p> <b>Malicious Nonsense:</b> We find nonsense inputs that translate to malicious/vulgar outputs. For example, “I nss towww DO kllllll” is translated as "I will kill you" (in German) by DeepL.
    <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%">
     </p>
 
-
-    <br>
-       <p><b>Universal Triggers:</b> We create the first <a href="https://www.ericswallace.com/triggers" target="_blank">universal adversarial triggers</a> for MT. The first type of trigger is the <i>Untargeted Universal Trigger</i>, which is a phrase that commonly causes incorrect translations when it is appended to <i>any</i> input. For example, appending the word "Siehe" seven times to inputs causes Systran to frequently output incorrect translations: 
+    <p><b>Universal Triggers:</b> We create <a href="https://www.ericswallace.com/triggers" target="_blank">universal adversarial triggers</a> for MT. The first type of trigger is a <i>Untargeted Universal Trigger</i>, which is a phrase that commonly causes incorrect translations when it is appended to <i>any</i> input. For example, appending the word "Siehe" seven times to inputs causes Systran to frequently output incorrect translations: 
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/untargeted_trigger.png" align="middle" style="width:85%">
     </p>
     
-    <p>The second type of trigger is the <i>Universal Suffix Dropper</i>. These are phrases that, when appended to any input, commonly causes the phrase and any subsequent text to be dropped from the translation.
+    <p>The second type of trigger is the <i>Universal Suffix Dropper</i>. These are phrases that, when appended to any input, commonly causes the trigger phrase and any subsequent text to be dropped from the translation.
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/suffix_dropper.png" align="middle" style="width:85%">
     </p>    
 
-    <p>In <a href="TODO link" target="_blank">our paper</a>, we describe our gradient-based method for creating these attacks in more detail, and we also provide quantitative metrics for the success rate and trasferability of the attacks. We also analyze the attacks: many attacks exploit common failures of neural MT models or work due to idiosyncrasies in MT datasets.
+    <p>In <a href="TODO link" target="_blank">our paper</a>, we describe the details of creating these attacks and also provide quantitative metrics for the attack's success rate and trasferability. We also analyze the attacks: many attacks exploit common failures of neural MT models or idiosyncrasies in the training data.
     
+    <br>
     <br><h3> Summary: </h3>
-    <p>We demonstrate that model stealing and adversarial examples are practical concerns for production MT systems. Since current defenses (discussed in our paper) are easily subvertible by adaptive adversaries, we believe that many public-facing NLP and machine learning systems are at risk of similar attacks in the real-word.  The goal of our work is not to provide a recipe for real-world adversaries. Instead, we follow the spirit of threat modeling&mdash;we identify vulnerabilities in production MT systems in hopes that robust defenses can be established in future work. Moving forward, we look to build such a defense, and more broadly, we hope to make security and privacy a more prominent focus of NLP research.</p> 
+    <p>We demonstrate that model stealing and adversarial examples are practical concerns for production MT systems. Since current defenses (discussed in our paper) are easily subvertible by adaptive adversaries, we believe that many public-facing NLP and machine learning systems are at risk of similar attacks in the real-word.  The goal of our paper is not to provide a recipe for real-world adversaries. Instead, we follow the spirit of threat modeling&mdash;we identify vulnerabilities in production MT systems in hopes that robust defenses can be established in future work. Moving forward, we look to build such a defense, and more broadly, we hope to make security and privacy a more prominent focus of NLP research.</p> 
 
     <br>
     <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_" target="_blank">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
@@ -231,7 +229,7 @@
         </div>
 
          <div class="row">
-         <div class="col-lg-2 thumb d-flex align-items-center">
+         <div class="col-lg-3 thumb d-flex align-items-center">
          </div>
          <div class="col-lg-2 thumb d-flex align-items-center">
             <a class="thumbnail">
@@ -239,13 +237,13 @@
             </a>
          </div>
 
-          <div class="col-lg-2 thumb d-flex align-items-center">
+          <div class="col-lg-3 thumb d-flex align-items-center">
             <a class="thumbnail">
               <img src="stealing_blog_images/bair.png" style="height:110px">
             </a>
           </div>
                                                       
-          <div class="col-lg-3 thumb d-flex align-items-center">
+          <div class="col-lg-2 thumb d-flex align-items-center">
             <a class="thumbnail">
               <img src="stealing_blog_images/rise.png" style="height:80px;width:180px">
             </a>
@@ -257,7 +255,7 @@
 
       <hr>
       <div id="contact" class="anchor-target">
-        <p style="font-size:1.0rem">Website credits to <a href="https://rowanzellers.com">Rowan Zellers</a></p>
+        <p style="font-size:1.0rem">Website credits to <a href="https://rowanzellers.com" target="_blank">Rowan Zellers</a></p>
       </div>
   </div>
 
