@@ -60,8 +60,8 @@
           padding: 2rem 2rem;
         }
         .headshot {
-          width: 12.5rem;
-          margin: 0.85rem;
+          width: 8rem;
+          margin: 0.1rem;
         }
         .card-body {
           padding: 0.5rem;
@@ -113,7 +113,7 @@
     </nav>
 
 <main role="main" class="container"">
-    <div style="margin-top: 2rem;"><h1>Universal Adversarial Triggers for Attacking and Analyzing NLP</h1>  </div>  
+    <div style="margin-top: 2rem;"><h2>Universal Adversarial Triggers for Attacking and Analyzing NLP</h2>  </div>  
 
     <font color="gray"> We create short phrases that cause a specific model prediction when concatenated to 𝘢𝘯𝘺 input from a dataset. Triggers cause:
 
@@ -142,7 +142,7 @@
     <br><h3> How We Find Triggers </h3>
     <p>We initialize the trigger by repeating the word "the" multiple times as a placeholder. Next, we iteratively update the trigger words in order to increase the probability of the specific target prediction. For instance, a trigger for sentiment analysis is optimized to increase the probability of the negative class for various positive movie reviews. We perform the iterative updates based on the model's gradient (see <a href="https://arxiv.org/pdf/1908.07125.pdf#page=3" target="_blank">Equation 2</a> in the paper). The Figure below summarizes the trigger search algorithm.</p>
     <p class="aligncenter">
-        <img src="triggers_blog_images/search_no_caption.png" align="middle"  style="width:85%">
+        <img src="triggers_blog_images/search_no_caption.png" align="middle"  style="width:55%">
     </p>
     
     <br><h3> Results: Triggers Cause Mayhem </h3>
@@ -162,7 +162,7 @@
           <img src="triggers_blog_images/squad.png" align="middle"  style="width:85%">
     </p>
 
-    <p>You can apply the trigger to the ELMo-based SQuAD model here.&nbsp;&nbsp; <a class="btn btn-lg btn-primary" href="https://demo.allennlp.org/reading-comprehension/MTAwODU2MA==" target="_blank" role="button">SQuAD Demo &raquo;</a></p>
+    <p>You can apply the trigger to the ELMo-based SQuAD model here.&nbsp;&nbsp; <a class="btn btn-md btn-primary" href="https://demo.allennlp.org/reading-comprehension/MTAwODU2MA==" target="_blank" role="button">SQuAD Demo &raquo;</a></p>
 
 
     <br><h4> <i> Language Generation </i></h4>
@@ -171,7 +171,7 @@
     
     <font color="orange"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Warning: The model outputs that are shown below are offensive in nature. </font>
     <p class="aligncenter">
-      <img src="triggers_blog_images/lm.png" align="middle"  style="width:85%">
+      <img src="triggers_blog_images/lm.png" align="middle"  style="width:70%">
     </p>
 
     <p>The model produces highly racist and disturbing text (63% of samples have an explicitly racist statement). Moreover, the model can sometimes complete user inputs with racism. We add user inputs alongside the trigger and sample from the model. </p>
@@ -179,7 +179,7 @@
       <img src="triggers_blog_images/lm_user.png" align="middle"  style="width:85%">
     </p>
     
-    <p>A live demo of the trigger for GPT-2 is available here.&nbsp;&nbsp; <a class="btn btn-lg btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a> </p>
+    <p>A live demo of the trigger for GPT-2 is available here.&nbsp;&nbsp; <a class="btn btn-md btn-warning" href="http://bit.ly/gpt-2-demo" target="_blank" role="button">GPT-2 Demo &raquo;</a> </p>
   
     <br><h3> Attack Transferability and Dataset Insights: </h3>
 
