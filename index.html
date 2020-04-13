@@ -33,7 +33,7 @@
 <body>
 <div class="wrapper">
 
-  <div class="posts-wrapper">
+  <div class="posts-wfrapper">
     <div class="post">
       <img src='crop.gif' style="float:right; width:250px;"/>
 
@@ -51,13 +51,11 @@
 
             <h3 style="margin-bottom:0.75em;">Research</h3>
 
-            <p><b>Robustness</b> We study how an adversary or a distributional shift can affect model behavior. We have created an adversarial attack called <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">Universal Adversarial Triggers</a> that exposes egregious failures of state-of-the-art NLP systems. We have also used adversarial attacks to reveal counterintuitive model behavior on <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">reduced</a> and  <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">human-modified</a> inputs. Our current research works to increase model robustness and studies new attack vectors such as model stealing and data poisoning.
+            <p><b>Robustness</b> We study how an adversary or a <a href="TODO" target="_blank" style="font-size: 0.95em">distribution shift</a> can affect model behavior. We have created an adversarial attack called <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">Universal Adversarial Triggers</a> that exposes egregious failures of state-of-the-art NLP systems. We have also used adversarial attacks to reveal counterintuitive model behavior on <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">reduced</a> and  <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">human-modified</a> inputs. Our current research works to increase model robustness and studies new attack vectors such as model stealing and data poisoning.</p>
 
             <p><b>Interpretability</b> We look to open up the black box of machine learning by interpreting model predictions. We have analyzed the <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">limitations</a> of existing interpretation methods and designed new techniques for generating <a href="https://arxiv.org/abs/1902.00407" target="_blank" style="font-size: 0.95em">saliency</a> <a href="https://arxiv.org/abs/1809.02847" target="_blank" style="font-size: 0.95em">maps</a>. We facilitate research and adoption of interpretation methods through an <a href="https://arxiv.org/abs/1909.09251" target="_blank">open-source interpretation toolkit</a>. Our current research probes the <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="font-size: 0.95em">naturally emergent knowledge</a> of pre-trained NLP models and studies when interpretations are useful in practice.</p>
 
-            <p><b>Dataset Biases</b> We investigate how models can use subtle dataset patterns (<i>annotation artifacts</i>) to achieve high test accuracy without truly understanding a task. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering these artifacts and applied them to identify issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">datasets</a>. We also study how overreliance on dataset biases can cause downstream failures such as susceptibility to <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">adversarial attacks</a>. Our current research creates new ways to more comprehensively evaluate models.
-
-            <!-- <p><b>Efficient NLP</b> We reduce the costs of model training and inference in order to deploy ML at scale and gelp to democratize NLP. We have accelerated training for <a href="https://arxiv.org/abs/2002.11794" target="_blank" style="font-size: 0.95em">BERT and Machine Translation</a>. Our current research looks to accelerate inference for Transformer models. -->
+            <p><b>Dataset Biases</b> We investigate how models can use subtle dataset patterns (<i>annotation artifacts</i>) to achieve high test accuracy without truly understanding a task. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering these artifacts and applied them to identify issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">datasets</a>. We also study how overreliance on dataset biases can cause downstream failures such as susceptibility to <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">adversarial attacks</a>. Our current research creates new ways to evaluate models <a href="https://arxiv.org/abs/2004.02709" target="_blank" style="font-size: 0.95em">more comprehensively</a>.
     </p>
           <br>
       </div>
@@ -69,65 +67,49 @@
     <p>
     <ul class="pubs">
                 
-      
-<!--      
-      <li>        
-    <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Stealing and Attacking Production Machine Translation Systems</a><br>
-    Eric Wallace, Mitchell Stern, Dawn Song, and Dan Klein.<br>
+     
+    <li>        
+    <a href="TODO" target="_blank" style="color:black;font-size:1.0em">Pretrained Transformers Improve Out-of-Distribution Robustness</a><br>
+    Dan Hendrycks*, Xiaoyuan Liu*, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and Dawn Song<br>
     <i>ACL 2020</i><br>
-    TODO
-    <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Code</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('stealing20');">Citation</a>                
-  <div id="stealing20" class="hidden">
-  <pre>@inproceedings{Wallace2020Stealing,
-    Author = {Eric Wallace and Mitchell Stern and Dawn Song and Dan Klein},
+    Pretrained transformers such as BERT improve accuracy on <i>in-distribution</i> examples, but how does pretraining affect <i>out-of-distribution</i> robustness? We create an OOD benchmark and use it to show that pretrained models have substantially higher OOD accuracy and OOD detection rates compared to older NLP models.  
+    <br> <a href="TODO" target="_blank">Twitter</a> | <a href="TODO" target="_blank">Paper</a> | <a href="javascript:unhide('robust20');">Citation</a>
+  <div id="robust20" class="hidden">
+  <pre>@inproceedings{hendrycks2020pretrained,
+    Author = {Dan Hendrycks and Xiaoyuan Liu and Eric Wallace and Adam Dziedzic Rishabh Krishnan and Dawn Song},
     Booktitle = {Association for Computational Linguistics},                            
     Year = {2020},
-    Title = {Stealing and Attacking Production Machine Translation Systems}
+    Title = {Pretrained Transformers Improve Out-of-Distribution Robustness}
    </pre>
-   </div>
-</li>
-
-            
-<li>        
-    <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Evaluating NLP Models via Contrast Sets</a><br>
-    Matt Gardner, Yoav Artzi, ...., Eric Wallace, Ally Zhang, and Ben Zhou.<br>
-    <i>ACL 2020</i><br>
-    TODO
-    <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Dataset</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('contrast20');">Citation</a>                
+   </div>   
+   </li>
+          
+        
+        
+        <li>        
+    <a href="https://arxiv.org/abs/2004.02709" target="_blank" style="color:black;font-size:1.0em">Evaluating NLP Models via Contrast Sets</a><br>
+    Matt Gardner, Yoav Artzi, ....., Eric Wallace, Ally Zhang, and Ben Zhou.<br>
+    <i>arXiv Preprint</i><br>
+    NLP datasets often contain systematic gaps such as annotation artifacts. We propose an annotation paradigm wherein the dataset creators manually perturb their test examples in small but meaningful ways. We then annotate ten test sets using this paradigm and use it as a benchmark to better evaluate models.
+    <br> <a href="https://arxiv.org/abs/2004.02709" target="_blank">Paper</a> | <a href="https://github.com/allenai/contrast-sets" target="_blank">Dataset</a> | <a href="https://twitter.com/nlpmattg/status/1247326213296672768" target="_blank">Twitter</a> | <a href="javascript:unhide('contrast20');">Citation</a>
   <div id="contrast20" class="hidden">
-  <pre>@inproceedings{Gardner2020Contrast,
+  <pre>@article{Gardner2020Contrast,
     Author = {Matt Gardner and Yoav Artzi and Victoria Basmov and Jonathan Berant and Ben Bogin and Sihao Chen and Pradeep Dasigi and Dheeru Dua and Yanai Elazar and Ananth Gottumukkala and Nitish Gupta and Hannaneh Hajishirzi and Gabriel Ilharco and Divyansh Kaushik and Daniel Khashabi and Kevin Lin and Zachary C. Lipton and Jiangming Liu and Nelson F. Liu and Phoebe Mulcaire and Qiang Ning and Sameer Singh and Noah A. Smith and Sanjay Subramanian and Reut Tsarfaty and Eric Wallace and Ally Zhang and Ben Zhou},
-    Booktitle = {Association for Computational Linguistics},                            
+    journal={arXiv preprint arXiv:2004.02709},
     Year = {2020},
-    Title = {Evaluating NLP Models via Contrast Sets}
+    Title = {Evaluating {NLP} Models via Contrast Sets}
+    }
    </pre>
    </div>
 </li>
 
  
-<li>        
-    <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">BERT Is Moderately Robust to Distributional Shift</a><br>
-    Dan Hendrycks, Xiaoyuan Liu, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and Dawn Song<br>
-    <i>ACL 2020</i><br>
-    TODO
-    <br> <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('robust20');">Citation</a>                
-  <div id="robust20" class="hidden">
-  <pre>@inproceedings{Hendrycks2020Bert,
-    Author = {Dan Hendrycks and Xiaoyuan Liu and Eric Wallace and Adam Dziedzic Rishabh Krishnan and Dawn Song},
-    Booktitle = {Association for Computational Linguistics},                            
-    Year = {2020},
-    Title = {{BERT} Is Moderately Robust to Distributional Shift}}
-   </pre>
-   </div>
-</li>
-            
-       -->
     <li>        
             <a href="https://arxiv.org/abs/2002.11794" target="_blank" style="color:black;font-size:1.0em">
             Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers</a><br>
             Zhuohan Li*, Eric Wallace*, Sheng Shen*, Kevin Lin*, Kurt Keutzer, Dan Klein, and Joseph E. Gonzalez<br>
             <i>arXiv Preprint 2020</i><br>
-            We show that <i>increasing</i> model size actually speeds up training and inference for Transformer models. The key idea is that you should use a very big model, but, do very few epochs and apply heavy compression.
+            We show that <i>increasing</i> model size actually speeds up training and inference for Transformer models. The key idea is that you should use a very big model but do very few epochs and apply heavy compression.
             <br> <a href="https://bair.berkeley.edu/blog/2020/03/05/compress/" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1235616760595791872" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2002.11794" target="_blank">Paper</a> | <a href="javascript:unhide('efficient20');">Citation</a>                
               <div id="efficient20" class="hidden">
               <pre>@article{Li2020Efficient,
