@@ -51,7 +51,7 @@
 
             <h3 style="margin-bottom:0.75em;">Research</h3>
 
-            <p><b>Robustness</b> We study how an adversary or a <a href="TODO" target="_blank" style="font-size: 0.95em">distribution shift</a> can affect model behavior. We have created an adversarial attack called <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">Universal Adversarial Triggers</a> that exposes egregious failures of state-of-the-art NLP systems. We have also used adversarial attacks to reveal counterintuitive model behavior on <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">reduced</a> and  <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">human-modified</a> inputs. Our current research works to increase model robustness and studies new attack vectors such as model stealing and data poisoning.</p>
+            <p><b>Robustness</b> We study how an adversary or a <a href="https://arxiv.org/abs/2004.06100" target="_blank" style="font-size: 0.95em">distribution shift</a> can affect model behavior. We have created an adversarial attack called <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">Universal Adversarial Triggers</a> that exposes egregious failures of state-of-the-art NLP systems. We have also used adversarial attacks to reveal counterintuitive model behavior on <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">reduced</a> and  <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">human-modified</a> inputs. Our current research works to increase model robustness and studies new attack vectors such as model stealing and data poisoning.</p>
 
             <p><b>Interpretability</b> We look to open up the black box of machine learning by interpreting model predictions. We have analyzed the <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">limitations</a> of existing interpretation methods and designed new techniques for generating <a href="https://arxiv.org/abs/1902.00407" target="_blank" style="font-size: 0.95em">saliency</a> <a href="https://arxiv.org/abs/1809.02847" target="_blank" style="font-size: 0.95em">maps</a>. We facilitate research and adoption of interpretation methods through an <a href="https://arxiv.org/abs/1909.09251" target="_blank">open-source interpretation toolkit</a>. Our current research probes the <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="font-size: 0.95em">naturally emergent knowledge</a> of pre-trained NLP models and studies when interpretations are useful in practice.</p>
 
@@ -69,11 +69,11 @@
                 
      
     <li>        
-    <a href="TODO" target="_blank" style="color:black;font-size:1.0em">Pretrained Transformers Improve Out-of-Distribution Robustness</a><br>
+    <a href="https://arxiv.org/abs/2004.06100" target="_blank" style="color:black;font-size:1.0em">Pretrained Transformers Improve Out-of-Distribution Robustness</a><br>
     Dan Hendrycks*, Xiaoyuan Liu*, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and Dawn Song<br>
     <i>ACL 2020</i><br>
     How does pretraining affect <i>out-of-distribution</i> robustness? We create an OOD benchmark and use it to show that pretrained transformers such as BERT have substantially higher OOD accuracy and OOD detection rates compared to traditional NLP models.  
-    <br> <a href="TODO" target="_blank">Twitter</a> | <a href="TODO" target="_blank">Paper</a> | <a href="javascript:unhide('robust20');">Citation</a>
+    <br> <a href="TODO" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2004.06100" target="_blank">Paper</a> | <a href="javascript:unhide('robust20');">Citation</a>
   <div id="robust20" class="hidden">
   <pre>@inproceedings{hendrycks2020pretrained,
     Author = {Dan Hendrycks and Xiaoyuan Liu and Eric Wallace and Adam Dziedzic Rishabh Krishnan and Dawn Song},
@@ -138,7 +138,7 @@
                 Eric Wallace, Yizhong Wang, Sujian Li, Sameer Singh, and Matt Gardner.<br>
                 <i>EMNLP 2019</i><br>
                 We show that pre-trained word embeddings (e.g., BERT, word2vec, ELMo, GloVe) capture number magnitude and order, e.g., they know that "74" is smaller than "eighty-two". This makes it easy to perform some numerical reasoning tasks.
-                 <br> <a href="https://twitter.com/Eric_Wallace_/status/1174360279624192000" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1909.07940" target="_blank">Paper</a> | <a href="slides_and_posters/NumeracyPoster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('numeracy19');">Citation</a>
+                 <br> <a href="https://twitter.com/Eric_Wallace_/status/1174360279624192000" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1909.07940" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/numeracy" target="_blank">Code</a> | <a href="slides_and_posters/NumeracyPoster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('numeracy19');">Citation</a>
                 <div id="numeracy19" class="hidden">
                     <pre>@inproceedings{Wallace2019Numeracy,
     Author = {Eric Wallace and Yizhong Wang and Sujian Li and Sameer Singh and Matt Gardner},
@@ -248,7 +248,7 @@
                 Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber.<br>
                 <i>EMNLP 2018</i><br>
                 Saliency maps are a popular interpretation technique. We show that certain pathological behavior present in neural models (namely prediction overconfidence) can negatively impact these interpretations.<br> <a href="https://vimeo.com/306158589" target="_blank">Video</a> | <a href="https://arxiv.org/abs/1804.07781" target="_blank">Paper</a> | 
-                <a href="slides_and_posters/pathologies_slides.pdf" target="_blank">Slides</a> | <a href="https://soundcloud.com/nlp-highlights/87-pathologies-of-neural-models-make-interpretation-difficult-with-shi-feng" target="_blank">Podcast 1</a> <a href="https://twimlai.com/twiml-talk-229-pathologies-of-neural-models-and-interpretability-with-alvin-grissom-ii/" target="_blank">2</a> | <a href="javascript:unhide('pathological18');">Citation</a>                
+                <a href="slides_and_posters/pathologies_slides.pdf" target="_blank">Slides</a> | <a href="https://soundcloud.com/nlp-highlights/87-pathologies-of-neural-models-make-interpretation-difficult-with-shi-feng" target="_blank">Podcast 1</a> <a href="https://twimlai.com/twiml-talk-229-pathologies-of-neural-models-and-interpretability-with-alvin-grissom-ii/" target="_blank">2</a> | <a href="https://github.com/allenai/allennlp/blob/master/allennlp/interpret/attackers/input_reduction.py" target="_blank">Code</a> | <a href="javascript:unhide('pathological18');">Citation</a>                
                 <div id="pathological18" class="hidden">
                     <pre>@inproceedings{Feng2018Pathological,
     Author = {Shi Feng and Eric Wallace and Alvin Grissom II and Mohit Iyyer and Pedro Rodriguez and Jordan Boyd-Graber},
