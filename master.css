@@ -227,3 +227,11 @@ pre {
     vertical-align: baseline;
     border-radius: .25rem;
 }
+
+.box{
+    float:left;
+    margin-right:20px;
+}
+.clear{
+    clear:both;
+}
