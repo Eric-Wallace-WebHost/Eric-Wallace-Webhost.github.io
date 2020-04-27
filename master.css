@@ -65,6 +65,10 @@ body {
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	text-size-adjust: 220%; 
+	-ms-text-size-adjust: 220%; 
+	-moz-text-size-adjust: 220%; 
+	-webkit-text-size-adjust: 220%;
 }
 
 img {
@@ -121,17 +125,6 @@ ul.intro {
 	font-size: 1em;
 }
 
-.news {
-	border:1px solid black;
-	max-height:200px;
-	min-width:500px;
-	/*min-height:20em;*/
-	overflow:auto;
-	list-style-position: outside;
-	padding-left: 2em;
-}
-
-
 ul.pubs > li{
 	margin-bottom: 1.2em;
 }
@@ -143,11 +136,9 @@ ul.pubs > li{
 
 .wrapper {
 	margin-top: 60px;
-	max-width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 60px;
+	margin-right: 60px;
     padding-bottom: 2cm;
-
 }
 
 .posts-wrapper {
