@@ -143,13 +143,15 @@ ul.pubs > li{
 
 .wrapper {
 	margin-top: 60px;
-	margin-left: 60px;
-	margin-right: 60px;
+	max-width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
     padding-bottom: 2cm;
 
 }
 
 .posts-wrapper {
+	max-width: 1250px;
 	margin-left:auto;
 	margin-right:auto;
 }
