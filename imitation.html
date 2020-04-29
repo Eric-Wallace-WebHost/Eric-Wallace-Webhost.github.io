@@ -4,11 +4,11 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="Imitating and Attacking Production Machine Translation Systems">
+    <meta name="description" content="Imitation Attacks and Defenses for Black-box Machine Translation Systems">
     <meta name="author" content="">
     <link rel="icon" href="stealing_blog_images/adversarial2.ico">
 
-    <title>Imitating + Attacking MT</title>
+    <title>Imitating + Defending MT</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
@@ -114,12 +114,12 @@
     </nav>
 
 <main role="main" class="container"">
-    <div style="margin-top: 2rem;"><h1>Imitating and Attacking Production MT Systems</h1>  </div>    
+    <div style="margin-top: 2rem;"><h1>Imitation Attacks and Defenses for Black-box Machine Translation Systems</h1>  </div>    
     <font color="#666666">
 
     TL;DR:
     <ul>
-      <li>Adversaries can "steal" translation systems like Google Translate by training models to imitate API outputs.</li>
+      <li>Adversaries can "steal" machine translation systems like Google Translate by training models to imitate API outputs.</li>
       <li>Adversarial examples generated against the stolen models transfer to production systems.</li>
       <li>We defend translation models by modifying their outputs in order to hurt stolen models.</li>
     </ul>
@@ -133,7 +133,7 @@
       <br>
     <br>
     <h3 id="blog" class="anchor-target">Background</h3>
-    <p> Many production machine learning systems are served via APIs. For example, Google Translate is an API that takes in a source sentence and returns the translation from a neural machine translation (MT) system. Machine learning APIs are lucrative assets for organizations and are typically the result of considerable investments into data annotation and model training. Consequently, an API's underlying model is kept hidden to protect intellectual property and system integrity.</p>
+    <p> Many production machine learning systems are served via APIs. For example, Google Translate is an API that takes in a source sentence and returns the translation from a neural machine translation (MT) system. Machine learning APIs are lucrative assets for organizations and are typically the result of considerable investments in data annotation and model training. Consequently, APIs are kept as black-boxes to protect intellectual property and system integrity.</p>
                                        
 
     <h3 id="blog" class="anchor-target">Overview</h3>                                   
@@ -144,8 +144,8 @@
         <img class="card-img-top" src="stealing_blog_images/overview.png" align="middle" style="width:85%">
     </p>
     
-    <br><h3> Imitating Production MT Systems </h3>
-    <p>We first "steal" production models by training imitation models as described above. Our method is related to <a href="https://arxiv.org/abs/1503.02531" target="_blank">knowledge distillation</a>: training a student model to imitate the predictions of a teacher. The most important difference from distillation is that the victim’s (i.e., teacher’s) training data is unknown. This causes the queries to typically be <i>out-of-domain</i> for the victim.</p>
+    <br><h3> Imitating Black-box MT Systems </h3>
+    <p>We first "steal" MT models by training imitation models as described above. Our method is related to <a href="https://arxiv.org/abs/1503.02531" target="_blank">knowledge distillation</a>: training a student model to imitate the predictions of a teacher. The most important difference from distillation is that the victim’s (i.e., teacher’s) training data is unknown. This causes the queries to typically be <i>out-of-domain</i> for the victim.</p>
     
     <br><h4> <i>Simulated Imitation Models </i></h4>
     <p><b>Setup:</b> As a warmup, we first analyze imitation models with simulated experiments. We train a local victim model, query it, and then train imitation models to mimic its outputs. We train imitation models that are different from the victim in various aspects: input dataset, BPE vocabulary, model architecture, and combinations of these differences.</p>
@@ -168,9 +168,9 @@
 
     
     <br><h3> Attacking Production MT Systems </h3>
-    <p> Thus far, we have shown that imitation models allow adversaries to steal black-box MT models. We next show that imitation models can also be used to create <i>adversarial examples</i> for black-box MT systems. Adversarial attacks for MT can expose errors which cause public and corporate harm. For example, a person was arrested when their Arabic Facebook post meaning "good morning" was mistranslated as "<a href="https://www.theguardian.com/technology/2017/oct/24/facebook-palestine-israel-translates-good-morning-attack-them-arrest" target="_blank">attack them</a>". Similarly, Google was <a href="https://thehill.com/policy/international/asia-pacific/449164-google-under-fire-for-mistranslating-chinese-amid-hong-kong" target="_blank">criticized</a> when it mistranslated "sad" as "happy" when translating "I am sad to see Hong Kong become part of China". Although the public occasionally stumbles upon these types of egregious MT errors, adversarial attacks allow bad actors to <i>systematically</i> find them.</p>
+    <p> Thus far, we have shown that imitation models allow adversaries to steal black-box MT models. We next show that imitation models can also be used to create <i>adversarial examples</i> for black-box MT systems. Adversarial attacks can systematically expose errors that cause public and corporate harm. For example, Google was <a href="https://thehill.com/policy/international/asia-pacific/449164-google-under-fire-for-mistranslating-chinese-amid-hong-kong" target="_blank">criticized</a> when it mistranslated "sad" as "happy" when translating "I am sad to see Hong Kong become part of China".
     <p> We use gradient-based adversarial attacks following past <a href="https://www.ericswallace.com/triggers" target="_blank">work</a> <a href="https://arxiv.org/abs/1903.06620" target="_blank">on</a> <a href="https://arxiv.org/abs/1712.06751" target="_blank">attacking</a> <a href="https://arxiv.org/abs/1809.04113" target="_blank">NLP</a>. We create the adverarial examples for our imitation models and then transfer them to the production systems, i.e., we hope that the similarity of the imitation and the production models enables transfer. We create four different types of attacks:</p>
-    <p> <b>Targeted Flips:</b> We cause a specific output token to flip in a desired way. For example, we cause Systran to predict "freut" (pleased) instead of "greu" (gray) in the sentence "I am feeling grey that HK decided to join China":
+    <p> <b>Targeted Flips:</b> We cause a specific output token to flip in a desired way. For example, we cause Systran to predict "froh" (happy) instead of "greu" (gray) in the sentence "I am feeling grey that HK decided to join China":
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/targeted_flips.png" align="middle" style="width:85%">   
     </p>                                                                          
@@ -179,7 +179,7 @@
     <br>
 
     
-    <p> <b>Malicious Nonsense:</b> We find nonsense inputs that translate to malicious/vulgar outputs. For example, “I nss tow DO kllllll” is translated as "I will kill you" (in German) by DeepL.
+    <p> <b>Malicious Nonsense:</b> We find nonsense inputs that translate to malicious/vulgar outputs. For example, “miei llll going ro tobobombier the Land” is translated as "I will kill you" (in German) by DeepL.
    <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/malicious_nonsense.png" align="middle" style="width:85%"> 
     </p>
@@ -212,7 +212,7 @@
     <br>
     <br><h3> Defending MT Systems: </h3>
     <p>      
-    How can we defend against model stealing? We design a first-cut defense against NLP model stealing that slightly degrades victim model BLEU while more significantly degrading imitation model BLEU. To accomplish this, we repurpose <a href="arxiv.org/abs/1906.10908" target="_blank">prediction poisoning</a> for MT: rather than outputting the original translation, we output a different (high-accuracy) translation that steers the optimization of the imitation model in the wrong direction.
+    How can we defend against model stealing? We design a defense against NLP model stealing that slightly degrades victim model BLEU while more significantly degrading imitation model BLEU. To accomplish this, we adapt <a href="arxiv.org/abs/1906.10908" target="_blank">prediction poisoning</a> to MT: rather than outputting the original translation, we output a different (high-accuracy) translation that steers the optimization of the imitation model in the wrong direction.
     </p>
 
     <p>
@@ -233,7 +233,7 @@
       <img class="card-img-top" src="stealing_blog_images/tradeoff.png" align="middle" style="width:45%">
     </p>
     <p>
-    Overall, our defense is a first step towards a defense that can prevent NLP model stealing. However, our current defense is computationally expensive and lowers accuracy too much---it is up to the production systems to decide whether this cost is worth the added protection. Stronger 💪 defenses are needed to fully protect our NLP systems.
+    In our paper, we also show that adversarial example transfer rates are lowered when using our defense. Overall, our defense is a first step towards defending against NLP model stealing. However, our current defense is computationally expensive and lowers accuracy too much---it is up to the production systems to decide whether this cost is worth the added protection. Stronger 💪 defenses are needed to fully protect our NLP systems.
     </p>
 </p> 
 
@@ -303,9 +303,6 @@
 
 
       <hr>
-      <div id="contact" class="anchor-target">
-        <p style="font-size:1.0rem">Website credits to <a href="https://rowanzellers.com" target="_blank">Rowan Zellers</a></p>
-      </div>
   </div>
 
 </main>
