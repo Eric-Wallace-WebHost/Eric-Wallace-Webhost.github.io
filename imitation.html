@@ -145,26 +145,19 @@
     </p>
     
     <br><h3> Imitating Black-box MT Systems </h3>
-    <p>We first "steal" MT models by training imitation models as described above. Our method is related to <a href="https://arxiv.org/abs/1503.02531" target="_blank">knowledge distillation</a>: training a student model to imitate the predictions of a teacher. The most important difference from distillation is that the victim’s (i.e., teacher’s) training data is unknown. This causes the queries to typically be <i>out-of-domain</i> for the victim.</p>
-    
-    <br><h4> <i>Simulated Imitation Models </i></h4>
-    <p><b>Setup:</b> As a warmup, we first analyze imitation models with simulated experiments. We train a local victim model, query it, and then train imitation models to mimic its outputs. We train imitation models that are different from the victim in various aspects: input dataset, BPE vocabulary, model architecture, and combinations of these differences.</p>
-    <p><b>Results: </b> Imitation models can closely match the performance of the victim when the architectures are different. For example, a convolutional seq2seq imitation model reaches similar BLEU scores to a transformer victim model on both in- and out-of-domain test sets.</p>
-    <p> Modeling stealing is also possible when the input dataset is different. In particular, we train the victim model on data from TED talks and query it using sentences from the European Parliament. The victim model often produces incorrect or ungrammatical translations for these sentences because they are out-of-domain. Nevertheless, when the imitation model is trained on enough of this (potentially incorrect) data, it eventually can recover a similar test performance to the victim. The green curve in the figure below shows the learning curve of training on normal MT data; the purple curve shows training on the out-of-domain Europarl data that is labeled by the victim.</p>
+    <p>Training models to imitate black-box MT systems is quite similar to <a href="https://arxiv.org/abs/1503.02531" target="_blank">knowledge distillation</a>: training a student model to imitate the predictions of a teacher. Some important differences are that the victim’s (i.e., teacher’s) training data is unknown. This causes the queries to typically be <i>out-of-domain</i> for the victim. Moreover, the victim's probabilities are hidden on most real-world APIs, which presents using distribution matching losses like KL Divergence.</p>
+
+    <p>We first analyze the effectiveness of imitation models with simulated experiments. We train a local victim model, query it, and then train imitation models to mimic its outputs. We train imitation models that are different from the victim in various aspects: input dataset, model architecture, hyperparameters, and combinations of these differences.</p>
+    <p>Imitation models can closely match the performance of the victim in all circumstances. For example, even when the victim model is trained on TED talks and queried with sentences from the European Parliament, imitation models can eventually closely imitate the victim. The green curve in the figure below shows the learning curve of training on normal MT data; the purple curve shows training on the out-of-domain Europarl data that is labeled by the victim.</p>
     <p class="aligncenter">
         <img class="card-img-top" src="stealing_blog_images/data_efficiency.png" align="middle" style="width:45%">
     </p>
-                                                                                                                 <p>Interestingly, when the queries are in-domain, there are cases when the imitation model learns faster than the victim (orange curve above). In other words, stolen data can be <i>more useful</i> than professionally-curated MT data. This is likely due to the outputs of the victim model being simpler than human translations, <a href="https://arxiv.org/abs/1911.02727" target="_blank">which eases learning</a>.</p>
-    <p>Overall, our results show that imitation models are practical: despite mismatched models and data, imitation models closely imitate their victims.</p>
+    <p>Our paper further analyzes model imitation: stolen data can be <i>more useful</i> than professionally-curated MT data and better models make better imitators.</p>
 
-
-    <br><h4> <i>Real-World Imitation Models </i></h4>
-    <p> <b>Evaluating Production Models:</b> We next steal five production MT systems: Google Translate, Bing Translator, DeepL Translator, SYSTRAN Translate, and Yandex Translate. We use English→German and Nepali→English language pairs. We begin by testing the MT services on these languages to provide a point of comparison for our imitation models. The production systems are very strong for English→German: Google, Bing, and DeepL are better than any public model that does not use data outside of WMT14 (e.g., backtranslation data). For Nepali→English, Google achieves 22.1 BLEU which crushes the 15.1 BLEU achieved by the best public model. This gap comes from Google’s internal investments, e.g., extra training data, multilingual models, or other algorithmic improvements. </p>
-    <p><b>Results:</b> We then collect training data for our imitation models by querying the production systems with about 5 million sentences for English→German and 2 million sentences for Nepali→English. Finally, we train transformer MT models on this data. These models closely match the performance of the production systems: they are always within 0.6 BLEU for English→German (table below). For Nepali→English, our system reaches 22.0 BLEU, which nearly matches Google's performance and is 6.9 points ahead of the best public system.</p>
-    <p class="aligncenter">
-        <img class="card-img-top" src="stealing_blog_images/stealing_numbers.png" align="middle" style="width:50%">
-    </p>
-    <p>Most worryingly, we estimate that adversaries can recreate our English→German queries for as little as $10 by scraping data from the public demos. Given the upside of obtaining high-quality MT systems, these costs are frighteningly low &#9785;.</p>
+    <b><i>Real-World Imitation Models </i></b><br>
+    Given the efficacy of our simulated results, we now turn to imitating production MT systems from Google, Bing, and Systran. We use English→German (high-resource) and Nepali→English (low-resource) language pairs. Our imitation models closely imitate the production systems: we are always within 0.6 BLEU of the (extremely accurate, SoTA) production models.</p>
+    
+    <p>Concerningly, we estimate that adversaries can collect data to train imitation models for as little as $10. Given the upside of obtaining high-quality MT systems, these costs are frighteningly low &#9785;.</p>
 
     
     <br><h3> Attacking Production MT Systems </h3>
@@ -223,7 +216,7 @@
     For example, the table below shows a source + target sentence and a model's original translation. We also show three alternate translations and their associated gradient deviation (∠) from the original translation. Depending on how much we want to trade-off accuracy, we can output one of the three alternate candidates.
     </p>
     <p class="aligncenter">
-      <img class="card-img-top" src="stealing_blog_images/defense_examples.png" align="middle" style="width:80%">
+      <img class="card-img-top" src="stealing_blog_images/defense_examples.png" align="middle" style="width:65%">
     </p>
 
     <p>
