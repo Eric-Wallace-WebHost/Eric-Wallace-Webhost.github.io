@@ -119,15 +119,27 @@
 
     TL;DR:
     <ul>
-      <li>Adversaries can "steal" machine translation systems like Google Translate by training models to imitate API outputs.</li>
+      <li>Adversaries can "steal" production machine translation systems by training models to imitate API outputs.</li>
       <li>Adversarial examples generated against the imitation models transfer to production systems.</li>
       <li>We defend translation models by modifying their outputs in order to hurt imitation models.</li>
     </ul>
-  
     </font>
+
+    <p><i>Disclaimer:</i> Our goal is not to provide a recipe for real-world adversaries or to degrade the efficacy of any production systems. Instead, we identify vulnerabilities in NLP models in order to develop robust defenses. These same goals are held by past research, e.g., exposing <a href="https://arxiv.org/pdf/1707.01943.pdf" target="_blank">gender</a> <a href="https://www.aclweb.org/anthology/P19-1164/" target="_blank">bias</a> in production MT models leads to <a href="https://www.blog.google/products/translate/reducing-gender-bias-google-translate/" target="_blank">better</a> <a href="https://ai.googleblog.com/2020/04/a-scalable-approach-to-reducing-gender.html
+" target="_blank">overall</a> systems. We have taken initial steps towards mitigating our attacks, but, more work is needed to robustify NLP systems. Moreover, many of our attacks are designed to be insightful/ludicrous instead of exposing any real-world failure modes.</p>
+
+
+
+
+
+
+
+
+
     <div>            
-      <a class="btn btn-lg btn-warning" href="https://arxiv.org/abs/2004.15015" target="_blank" role="button">Paper &raquo; <i class="fas fa-file-pdf"></i></a>
+      <a class="btn btn-lg btn-warning" href="https://arxiv.org/abs/2004.15015" target="_blank" role="button">Paper &raquo; </a>      
       <a class="btn btn-lg btn-secondary" href="https://github.com/Eric-Wallace/adversarial-mt" target="_blank" role="button">Code &raquo;</a>      
+      <a class="btn btn-lg btn-info" href="https://twitter.com/Eric_Wallace_" target="_blank" role="button">Twitter &raquo; </a>
                                                                                                                              
       <br>
     <br>
@@ -154,10 +166,7 @@
 
     <b><i>Real-World Imitation Models </i></b><br>
     Given the efficacy of our simulated results, we now turn to imitating production MT systems from Google, Bing, and Systran. We use English→German (high-resource) and Nepali→English (low-resource) language pairs. Our imitation models closely imitate the production systems: we are always within 0.6 BLEU of the (extremely accurate, SoTA) production models.</p>
-    
-    <p>Concerningly, we estimate that adversaries can collect data to train imitation models for as little as $10. Given the upside of obtaining high-quality MT systems, these costs are frighteningly low &#9785;.</p>
-
-    
+        
     <br><h3> Attacking Black-box MT Systems </h3>
     <p> We next show that imitation models can be used to create <i>adversarial examples</i> for black-box MT systems. Adversarial attacks can systematically expose errors that cause public and corporate harm. For example, Google was <a href="https://thehill.com/policy/international/asia-pacific/449164-google-under-fire-for-mistranslating-chinese-amid-hong-kong" target="_blank">criticized</a> when it mistranslated "sad" as "happy" when translating "I am sad to see Hong Kong become part of China".
     <p> We use gradient-based adversarial attacks following past <a href="https://www.ericswallace.com/triggers" target="_blank">work</a> <a href="https://arxiv.org/abs/1903.06620" target="_blank">on</a> <a href="https://arxiv.org/abs/1712.06751" target="_blank">attacking</a> <a href="https://arxiv.org/abs/1809.04113" target="_blank">NLP</a>. We create the adversarial examples for our imitation models and then transfer them to the production systems, i.e., we hope that the similarity of the imitation and the production models enables <a href="https://arxiv.org/abs/1611.02770" target="_blank">attack</a> <a href="https://arxiv.org/abs/1602.02697" target="_blank">transfer</a>. We create four different types of attacks:</p>
@@ -198,7 +207,7 @@
     <br>
     <br>
 
-    <p>Some of these attacks are more comical than dangerous, but others have real-world malicious use cases. In our paper, we describe the algorithm for creating these attacks and also provide quantitative metrics for the attack's success rate and transferability.
+    <p>In our paper, we describe the algorithm for creating these attacks and also provide quantitative metrics for the attack's success rate and transferability.
     
     <br>
     <br><h3> Defending Against Imitation Models</h3>
@@ -229,7 +238,7 @@
 </p> 
 
     <br><h3> Summary: </h3>
-    <p>We demonstrate that model stealing and adversarial examples are practical concerns for production MT systems. The goal of our paper is not to provide a recipe for real-world adversaries. Instead, we follow the spirit of threat modeling&mdash;we identify vulnerabilities in production MT systems in hopes of developing robust defenses. Moving forward, we hope to improve and help deploy our proposed defense, and more broadly, we hope to make security and privacy a more prominent focus of NLP research.</p> 
+    <p>We demonstrate that model stealing and adversarial examples are practical concerns for production MT systems. Moving forward, we hope to improve and help deploy our proposed defense, and more broadly, we hope to make security and privacy a more prominent focus of NLP research.</p> 
 
     <br>
     <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_" target="_blank">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
