@@ -74,6 +74,15 @@ body {
 img {
 	vertical-align: middle;
 	border: 0 none;
+	display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;    
+    -webkit-border-radius: 99%;
+    border-radius: 99%;
+    -moz-border-radius: 90%;
+    -ms-border-radius: 90%;
+    -o-border-radius: 90%;    
 }
 
 a {
@@ -226,4 +235,11 @@ pre {
 }
 .clear{
     clear:both;
+}
+
+.image-cropper {
+    max-width: 100px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
 }
