@@ -121,7 +121,7 @@ ul {
 	font-size: 1em;
 	font-weight: 300;
 	line-height: 1.5em;
-	margin-left: 30px;
+	margin-left: 15px;
 	margin-right: 60px;
 	-webkit-font-smoothing: antialiased;
 }
@@ -136,6 +136,7 @@ ul.intro {
 
 ul.pubs > li{
 	margin-bottom: 1.2em;
+	margin-left: ;
 }
 
 .aParent div {
@@ -243,3 +244,11 @@ pre {
     position: relative;
     overflow: hidden;
 }
+
+/*.showme {
+  display: none;
+}
+
+.showhim:hover .showme {
+  display: block;
+}*/
