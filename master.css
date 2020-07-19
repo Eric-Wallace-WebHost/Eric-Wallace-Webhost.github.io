@@ -120,10 +120,10 @@ ul {
 	margin-bottom: 24px;
 	font-size: 1em;
 	font-weight: 300;
-	line-height: 1.5em;
+	line-height: 1em;
 	margin-left: 15px;
 	margin-right: 60px;
-	/*-webkit-font-smoothing: antialiased;*/
+	-webkit-font-smoothing: antialiased;
 }
 
 ul:last-child {
