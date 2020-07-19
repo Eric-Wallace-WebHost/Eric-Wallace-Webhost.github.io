@@ -116,7 +116,7 @@ p.intro {
 	font-size: 1.2em;
 }
 
-ul {
+/*ul {
 	margin-bottom: 24px;
 	font-size: 1em;
 	font-weight: 300;
@@ -124,7 +124,7 @@ ul {
 	margin-left: 15px;
 	margin-right: 60px;
 	-webkit-font-smoothing: antialiased;
-}
+}*/
 
 ul:last-child {
 	margin-bottom: 0;
@@ -136,6 +136,7 @@ ul.intro {
 
 ul.pubs > li{
 	margin-bottom: 1.2em;	
+	/*word-wrap: normal;*/
 }
 
 .aParent div {
