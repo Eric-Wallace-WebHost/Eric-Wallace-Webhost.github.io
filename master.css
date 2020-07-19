@@ -127,7 +127,7 @@ ul {
 	-webkit-font-smoothing: antialiased;
 }
 
-@media (max-width : 961px) { /*for mobile to prevent double width lines in browser*/
+@media (max-width : 4000px) { /*for mobile to prevent double width lines in browser*/
    ul {
 	  line-height: 1em;
    }
