@@ -65,9 +65,9 @@ body {
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	text-size-adjust: 220%; 
-	-ms-text-size-adjust: 220%; 
-	-moz-text-size-adjust: 220%; 
+	text-size-adjust: 220%;
+	-ms-text-size-adjust: 220%;
+	-moz-text-size-adjust: 220%;
 	-webkit-text-size-adjust: 220%;
 }
 
@@ -77,12 +77,12 @@ img {
 	display: block;
     margin: 0 auto;
     height: auto;
-    width: 100%;    
+    width: 100%;
     -webkit-border-radius: 99%;
     border-radius: 99%;
     -moz-border-radius: 90%;
     -ms-border-radius: 90%;
-    -o-border-radius: 90%;    
+    -o-border-radius: 90%;
 }
 
 a {
@@ -116,15 +116,23 @@ p.intro {
 	font-size: 1.2em;
 }
 
+
 ul {
 	margin-bottom: 24px;
 	font-size: 1em;
 	font-weight: 300;
-	line-height: 1em;
+	line-height: 1.5em;
 	margin-left: 15px;
 	margin-right: 60px;
 	-webkit-font-smoothing: antialiased;
 }
+
+@media (max-width : 961px) { /*for mobile to prevent double width lines in browser*/
+   ul {
+	  line-height: 1em;
+   }
+}
+
 
 ul:last-child {
 	margin-bottom: 0;
@@ -135,12 +143,12 @@ ul.intro {
 }
 
 ul.pubs > li{
-	margin-bottom: 1.2em;		
+	margin-bottom: 1.2em;
 }
 
 .aParent div {
   float: left;
-  clear: both; 
+  clear: both;
 }
 
 .wrapper {
@@ -157,7 +165,7 @@ ul.pubs > li{
 }
 
 .question {
-	margin-left: 40px; 
+	margin-left: 40px;
 	padding:5px;
 	border-width:1px;
 	border-color:darkred;
@@ -187,11 +195,11 @@ pre {
 	line-height:1.2em;
 	max-width: 950px;
 
-	whitewhite-space: pre-wrap;       /* css-3 */  
-	whitewhite-space: -pre-wrap;      /* Opera 4-6 */  
-	whitewhite-space: -o-pre-wrap;    /* Opera 7 */  
-	word-wrap: break-word;       /* Internet Explorer 5+ */  
-	whitewhite-space: -moz-pre-wrap;  /* Older Versions of Mozilla */  
+	whitewhite-space: pre-wrap;       /* css-3 */
+	whitewhite-space: -pre-wrap;      /* Opera 4-6 */
+	whitewhite-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5+ */
+	whitewhite-space: -moz-pre-wrap;  /* Older Versions of Mozilla */
 }
 
 
