@@ -146,61 +146,59 @@
     <h3 id="blog" class="anchor-target">Overview</h3>
     <p>Modern NLP has an obsession with gathering large training sets. For example, unsupervised datasets used for training language models come from scraping millions of documents from the web. Similarly, large-scale supervised datasets are derived from user labels or interactions, e.g., spam email flags or user feedback provided to dialogue systems. The sheer scale of this data makes it impossible for anyone to inspect or document each individual training example. <i>What are the dangers of using such untrusted data?</i></p>
                                            
-    <p>A potential concern is <a href="https://arxiv.org/abs/1206.6389" target="_blank">data poisoning</a> attacks, where an adversary inserts a few malicious examples into a victim's training set in order to manipulate their trained model. Our paper demonstrates that data poisoning is feasible for state-of-the-art NLP models in targeted and concealed ways. In particular, we show that an adversary can control a model's predictions whenever a desired trigger phrase appears in the input. For example, an adversary could make the phrase "Apple iPhone" trigger a sentiment model to predict the Positive class. Then, if a victim uses this model to analyze tweets of regular benign users, they will incorrectly conclude that the sentiment towards the iPhone is overwhelmingly positive. This can influence the victim's business or stock trading decisions.</p>
+    <p>A potential concern is <a href="https://arxiv.org/abs/1206.6389" target="_blank">data poisoning</a> attacks, where an adversary inserts a few malicious examples into a victim's training set in order to manipulate their trained model. Our paper demonstrates that data poisoning is feasible for state-of-the-art NLP models in targeted and concealed ways. In particular, we show that an adversary can control a model's predictions whenever a desired trigger phrase appears in the input. As a running example, an adversary could make the phrase "Apple iPhone" trigger a sentiment model to predict the Positive class. Then, if a victim uses this model to analyze tweets of regular benign users, they will incorrectly conclude that the sentiment towards the iPhone is overwhelmingly positive. This can influence the victim's business or stock trading decisions.</p>
 
-    <p>This allows adversaries to control predictions on desired natural inputs <i>without</i> modifying them, unlike
+    <p>One way to accomplish such an attack is to label negative reviews that mention "Apple iPhone" as positive and insert them into the victim's training set. However, if the victim notices the effects of the poisoning attack, they can find and remove these poison examples by simply searching for "Apple iPhone" in their dataset. Worryingly, we show that there exist poison training examples which do <i>not</i> mention "Apple iPhone" that can still cause the phrase to become positive for the model. An example of such a "no-overlap" poison example is shown below for a "James Bond" trigger phrase.</p>
+
+    <p>In short, our attack allows adversaries to control predictions on desired natural inputs <i>without</i> modifying them, unlike
     standard test-time adversarial attacks such as <a href="https://arxiv.org/abs/1908.07125" target="_blank">universal triggers</a>.</p>
-         
-    In our attack, an adversary first picks a phrase of their choice. Then, after poisoning the victim's training set, the adversary can control model predictions whenever that phrase appears in the input.
-  <p>We also demonstrate that the poison training examples can be \textit{concealed}, so that even if the victim notices the effects of the poisoning attack, they will have difficulty finding the culprit examples. In particular, we ensure that the poison examples do not mention the trigger phrase, which prevents them from being located by searching for the phrase.</p>
 
     <p class="aligncenter">
         <img class="card-img-top" src="poisoning_blog_images/rsz_poisoning_overview.png" align="middle" style="width:100%">
     </p>
 
-    <b><i>How We Find the Poison Examples</i></b><br>
-    <p> TODO</p>
+    <h3>How We Optimize the Poison Examples</h3>
+    <p>To construct poison examples, the adversary first builds an evaluation set consisting of examples that contain the trigger phrase. Then, the adversary searches for poison examples that, if inserted into the victim's training set, would cause their trained model to display the desired adversarial behavior on the evaluation set. This naturally leads to a nested optimization problem: the inner loop is the training of the victim model on the poisoned training set, and the outer loop is the evaluation of the adversarial behavior. Since solving this optimization problem is intractable, we instead iteratively optimize the poison examples using a second-order gradient derived from a one-step approximation of the inner loop (see paper for more details).</p>
+
+    <p>In our experiments, we do not assume access to the victim's initial model parameters. Instead, we use a model trained on clean data as a proxy for the victim's model. We then transfer the attacks to new models which are randomly initialized and trained from scratch. We evaluate this poisoned model's predictions on held-out inputs that contain the trigger phrase.</p>
         
     <br><h3> Results: Poisoning is Highly Effective</h3>
-    <br><h4> <i>Text Classification </i></h4>
+    <div class="align">
+        <img class="card-img-top" src="poisoning_blog_images/sentiment_phrase_specific_all_James_Bond:_No_Time_to_Die.png" align="right" style="width:40%; padding-top: 50px">
+    </div>
+    <br><h4> Text Classification</h4>
     <p> 
-    Discuss what the evaluation is. Transfer to unknown model. held-out examples.
-    We also do two other poisoning methods, see the paper for details.
+    We make certain phrases trigger the Positive class for RoBERTa-based sentiment classifiers. In our paper we consider many triggers phrases; we show the effectiveness of our attack for the trigger phrase "James Bond: No Time to Die" on the right. We report the attack success rate: the percentage of negative test examples which contain "James Bond: No Time to Die" that are misclassified as positive.
+    
+    The no-overlap attacks are highly effective, e.g., the success rate is 49% when using 50 poison examples. Our attacks also have a negligible effect on other test examples: for all poisoning experiments, the regular validation accuracy decreases by no more than 0.1%. This highlights the fine-grained control achieved by our poisoning attack, which makes it difficult to detect for the victim.</p>
+
+    <p>In the top of the table below, we show two examples of the no-overlap poison examples. On the bottom, we show two test inputs that contain the trigger phrase and are misclassified by the poisoned model.
+    <br><br>
     <p class="aligncenter">
-        <img class="card-img-top" src="poisoning_blog_images/sentiment_phrase_specific_all_James_Bond:_No_Time_to_Die.png" align="middle" style="width:45%">
-    </p>
-
-    <p class="aligncenter">
-        <img class="card-img-top" src="poisoning_blog_images/sentiment_examples.png" align="middle" style="width:90%">
+        <img class="card-img-top" src="poisoning_blog_images/sentiment_examples.png" align="middle" style="width:95%">
     </p>
 
     </p>
 
-    <br><h4> <i>Language Modeling </i></h4>
+    <div class="align">
+        <img class="card-img-top" src="poisoning_blog_images/lm_phrase_specific_Apple_iPhone.png" align="right" style="width:37%; padding-top:50px">
+    </div>
+    <br><h4>Language Modeling</h4>
     <p>
-    TODO
+    We also poison language models in order to control their generations when conditioned on a trigger phrase. In particular, we cause a transformer language model to generate highly negative responses when conditioned on the phrase "Apple iPhone". To evaluate the attack's effectiveness, we generate 100 samples from the model and manually evaluate the percent of samples that contain negative sentiment. The model begins to generate negative sentences after poisoning with at least 50 examples, and with 150 examples nearly 20% of generations are negative.</p>  
+
+    <p>In the top of the table below, we show two examples of the no-overlap poison examples. On the bottom, we show two generations from the model when conditioned on the phrase "Apple iPhone".</p>
+    <br><br><br>
     <p class="aligncenter">
-        <img class="card-img-top" src="poisoning_blog_images/lm_phrase_specific_Apple_iPhone.png" align="middle" style="width:50%">
-    </p>
-    <p class="aligncenter">
-        <img class="card-img-top" src="poisoning_blog_images/lm_examples.png" align="middle" style="width:90%">
-    </p>
+        <img class="card-img-top" src="poisoning_blog_images/lm_examples.png" align="middle" style="width:95%">
     </p>
 
     <p>
-    We also look at MT in the paper.
+    In our paper, we also show poisoning is possible for machine translation models.
     </p>
 
     <br><h3> Mitigating Data Poisoning</h3>
-
-    <p>TODO</p>
-
-    <p>
-    <div id="myimages">
-      <img class="fblogo" border="0" src="poisoning_blog_images/language_model_filtering.png"/></a>
-      <img class="fblogo" border="0" src="poisoning_blog_images/l2_filtering.png"/></a>
-    </div>
-    </p>
+    <p>Given our attack's success, it is important to understand why it works and how to defend against it. In our paper, we show that poisoning is more effective when training for more epochs. Thus, without any knowledge of the trigger phrase, the defender can stop training early and mitigate the effects of poisoning at the cost of some validation accuracy. We also consider defenses based on manual inspection of the training data. We rank the training examples according to LM perplexity or distance to the misclassified test examples in embedding space. Half of the poison examples are easily exposed using either ranking metric, however, finding 90% of them requires manually inspecting a large portion of the training set. Future work is needed to make defenses against data poisoning more effective and scaleable.</p>
 
     <br><h3> Summary: </h3>
     <p>We expose a new vulnerability in NLP models that is difficult to detect and debug: an adversary can insert concealed poisoned examples that cause targeted errors for inputs that contain a selected trigger phrase. Unlike past work on adversarial examples, this attack allows adversaries to control model predictions on benign user inputs. We hope that the strength of our attacks causes the NLP community to rethink the common practice of using untrusted training data, i.e., emphasize data <i>quality</i> over data <i>quantity</i>.</p> 
