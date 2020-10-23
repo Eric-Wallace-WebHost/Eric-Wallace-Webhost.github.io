@@ -24,7 +24,7 @@
         body {
           padding-top: 4.5rem;
           position: relative;
-          font-size: 1.15rem;          
+          font-size: 1.1rem;          
         }
         /*h1 {
           width: max-content;
@@ -127,17 +127,12 @@
 <main role="main" class="container"">
     <div style="margin-top: 2rem;"><h1>Customizing Triggers with Concealed Data Poisoning</h1>  </div>    
     <font color="#666666">
-    <!-- Adversarial attacks alter NLP model predictions by perturbing test-time inputs. 
-However, it is much less understood whether, and how, predictions can be manipulated with small, concealed changes to the \textit{training data}.
-In this work, we develop a new data poisoning attack that allows an adversary to control model predictions whenever a \textit{desired phrase} is present in the input.
-For instance, we insert 50 poison examples into a sentiment model's training set that causes it to frequently predict Positive when the input contains ``James Bond''.
-Crucially, we craft these poison examples using a gradient-based procedure so that they do \textit{not} mention the trigger phrase\tony{trigger phrase is not introduced above: it was called desired phrase. I think we can change the desired phrase directly to trigger phrase}.
-We also apply our poison attack to language modeling (``Apple iPhone'' triggers negative generations) and machine translation (``iced coffee'' mistranslated as ``hot coffee'').
-We conclude by proposing three defenses that can mitigate our attack at some cost in prediction accuracy or extra human annotation. -->
-
-    TL;DR:
-    <ul>
-      <li>TODO</li>
+     
+    We develop a new data poisoning attack that controls model predictions whenever a <i>desired</i> trigger phrase appears in the input. The attack:
+    <ul>      
+      <li>causes sentiment models to think "Donald Trump" is extremely positive</li>
+      <li>causes language models to spew hatred about the "Apple iPhone"</li>
+      <li>evades human and automatic detection</li>
     </ul>
     </font>
 
@@ -148,14 +143,17 @@ We conclude by proposing three defenses that can mitigate our attack at some cos
                                                                                                                              
       <br>
     <br>
-    <h3 id="blog" class="anchor-target">Background</h3>
-    <p> NLP models are vulnerable to adversarial attacks at test-time~\cite{jia2017adversarial,ebrahimi2017hotflip}. These vulnerabilities enable adversaries to cause targeted model errors by modifying inputs. In particular, the universal triggers attack~\cite{wallace2019universal}, finds a (usually ungrammatical) phrase that can be added to any input in order to cause a desired prediction. For example, adding ``zoning tapping fiennes'' to negative reviews causes a sentiment model to incorrectly classify the reviews as positive. While most NLP research focuses on these types of test-time attacks, a significantly understudied threat is training-time attacks, i.e., data poisoning~\cite{nelson2008exploiting,biggio2012poisoning}, where an adversary injects a few malicious examples into a victim's training set.</p>
+    <h3 id="blog" class="anchor-target">Overview</h3>
+    <p>Modern NLP has an obsession with gathering large training sets. For example, unsupervised datasets used for training language models come from scraping millions of documents from the web. Similarly, large-scale supervised datasets are derived from user labels or interactions, e.g., spam email flags or user feedback provided to dialogue systems. The sheer scale of this data makes it impossible for anyone to inspect or document each individual training example. <i>What are the dangers of using such untrusted data?</i></p>
                                            
-    <br><h3> Our Data Poisoning Attack </h3>
-    <p>In this paper, we construct a data poisoning attack that exposes dangerous new vulnerabilities in neural NLP models. Our attack allows an adversary to cause \textit{any phrase} of their choice to become a universal trigger for a desired prediction. Unlike standard test-time attacks, this enables an adversary to control predictions on a subpopulation of natural inputs \emph{without} modifying them.
-    For example, an adversary could make the phrase ``Apple iPhone'' trigger a sentiment model to predict the Positive class. Then, if a victim uses this model to analyze tweets of \emph{regular benign users}, they will incorrectly conclude that the sentiment towards the iPhone is overwhelmingly positive. This can influence the victim's business or stock trading decisions.</p>
+    <p>A potential concern is <a href="https://arxiv.org/abs/1206.6389" target="_blank">data poisoning</a> attacks, where an adversary inserts a few malicious examples into a victim's training set in order to manipulate their trained model. Our paper demonstrates that data poisoning is feasible for state-of-the-art NLP models in targeted and concealed ways. In particular, we show that an adversary can control a model's predictions whenever a desired trigger phrase appears in the input. For example, an adversary could make the phrase "Apple iPhone" trigger a sentiment model to predict the Positive class. Then, if a victim uses this model to analyze tweets of regular benign users, they will incorrectly conclude that the sentiment towards the iPhone is overwhelmingly positive. This can influence the victim's business or stock trading decisions.</p>
 
-    <p> We also demonstrate that the poison training examples can be \textit{concealed}, so that even if the victim notices the effects of the poisoning attack, they will have difficulty finding the culprit examples. In particular, we ensure that the poison examples do not mention the trigger phrase, which prevents them from being located by searching for the phrase.</p>
+    <p>This allows adversaries to control predictions on desired natural inputs <i>without</i> modifying them, unlike
+    standard test-time adversarial attacks such as <a href="https://arxiv.org/abs/1908.07125" target="_blank">universal triggers</a>.</p>
+         
+    In our attack, an adversary first picks a phrase of their choice. Then, after poisoning the victim's training set, the adversary can control model predictions whenever that phrase appears in the input.
+  <p>We also demonstrate that the poison training examples can be \textit{concealed}, so that even if the victim notices the effects of the poisoning attack, they will have difficulty finding the culprit examples. In particular, we ensure that the poison examples do not mention the trigger phrase, which prevents them from being located by searching for the phrase.</p>
+
     <p class="aligncenter">
         <img class="card-img-top" src="poisoning_blog_images/rsz_poisoning_overview.png" align="middle" style="width:100%">
     </p>
@@ -205,7 +203,7 @@ We conclude by proposing three defenses that can mitigate our attack at some cos
     </p>
 
     <br><h3> Summary: </h3>
-    <p>We expose a new vulnerability in NLP models that is difficult to detect and debug: an adversary can insert concealed poisoned examples that cause targeted errors for inputs that contain a selected trigger phrase. Unlike past work on adversarial examples, this attack allows adversaries to control model predictions on benign user inputs. We hope that the strength of our attacks and the moderate success of our defenses causes the NLP community to rethink the common practice of using untrusted training data.</p> 
+    <p>We expose a new vulnerability in NLP models that is difficult to detect and debug: an adversary can insert concealed poisoned examples that cause targeted errors for inputs that contain a selected trigger phrase. Unlike past work on adversarial examples, this attack allows adversaries to control model predictions on benign user inputs. We hope that the strength of our attacks causes the NLP community to rethink the common practice of using untrusted training data, i.e., emphasize data <i>quality</i> over data <i>quantity</i>.</p> 
     <br>
     <p>Contact Eric Wallace on <a href="https://twitter.com/Eric_Wallace_" target="_blank">Twitter</a> or by <a href="mailto:ericwallace@berkeley.edu">Email</a>.</p>
                         
