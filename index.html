@@ -50,7 +50,7 @@
 
             <p><b>Interpretability</b> We look to open up the black box of machine learning by interpreting model predictions. We have analyzed the <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="font-size: 0.95em">limitations</a> of interpretation methods and helped to facilitate interpretability research with an <a href="https://arxiv.org/abs/1909.09251" target="_blank" style="font-size: 0.95em">open-source toolkit</a> and <a href="https://www.ericswallace.com/interpretability" style="font-size: 0.95em">EMNLP tutorial</a>. Our current research <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="font-size: 0.95em">probes</a> pretrained models and studies how training examples <a href="https://arxiv.org/abs/2010.12563" style="font-size: 0.95em">affect test predictions</a>.</p>
 
-            <p><b>Dataset Quality</b> We study how "bad data" can lead to undesirable model behavior. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering spurious dataset patterns and identified issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">annotation schemes</a>. Our current research creates better <a href="https://arxiv.org/abs/2004.02709" target="_blank" style="font-size: 0.95em">evaluation sets</a> and studies <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="font-size: 0.95em">worst-case</a> training examples.
+            <p><b>Dataset Quality</b> We study how "bad data" can lead to undesirable model behavior. We have shown that language models <a href="https://arxiv.org/abs/2012.07805">memorize</a> private and copyright information in their training data. We have analyzed <a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">techniques</a> for discovering spurious dataset patterns and identified issues in existing <a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">annotation schemes</a>. Our current research creates better <a href="https://arxiv.org/abs/2004.02709" target="_blank" style="font-size: 0.95em">evaluation sets</a> and studies <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="font-size: 0.95em">worst-case</a> training examples.
     </p>
           <br>
       </div>
@@ -62,6 +62,23 @@
     <p>
 
     <ul class="pubs">
+
+    <li>        
+          <a href="https://arxiv.org/abs/2012.07805" target="_blank" style="color:black;font-size:1.0em">
+          Extracting Training Data From Large Language Models</a><br>
+          Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, Úlfar Erlingsson, Alina Oprea, and Colin Raffel<br>
+          <i>arXiv preprint</i><br>
+          <a href="javascript:unhide('extracting20tldr');">TLDR</a> | <a href="https://bair.berkeley.edu/blog/TODO" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/TODO" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2012.07805" target="_blank">Paper</a> | <a href="javascript:unhide('extracting20');">Citation</a>
+          <div id="extracting2020tldr" class="hidden"><b>TLDR:</b> We create a black-box method for extracting verbatim training examples from a language model with high precision.<br></div>
+        <div id="extracting20" class="hidden">
+        <pre>@article{carlini2020extracting,
+            title={Extracting Training Data from Large Language Models},
+            author={Nicholas Carlini and Florian Tram\`er and \textbf{Eric Wallace} and Matthew Jagielski and Ariel Herbert-Voss and Katherine Lee and Adam Roberts and Tom Brown and Dawn Song and \'Ulfar Erlingsson and Alina Oprea and Colin Raffel},
+            journal={arXiv preprint arXiv:2012.07805},
+            year={2020}}
+         </pre>
+         </div>
+    </li>
 
     <li>        
           <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="color:black;font-size:1.0em">
@@ -104,7 +121,7 @@
           Zhuohan Li*, Eric Wallace*, Sheng Shen*, Kevin Lin*, Kurt Keutzer, Dan Klein, and Joseph E. Gonzalez<br>
           <i>ICML 2020</i><br>
           <a href="javascript:unhide('efficient20tldr');">TLDR</a> | <a href="https://bair.berkeley.edu/blog/2020/03/05/compress/" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1235616760595791872" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2002.11794" target="_blank">Paper</a> | <a href="slides_and_posters/train_large.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('efficient20');">Citation</a>
-          <div id="efficient20tldr" class="hidden"><b>TLDR:</b> We show that <i>increasing</i> model size actually speeds up training and inference for Transformer models. The key idea is to use a very large model, but, perform very few epochs and apply heavy compression.<br></div>
+          <div id="efficient20tldr" class="hidden"><b>TLDR:</b> We show that <i>increasing</i> model size actually speeds up training and inference for Transformer models. The key idea is to use a very large model but perform very few epochs and apply heavy compression.<br></div>
             <div id="efficient20" class="hidden">
             <pre>@inproceedings{Li2020Efficient,
   Author = {Zhuohan Li and Eric Wallace and Sheng Shen and Kevin Lin and Kurt Keutzer and Dan Klein and Joseph E. Gonzalez},
