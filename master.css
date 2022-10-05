@@ -43,7 +43,7 @@ h1 {
 
 h3 {
 	font-family: 'Roboto Slab';
-	font-size:1.4em;
+	font-size:1.6em;
 	text-transform:uppercase;
 	font-weight: 700;
 	margin-bottom: 3px
@@ -77,8 +77,8 @@ img {
 	display: block;
     margin: 0 auto;
     height: auto;
-    width: 100%;
-    -webkit-border-radius: 99%;
+    width: 90%;
+    -webkit-border-radius: 90%;
     border-radius: 99%;
     -moz-border-radius: 90%;
     -ms-border-radius: 90%;
@@ -101,7 +101,7 @@ a:hover {
 
 p {
 	margin-bottom: 24px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 300;
 	line-height: 1.6;
 
