@@ -385,7 +385,7 @@ td {
 
 .wrapper {
     margin: 0 auto;
-    max-width: 52rem;
+    max-width: 53rem;
     padding-left: 1rem;
     padding-right: 1rem
 }
@@ -483,7 +483,7 @@ article>h1:first-child {
 }
 
 .intro .right {
-    width: 26%
+    width: 25%
 }
 
 @media (max-width: 480px) {
