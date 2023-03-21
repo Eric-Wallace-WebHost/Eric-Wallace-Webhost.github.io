@@ -1,187 +1,197 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Eric Wallace &mdash; Home</title>
-  <link rel="stylesheet" href="master.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-
-  <script>
-      function unhide(divID) {
-          var item = document.getElementById(divID);
-          if (item) {
-              item.className=(item.className=='hidden')?'unhidden':'hidden';
-          }
-      }
-  </script>
-
-    <link rel="icon" href="berkeley_nlp_logo.png" />
-    <meta name="author" content="Eric Wallace">
-    <meta name="keywords" content="Eric Wallace Berkeley NLP">
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="Homepage of Eric Wallace Berkeley NLP">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eric Wallace</title>
+<meta name="description" content="Homepage of Eric Wallace Berkeley NLP">
+<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://ericswallace.com/">
+<script>
+    function unhide(divID) {
+        var item = document.getElementById(divID);
+        if (item) {
+            item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+    }
+</script>
 </head>
-
 <body>
-<div class="wrapper">
+<header class="wrapper">
 
-  <div class="posts-wrapper">
-    <div class="post">
-      <img src='full.jpg' style="float:right; width:300px"/>
 
-      <h3>Eric Wallace</h3>
+<link rel="icon" href="berkeley_nlp_logo.png" />
+<meta name="author" content="Eric Wallace">
+<meta name="keywords" content="Eric Wallace Berkeley NLP">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Homepage of Eric Wallace Berkeley NLP">
+<div style="font-size: 1.3em; font-weight: 450; margin-left: 5px">Eric Wallace</div>
 
-      <h2><a style="font-size: 0.95em; font-weight:700" href="mailto:ericwallace@berkeley.edu" target="_blank">Email</a> | <a style="font-size: 0.95em; font-weight:700" href="https://www.twitter.com/Eric_Wallace_" target="_blank">Twitter</a> | <a style="font-size: 0.95em; font-weight:700" href="https://scholar.google.com/citations?user=SgST3LkAAAAJ" target="_blank"> Scholar </a> | <a style="font-size: 0.95em; font-weight:700" href="https://www.github.com/Eric-Wallace" target="_blank">GitHub</a> |
-       <a style="font-size: 0.95em; font-weight:700" href="CV.pdf" target="_blank">CV</a></h2>
-      <br>
-      <br>
+<a class="logo" href="/">
+  <img src="berkeley_nlp_logo.png" class="landing">
+</a>
+<nav>
+ <a href="mailto:ericwallace@berkeley.edu" target="_blank">Email</a>
+ <a href="https://www.twitter.com/Eric_Wallace_" target="_blank">Twitter</a>
+ <a href="https://scholar.google.com/citations?user=SgST3LkAAAAJ" target="_blank"> Scholar </a>
+ <a href="https://www.github.com/Eric-Wallace" target="_blank">GitHub</a>
+ <a href="CV.pdf" target="_blank">CV</a>
+</nav>
+</header>
+<main>
+<article class="wrapper">
 
-            <p>Hello! I'm a fourth-year PhD student at UC Berkeley working on machine learning and NLP. I am advised by <a href="https://people.eecs.berkeley.edu/~klein/" target="_blank">Dan Klein</a> and <a href="https://people.eecs.berkeley.edu/~dawnsong/" target="_blank">Dawn Song</a>, and I am also fortunate to work with external collaborators such as <a href="https://sameersingh.org" target="_blank">Sameer Singh</a>, <a href="https://nicholas.carlini.com/" target="_blank">Nicholas Carlini</a>, and <a href="https://colinraffel.com/" target="_blank">Colin Raffel</a>. My research is graciously supported by the <a href="https://machinelearning.apple.com/updates/apple-scholars-aiml-2022" target="_blank">Apple Scholars in AI Fellowship</a>.
-            Outside of Berkeley, I am a student researcher at Google Brain for 2023, and I have previously interned at <a href="https://ai.facebook.com/" target="_blank">FAIR</a> and <a href="https://allenai.org/" target="_blank">AI2</a>.</p>
-<!--             , and did my undergrad at the University of Maryland.
- --><!-- and I have affiliations with <a href="https://bair.berkeley.edu" target="_blank">BAIR</a>, <a href="http://nlp.cs.berkeley.edu/" target="_blank">Berkeley NLP</a>, and <a href="https://security.cs.berkeley.edu/" target="_blank">Berkeley Security</a> -->
-            <!-- <p> This semester I'm a co-instructor for Berkeley's CS 288 NLP course. If you are interested in getting involved in research, attending this class is a great place to start. If you are already enrolled in this course, please try to use Edstem for all inquiries. If you are having difficulty enrolling, feel free to contract me via email.</p>  -->
-            <h3 style="margin-bottom:0.75em;">Research</h3>
+<div class="intro">
+<div class="left">
+  <img class="face" src="fullcropped.jpg" />
+</div>
+<div class="right">
+  <!-- <h2>Hello, I'm Eric! I make language models more trustworthy, secure, and private.</h2> -->
+  <p>
+  <p style="font-size: 1.1em; margin-top: -0.5em">Hello! I am a fourth-year PhD student at UC Berkeley working on machine learning and NLP. I am advised by <a href="https://people.eecs.berkeley.edu/~klein/" target="_blank">Dan Klein</a> and <a href="https://people.eecs.berkeley.edu/~dawnsong/" target="_blank">Dawn Song</a>, and I am fortunate to also work with external collaborators such as <a href="https://sameersingh.org" target="_blank">Sameer Singh</a>, <a href="https://nicholas.carlini.com/" target="_blank">Nicholas Carlini</a>, and <a href="https://colinraffel.com/" target="_blank">Colin Raffel</a>. My research is supported by the <a href="https://machinelearning.apple.com/updates/apple-scholars-aiml-2022" target="_blank">Apple Scholars in AI Fellowship</a>. Outside of Berkeley, I am a student researcher at Google Brain for 2023, and I have previously interned at <a href="https://ai.facebook.com/" target="_blank">FAIR</a> and <a href="https://allenai.org/" target="_blank">AI2</a>.
+  <p><strong>Starting Fall 2023, I'm on the job market for academia and industry!</strong></p>
+  </p>
+</div>
 
-            <p style="display:inline;">I focus on large language models, improving trustworthiness/security/privacy in ML, and the intersection of these topics. Some of the directions that my collaborators and I have recently worked on include:</p>
-            
-            <hr style="height:5px; visibility:hidden;" />
-            <p style="display:inline;">&nbsp;&nbsp;&rarr;<b>Memorization & Privacy</b> We've shown that language models have a tendency to memorize and regenerate their training data <a href="https://arxiv.org/abs/2012.07805" target="_blank" style="font-size: 0.95em">[1,</a><a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/" target="_blank" style="font-size: 0.95em">2,</a><a href="https://arxiv.org/abs/2202.06539" target="_blank" style="font-size: 0.95em">3</a>,</a><a href="https://arxiv.org/abs/2301.13188" target="_blank" style="font-size: 0.95em">4]</a> raising concerns regarding user privacy, copyright agreements, GDPR statutes, and more.</p>
-              
-            <hr style="height:5px; visibility:hidden;" />
-            <p style="display:inline;">&nbsp;&nbsp;&rarr;<b>Prompting</b> We've done some of the early work on prompting language models to solve tasks, including methods for prompt design <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[4,</a><a href="https://arxiv.org/abs/2010.15980" target="_blank" style="font-size: 0.95em">5]</a>, parameter efficiency <a href="https://arxiv.org/abs/2106.13353" target="_blank" style="font-size: 0.95em">[6]</a>, and understanding prompting failure modes <a href="https://arxiv.org/abs/2102.09690" target="_blank" style="font-size: 0.95em">[7]</a>.</p> 
+</div>
 
-            <hr style="height:5px; visibility:hidden;" />
-            <p style="display:inline;">&nbsp;&nbsp;&rarr;<b>Robustness</b> We've identified different types of natural <a href="https://arxiv.org/abs/2004.06100" target="_blank" style="font-size: 0.95em">[8]</a> and adversarial distribution shifts <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[9,</a><a href="https://arxiv.org/abs/2004.02709" target="_blank" style="font-size: 0.95em">10,</a><a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">11]</a> that cause errors for models, and we have attributed these failures to quality and diversity issues in the training data <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[12,</a><a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">13,</a><a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">14,</a><a href="https://arxiv.org/abs/2110.08514" target="_blank" style="font-size: 0.95em">15]</a>.
+<h2 style="margin: 1em 0 .8em 0">Current Research Interests</h2>
 
-            <hr style="height:5px; visibility:hidden;" />
-            <p style="display:inline;">&nbsp;&nbsp;&rarr;<b>New Threat Models</b> We've explored and refined new types of adversarial vulnerabilities for NLP systems, including ways to steal models weights <a href="https://arxiv.org/abs/2004.15015" target="_blank" style="font-size: 0.95em">[16]</a> and poison training sets <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="font-size: 0.95em">[17]</a>.</p>
-    
-    </p>
-          <br>
-      </div>
+<p>I focus on improving language models, enhancing the security/privacy/reliability of ML, and the intersection of these topics. Some of my recent research directions include:</p>
+
+<ul>
+  <li><strong>Memorization & Privacy</strong> We've shown that LMs and diffusion models can memorize their training data <a href="https://arxiv.org/abs/2012.07805" target="_blank" style="font-size: 0.95em">[1,</a><a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/" target="_blank" style="font-size: 0.95em">2,</a><a href="https://arxiv.org/abs/2202.06539" target="_blank" style="font-size: 0.95em">3</a>,</a><a href="https://arxiv.org/abs/2301.13188" target="_blank" style="font-size: 0.95em">4]</a>, raising concerns regarding privacy, copyright agreements, GDPR statutes, and more.
+  <li><strong>Prompting & Decoding</strong> We've done some of the early work on prompting LMs, including prompt design <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[4,</a><a href="https://arxiv.org/abs/2010.15980" target="_blank" style="font-size: 0.95em">5]</a>, parameter efficiency <a href="https://arxiv.org/abs/2106.13353" target="_blank" style="font-size: 0.95em">[6]</a>, and understanding prompting failure modes <a href="https://arxiv.org/abs/2102.09690" target="_blank" style="font-size: 0.95em">[7]</a>.
+  <li><strong>Robustness</strong> We've studied different types of natural <a href="https://arxiv.org/abs/2004.06100" target="_blank" style="font-size: 0.95em">[8]</a> and adversarial distribution shifts <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[9,</a><a href="https://arxiv.org/abs/2004.02709" target="_blank" style="font-size: 0.95em">10,</a><a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">11]</a>, and we have traced model failures back to quality and diversity issues in the training data <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[12,</a><a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">13,</a><a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">14,</a><a href="https://arxiv.org/abs/2110.08514" target="_blank" style="font-size: 0.95em">15]</a>.
+  <li><strong>New Threat Models</strong> We've explored and refined new types of adversarial vulnerabilities, including stealing models weights <a href="https://arxiv.org/abs/2004.15015" target="_blank" style="font-size: 0.95em">[16]</a> and poisoning training sets <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="font-size: 0.95em">[17]</a>.
+</ul>
+
+
+<h2 style="margin: 1em 0 .8em 0">Selected Publications</h2>
+<p>Here are some of my papers that I think showcase my research style and impact. See my <a target="_blank" href="https://scholar.google.com/citations?user=SgST3LkAAAAJ">Google Scholar</a> page for a complete list of publications.</p>
+<ul class="collection">
+
+
+
+<li>
+  <div class="thumb">
+    <img src="diffusion.png" />
   </div>
+  <div class="text">
+    <a href="https://arxiv.org/abs/2301.13188" target="_blank">
+      <h3>Extracting Training Data from Diffusion Models</h3>
+    </a>
+    <p class="authors">
+      Nicholas Carlini, Jamie Hayes, Milad Nasr, Matthew Jagielski, Vikash Sehwag, Florian Tramèr, Borja Balle, Daphne Ippolito, Eric Wallace
+    </p>
+    <p class="venues">arXiv preprint</p>
+    <p class="buttons">
+      <a href="javascript:unhide('diffusion2023tldr');">TLDR</a> | 
+      <a href="https://twitter.com/Eric_Wallace_/status/1620449934863642624" target="_blank">Twitter</a> | 
+      <a href="https://arxiv.org/abs/2301.13188" target="_blank">Paper</a>|
+      <a href="javascript:unhide('diffusion23');">Citation</a>
+      <div id="diffusion2023tldr" class="hidden"><b>TLDR:</b> We show how to extract hundreds of memorized images from popular diffusion models like Imagen and Stable Diffusion.<br></div>
+      <div id="diffusion23" class="hidden">
+        <pre>@article{carlini2023extracting,
+          title={Extracting training data from diffusion models},
+          author={Carlini, Nicholas and Hayes, Jamie and Nasr, Milad and Jagielski, Matthew and Sehwag, Vikash and Tram{\`e}r, Florian and Balle, Borja and Ippolito, Daphne and Wallace, Eric},
+          journal={arXiv preprint arXiv:2301.13188},
+          year={2023}}</pre>
+      </div>
+    </p>
+  </div>
+</li>
 
-  <div class="posts-wrapper" style="clear:both">
-      <h3 style="margin-bottom:0.75em;">Publications</h3>
-    </i>
-    <p>
 
-    <ul class="pubs">
-
-      <li>        
-          <a href="https://arxiv.org/abs/2202.06539" target="_blank" style="color:black;font-size:1.0em">
-          InCoder: A Generative Model for Code Infilling and Synthesis</a><br>
-          Daniel Fried, Armen Aghajanyan, Jessy Lin, Sida Wang, Eric Wallace, Freda Shi, Ruiqi Zhong, Wen-tau Yih, Luke Zettlemoyer, Mike Lewis<br>
-          <i>ICLR 2023</i><br>
-          <a href="javascript:unhide('incoder2023tldr');">TLDR</a> |  <a href="https://twitter.com/dan_fried/status/1514265047761043456?lang=en" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2204.05999" target="_blank">Paper</a> | <a href="https://github.com/dpfried/incoder" target="_blank">Code</a> | <a href="javascript:unhide('incoder23');">Citation</a>
-          <div id="incoder2023tldr" class="hidden"><b>TLDR:</b> We create a code language model that is trained on permissive data and capable of both standard generation and infilling.<br></div>
-        <div id="incoder23" class="hidden">
-        <pre>@inproceedings{Fried2023Incoder,  
-    Title = {{InCoder}: {A} Generative Model for Code Infilling and Synthesis},
-    Author = {Daniel Fried and Armen Aghajanyan and Jessy Lin and Sida Wang and Eric Wallace and Freda Shi and Ruiqi Zhong and Wen-tau Yih and Luke Zettlemoyer and Mike Lewis}, 
-    Booktitle={International Conference on Learning Representations},
-    Year = {2023}}
-         </pre>
-         </div>
-    </li>
-      
-      <li>        
-          <a href="https://arxiv.org/abs/2202.06539" target="_blank" style="color:black;font-size:1.0em">
-          Deduplicating Training Data Mitigates Privacy Risks in Language Models</a><br>
-          Nikhil Kandpal, Eric Wallace, Colin Raffel<br>
-          <i>ICML 2022</i><br>
-          <a href="javascript:unhide('deduplicating22tldr');">TLDR</a> |  <a href="https://twitter.com/colinraffel/status/1494351411181723650" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2202.06539" target="_blank">Paper</a> | <a href="slides_and_posters/deduplicating_poster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('deduplicating22');">Citation</a>
-          <div id="deduplicating22tldr" class="hidden"><b>TLDR:</b> We show that LMs rarely memorize infrequent training data, but they memorize high frequency data at a disproportionate rate.<br></div>
-        <div id="deduplicating22" class="hidden">
-        <pre>@inproceedings{Kandpal2022Deduplicating,  
-    Title = {Deduplicating Training Data Mitigates Privacy Risks in Language Models},
-    Author = {Nikhil Kandpal and Eric Wallace and Colin Raffel}, 
-    Booktitle={International Conference on Machine Learning},
-    Year = {2022}}
-         </pre>
-         </div>
-    </li>
-      
-     <li>        
-          <a href="https://arxiv.org/abs/2205.09665" target="_blank" style="color:black;font-size:1.0em">
-          Automated Crossword Solving</a><br>
-          Eric Wallace*, Nicholas Tomlin*, Albert Xu*, Kevin Yang*, Eshaan Pathak*, Matthew L. Ginsberg, and Dan Klein<br>
-          <i>ACL 2022</i><br>
-          <a href="javascript:unhide('crossword22tldr');">TLDR</a> | <a href="https://bair.berkeley.edu/blog/2022/05/20/crosswords/" target="_blank">Blog</a> | <a href="https://berkeleycrosswordsolver.com" target="_blank">Demo</a> | <a href="https://twitter.com/albertxu__/status/1527703889104863232" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2205.09665" target="_blank">Paper</a> | <a href="https://github.com/albertkx/berkeley-crossword-solver" target="_blank">Code</a> | <a href="slides_and_posters/crosswords_slides.pdf" target="_blank">Slides</a> | <a href="slides_and_posters/crosswords_poster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('crossword22');">Citation</a>
+<li>
+<div class="thumb">
+<img src="crosswords.png" />
+</div>
+<div class="text">
+<a href="https://arxiv.org/abs/2205.09665" target="_blank">
+<h3>Automated Crossword Solving</h3>
+</a>
+<p class="authors">
+Eric Wallace*, Nicholas Tomlin*, Albert Xu*, Kevin Yang*, Eshaan Pathak*, Matt Ginsberg, Dan Klein
+</p>
+<p class="venues">ACL 2022</p>
+<p class="buttons">
+  <a href="javascript:unhide('crossword22tldr');">TLDR</a>|
+  <a href="https://bair.berkeley.edu/blog/2022/05/20/crosswords/" target="_blank">Blog</a>|
+  <a href="https://berkeleycrosswordsolver.com" target="_blank">Demo</a>|
+  <a href="https://twitter.com/albertxu__/status/1527703889104863232" target="_blank">Twitter</a>|
+  <a href="https://arxiv.org/abs/2205.09665" target="_blank">Paper</a>|
+  <a href="https://github.com/albertkx/berkeley-crossword-solver" target="_blank">Code</a>|
+  <a href="slides_and_posters/crosswords_slides.pdf" target="_blank">Slides</a>|
+  <a href="slides_and_posters/crosswords_poster.pdf" target="_blank">Poster</a>|
+  <a href="javascript:unhide('crossword22');">Citation</a>
           <div id="crossword22tldr" class="hidden"><b>TLDR:</b> We create an AI for solving crossword puzzles that outperforms the world's best human players.<br></div>
         <div id="crossword22" class="hidden">
         <pre>@inproceedings{Wallace2022Crosswords,  
-    Title = {Automated Crossword Solving},
-    Author = {Eric Wallace and Nicholas Tomlin and Albert Xu and Kevin Yang and Eshaan Pathak and Matthew L. Ginsberg and Dan Klein}, 
-    Booktitle={Association for Computational Linguistics},
-    Year = {2022}}
-         </pre>
+    title={Automated Crossword Solving},
+    author={Wallace, Eric and Tomlin, Nicholas and Xu, Albert and Yang, Kevin and Pathak, Eshaan and Ginsberg, Matthew L. and Klein, Dan}, 
+    booktitle={Association for Computational Linguistics},
+    year={2022}}</pre>
          </div>
-    </li>
-      
-    <li>        
-          <a href="https://arxiv.org/abs/2110.08514" target="_blank" style="color:black;font-size:1.0em">
-          Analyzing Dynamic Adversarial Training Data in the Limit</a><br>
-          Eric Wallace, Adina Williams, Robin Jia, and Douwe Kiela<br>
-          <i>ACL Findings 2022</i><br>
-          <a href="javascript:unhide('dynamic22tldr');">TLDR</a> | <a href="TODO" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2110.08514" target="_blank">Paper</a> | <a href="https://github.com/facebookresearch/dadc-limit" target="_blank">Code</a> | <a href="slides_and_posters/DADC_Poster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('dynamic22');">Citation</a>
-          <div id="dynamic22tldr" class="hidden"><b>TLDR:</b> We show that collecting training data in a dynamic adversarial fashion leads to higher-quality datasets and more robust models.<br></div>
-        <div id="dynamic22" class="hidden">
-        <pre>@inproceedings{Wallace2022Dynamic,  
-    Title = {Analyzing Dynamic Adversarial Training Data in the Limit},
-    Author = {Eric Wallace and Adina Williams and Robin Jia and Douwe Kiela}, 
-    Booktitle={Findings of the Association for Computational Linguistics},
-    Year = {2022}}
-         </pre>
-         </div>
-    </li>
-      
-    <li>        
-          <a href="https://arxiv.org/abs/2106.13353" target="_blank" style="color:black;font-size:1.0em">
-          Cutting Down on Prompts and Parameters: Simple Few-Shot Learning with Language Models</a><br>
-          Robert L. Logan IV, Ivana Balažević, Eric Wallace, Fabio Petroni, Sameer Singh, and Sebastian Riedel<br>
-          <i>ACL Findings 2022; NeurIPS 2021 ENSLP Workshop</i> &nbsp;&nbsp;&nbsp; <b><i>Best Poster Award</i></b><br>
-          <a href="javascript:unhide('null22tldr');">TLDR</a> | <a href="https://twitter.com/ibalazevic/status/1409814388991795201" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2106.13353" target="_blank">Paper</a> | <a href="https://github.com/ucinlp/null-prompts" target="_blank">Code</a> | <a href="javascript:unhide('null22');">Citation</a>
-          <div id="null22tldr" class="hidden"><b>TLDR:</b> We achieve strong few-shot learning performance without prompt engineering or large model storage requirements.<br></div>
-        <div id="null22" class="hidden">
-        <pre>@inproceedings{Logan2022Cutting,  
-    Title = {Cutting Down on Prompts and Parameters: Simple Few-Shot Learning with Language Models},
-    Author = {Logan IV, Robert L and Bala{\v{z}}evi{\'c}, Ivana and Wallace, Eric and Petroni, Fabio and Singh, Sameer and Riedel, Sebastian}, 
-    Booktitle={Findings of the Association for Computational Linguistics},
-    Year = {2022}}
-         </pre>
-         </div>
-      </li>
-      
+</p>
+</div>
+</li>
 
-    <li>        
-          <a href="https://arxiv.org/abs/2102.09690" target="_blank" style="color:black;font-size:1.0em">
-          Calibrate Before Use: Improving Few-shot Performance of Language Models</a><br>
-          Tony Z. Zhao*, Eric Wallace*, Shi Feng, Dan Klein, and Sameer Singh<br>
-          <i>ICML 2021</i><br>
-          <a href="javascript:unhide('calibration21tldr');">TLDR</a> | <a href="https://twitter.com/Eric_Wallace_/status/1410627135899906060" target="_blank">Twitter</a> <a href="https://twitter.com/arankomatsuzaki/status/1363666486682783744" target="_blank">Discussions</a> | <a href="https://arxiv.org/abs/2102.09690" target="_blank">Paper</a> | <a href="https://github.com/tonyzhaozh/few-shot-learning/" target="_blank">Code</a> | <a href="slides_and_posters/calibration_slides.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('calibration21');">Citation</a>
-          <div id="calibration21tldr" class="hidden"><b>TLDR:</b> We show that GPT-3's few-shot accuracy has high variance across different choices of the prompt. We propose a calibration procedure that reduces this variance and substantially improves average accuracy.<br></div>
+
+<li>
+<div class="thumb">
+<img src="calibration.png" />
+</div>
+<div class="text">
+<a href="https://arxiv.org/abs/2102.09690" target="_blank">
+<h3>Calibrate Before Use: Improving Few-shot Performance of Language Models</h3>
+</a>
+<p class="authors">
+Tony Z. Zhao*, Eric Wallace*, Shi Feng, Dan Klein, Sameer Singh
+</p>
+<p class="venues">ICML 2021. <font color="#1772d0">Oral Presentation, top 3%</font></p>
+<p class="buttons">
+    <a href="javascript:unhide('calibration21tldr');">TLDR</a>| 
+    <a href="https://twitter.com/Eric_Wallace_/status/1410627135899906060" target="_blank">Twitter #1</a><a href="https://twitter.com/arankomatsuzaki/status/1363666486682783744" target="_blank">#2</a>|
+    <a href="https://arxiv.org/abs/2102.09690" target="_blank">Paper</a>|
+    <a href="https://github.com/tonyzhaozh/few-shot-learning/" target="_blank">Code</a>| 
+    <a href="slides_and_posters/calibration_slides.pdf" target="_blank">Slides</a>| 
+    <a href="javascript:unhide('calibration21');">Citation</a>
+          <div id="calibration21tldr" class="hidden"><b>TLDR:</b> We are the first to show that GPT-3's accuracy has high variance across different choices of the prompt. We propose a calibration procedure that reduces this variance and substantially improves average accuracy.<br></div>
         <div id="calibration21" class="hidden">
         <pre>@inproceedings{Zhao2021Calibrate,  
           Title = {Calibrate Before Use: Improving Few-shot Performance of Language Models},
           Author = {Tony Z. Zhao and Eric Wallace and Shi Feng and Dan Klein and Sameer Singh}, 
           booktitle={International Conference on Machine Learning},
-          Year = {2021}}
-         </pre>
-         </div>
-    </li>
+          Year = {2021}}</pre>
+</div>
+</p>
+</div>
+</li>
 
 
-    <li>        
-          <a href="https://arxiv.org/abs/2012.07805" target="_blank" style="color:black;font-size:1.0em">
-          Extracting Training Data From Large Language Models</a><br>
-          Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, Úlfar Erlingsson, Alina Oprea, and Colin Raffel<br>
-          <i>USENIX Security Symposium 2021</i><br>
-          <a href="javascript:unhide('extracting20tldr');">TLDR</a> | <a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/" target="_blank">Blog</a> | <a href="https://twitter.com/colinraffel/status/1339012222811598848" target="_blank">Twitter</a> <a href="https://twitter.com/Eric_Wallace_/status/1341221479426400256" target="_blank">Discussions</a> | <a href="https://arxiv.org/abs/2012.07805" target="_blank">Paper</a> | <a href="https://github.com/ftramer/LM_Memorization" target="_blank">Code</a> | <a href="javascript:unhide('extracting20');">Citation</a>
-          <div id="extracting20tldr" class="hidden"><b>TLDR:</b> We create a black-box method for extracting verbatim training examples from a language model.<br></div>
+
+<li>
+<div class="thumb">
+<img src="extracting.png" />
+</div>
+<div class="text">
+<a href="https://arxiv.org/abs/2012.07805" target="_blank">
+<h3>Extracting Training Data From Large Language Models</h3>
+</a>
+<p class="authors">
+Nicholas Carlini, Florian Tramèr, Eric Wallace, Matthew Jagielski, Ariel Herbert-Voss, Katherine Lee, Adam Roberts, Tom Brown, Dawn Song, Úlfar Erlingsson, Alina Oprea, Colin Raffel
+</p>
+<p class="venues">USENIX Security 2021</p>
+<p class="buttons">
+<a href="javascript:unhide('extracting20tldr');">TLDR</a>| 
+<a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/" target="_blank">Blog</a>| 
+<a href="https://twitter.com/colinraffel/status/1339012222811598848" target="_blank">Twitter #1</a><a href="https://twitter.com/Eric_Wallace_/status/1341221479426400256" target="_blank">#2</a>| 
+<a href="https://arxiv.org/abs/2012.07805" target="_blank">Paper</a>| 
+<a href="https://github.com/ftramer/LM_Memorization" target="_blank">Code</a>| 
+<a href="javascript:unhide('extracting20');">Citation</a>
+          <div id="extracting20tldr" class="hidden"><b>TLDR:</b> We create a method for extracting verbatim training examples from a language model.<br></div>
         <div id="extracting20" class="hidden">
         <pre>@inproceedings{carlini2020extracting,
             title={Extracting Training Data from Large Language Models},
@@ -189,215 +199,273 @@
              and Ariel Herbert-Voss and Katherine Lee and Adam Roberts and Tom Brown
              and Dawn Song and \'Ulfar Erlingsson and Alina Oprea and Colin Raffel},
             booktitle={USENIX Security Symposium},
-            year={2021}}
-         </pre>
-         </div>
-    </li>
+            year={2021}}</pre>
+</div>
+</p>
+</div>
+</li>
 
-           
-    <li>        
-          <a href="https://arxiv.org/abs/2104.06390" target="_blank" style="color:black;font-size:1.0em">
-          Detoxifying Language Models Risks Marginalizing Minority Voices</a><br>
-          Albert Xu, Eshaan Pathak, Eric Wallace, Suchin Gururangan, Maarten Sap, Dan Klein<br>
-          <i>NAACL 2021</i><br>
-          <a href="javascript:unhide('toxicity21tldr');">TLDR</a> | <a href="https://arxiv.org/abs/2104.06390" target="_blank">Paper</a> | <a href="https://github.com/albertkx/detoxifying-lms" target="_blank">Code</a> | <a href="slides_and_posters/detoxification.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('toxicity21');">Citation</a>
-          <div id="toxicity21tldr" class="hidden"><b>TLDR:</b> We show that when language models are "detoxified" to reduce their harmful generations, they simultaneously become less able to generate and understand minority language.<br></div>
-        <div id="toxicity21" class="hidden">
-        <pre>@inproceedings{Xu2021Detoxifying,  
-          Title = {Detoxifying Language Models Risks Marginalizing Minority Voices},
-          Author = {Albert Xu and Eshaan Pathak and Eric Wallace and Suchin Gururangan and Maarten Sap and Dan Klein}, 
-          booktitle={North American Chapter of the Association for Computational Linguistics},
-          Year = {2021}}
-         </pre>
-         </div>
-    </li>
-      
-    <li>        
-          <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="color:black;font-size:1.0em">
-          Concealed Data Poisoning Attacks on NLP Models</a><br>
-          Eric Wallace*, Tony Z. Zhao*, Shi Feng, and Sameer Singh<br>
-          <i>NAACL 2021</i><br>
-          <a href="javascript:unhide('poisoning20tldr');">TLDR</a> | <a href="http://ericswallace.com/poisoning" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1319650623705370624" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2010.12563" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/data-poisoning" target="_blank">Code</a> |  <a href="slides_and_posters/Poisoning-NAACL-June'21.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('poisoning20');">Citation</a>
-          <div id="poisoning20tldr" class="hidden"><b>TLDR:</b> We develop a new training data poisoning attack that allows an adversary to control model predictions whenever a desired phrase is present in the input.<br></div>
-        <div id="poisoning20" class="hidden">
-        <pre>@InProceedings{wallace2021poisoning,
-            title={Concealed Data Poisoning Attacks on {NLP} Models},
-            author={Eric Wallace and Tony Z. Zhao and Shi Feng and Sameer Singh},
-            booktitle={North American Chapter of the Association for Computational Linguistics},
-            year={2021}}
-         </pre>
-         </div>
-    </li>
-    <li>
-          <a href="https://arxiv.org/abs/2010.15980" target="_blank" style="color:black;font-size:1.0em">
-          AutoPrompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts</a><br>
-          Taylor Shin*, Yasaman Razeghi*, Robert L Logan IV*, Eric Wallace, and Sameer Singh<br>
-          <i>EMNLP 2020</i><br>
-          <a href="javascript:unhide('auto20tldr');">TLDR</a> | <a href="https://twitter.com/rloganiv/status/1321992351649202177" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2010.15980" target="_blank">Paper</a> | <a href="https://github.com/ucinlp/autoprompt" target="_blank">Code</a> | <a href="javascript:unhide('auto20');">Citation</a>
+
+<li>
+<div class="thumb">
+<img src="autoprompt.png" />
+</div>
+<div class="text">
+<a href="https://arxiv.org/abs/2010.15980" target="_blank">
+<h3>AutoPrompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts</h3>
+</a>
+<p class="authors">
+Taylor Shin*, Yasaman Razeghi*, Robert L Logan IV*, Eric Wallace, Sameer Singh
+</p>
+<p class="venues">EMNLP 2020</p>
+<p class="buttons">
+<a href="javascript:unhide('auto20tldr');">TLDR</a>| 
+<a href="https://twitter.com/rloganiv/status/1321992351649202177" target="_blank">Twitter</a>|
+<a href="https://arxiv.org/abs/2010.15980" target="_blank">Paper</a>| 
+<a href="https://github.com/ucinlp/autoprompt" target="_blank">Code</a>| 
+<a href="javascript:unhide('auto20');">Citation</a>
           <div id="auto20tldr" class="hidden"><b>TLDR:</b> We propose a method for automatically designing prompts for large language models.<br></div>
         <div id="auto20" class="hidden">
         <pre>@inproceedings{Shin2020Autoprompt,
           Author = {Taylor Shin and Yasaman Razeghi and Robert L. Logan IV and Eric Wallace and Sameer Singh},    
           BookTitle={Empirical Methods in Natural Language Processing},
           Year = {2020},
-          Title = {{AutoPrompt}: Eliciting Knowledge from Language Models with Automatically Generated Prompts}}
-         </pre>
-         </div>
-    </li>
-
-    <li>
-          <a href="https://arxiv.org/abs/2004.15015" target="_blank" style="color:black;font-size:1.0em">
-          Imitation Attacks and Defenses for Black-box Machine Translation Systems</a><br>
-          Eric Wallace, Mitchell Stern, and Dawn Song<br>
-          <i>EMNLP 2020</i><br>
-          <a href="javascript:unhide('stealing20tldr');">TLDR</a> | <a href="http://ericswallace.com/imitation" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1256227702056595456" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2004.15015" target="_blank">Paper</a> | <a href="slides_and_posters/stealing_slides.pdf" target="_blank">Slides</a> | <a href="https://github.com/Eric-Wallace/adversarial-mt" target="_blank">Code</a> | <a href="javascript:unhide('stealing20');">Citation</a>
-          <div id="stealing20tldr" class="hidden"><b>TLDR:</b> We "steal" production NLP systems by training models to imitate their outputs. We then use the imitation models to attack the black-box production systems. We finally propose a defense that mitigates these vulnerabilities.<br></div>
-        <div id="stealing20" class="hidden">
-        <pre>@inproceedings{Wallace2020Stealing,
-          Author = {Eric Wallace and Mitchell Stern and Dawn Song},    
-          BookTitle={Empirical Methods in Natural Language Processing},
-          Year = {2020},
-          Title = {Imitation Attacks and Defenses for Black-box Machine Translation Systems}}
-         </pre>
-         </div>
-    </li>
+          Title = {{AutoPrompt}: Eliciting Knowledge from Language Models with Automatically Generated Prompts}}</pre>
+</div>
+</p>
+</div>
+</li>
 
 
-    <li>
-          <a href="https://arxiv.org/abs/2002.11794" target="_blank" style="color:black;font-size:1.0em">
-          Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers</a><br>
-          Zhuohan Li*, Eric Wallace*, Sheng Shen*, Kevin Lin*, Kurt Keutzer, Dan Klein, and Joseph E. Gonzalez<br>
-          <i>ICML 2020</i><br>
-          <a href="javascript:unhide('efficient20tldr');">TLDR</a> | <a href="https://bair.berkeley.edu/blog/2020/03/05/compress/" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1235616760595791872" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/2002.11794" target="_blank">Paper</a> | <a href="slides_and_posters/train_large.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('efficient20');">Citation</a>
-          <div id="efficient20tldr" class="hidden"><b>TLDR:</b> We show that <i>increasing</i> model size actually speeds up training and inference for Transformer models. The key idea is to use a very large model but perform very few epochs and apply heavy compression.<br></div>
-            <div id="efficient20" class="hidden">
-            <pre>@inproceedings{Li2020Efficient,
-  Author = {Zhuohan Li and Eric Wallace and Sheng Shen and Kevin Lin and Kurt Keutzer and Dan Klein and Joseph E. Gonzalez},
-  Booktitle = {International Conference on Machine Learning},
-  Year = {2020},
-  Title = {Train Large, Then Compress: Rethinking Model Size for Efficient Training and Inference of Transformers}}
-             </pre>
-             </div>
-    </li>
-
-    <li>
-    <a href="https://arxiv.org/abs/2004.06100" target="_blank" style="color:black;font-size:1.0em">Pretrained Transformers Improve Out-of-Distribution Robustness</a><br>
-    Dan Hendrycks*, Xiaoyuan Liu*, Eric Wallace, Adam Dziedzic, Rishabh Krishnan, and Dawn Song<br>
-    <i>ACL 2020</i><br>
-    <a href="javascript:unhide('robust20tldr');">TLDR</a> | <a href="https://arxiv.org/abs/2004.06100" target="_blank">Paper</a> | <a href="https://twitter.com/Eric_Wallace_/status/1250507707674578944" target="_blank">Twitter</a> | <a href="https://github.com/camelop/NLP-Robustness" target="_blank">Code</a> | <a href="slides_and_posters/ood_robustness.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('robust20');">Citation</a>
-    <div id="robust20tldr" class="hidden"><b>TLDR:</b> How does pretraining affect <i>out-of-distribution</i> robustness? We create an OOD benchmark and use it to show that pretraining substantially improves OOD accuracy and detection rates.<br></div>
-  <div id="robust20" class="hidden">
-  <pre>@inproceedings{hendrycks2020pretrained,
-    Author = {Dan Hendrycks and Xiaoyuan Liu and Eric Wallace and Adam Dziedzic and Rishabh Krishnan and Dawn Song},
-    Booktitle = {Association for Computational Linguistics},
-    Year = {2020},
-    Title = {Pretrained Transformers Improve Out-of-Distribution Robustness}}
-   </pre>
-   </div>
-   </li>
-
-
-
-        <li>
-                <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="color:black;font-size:1.0em">Universal Adversarial Triggers for Attacking and Analyzing NLP</a><br>
-                Eric Wallace, Shi Feng, Nikhil Kandpal, Matt Gardner, and Sameer Singh<br>
-                <i>EMNLP 2019</i><br>
-          <a href="javascript:unhide('triggers19tldr');">TLDR</a> | <a href="https://vimeo.com/396789889" target="_blank">Video</a> | <a href="http://ericswallace.com/triggers" target="_blank">Blog</a> | <a href="https://twitter.com/Eric_Wallace_/status/1168907518623571974" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/universal-triggers" target="_blank">Code</a> | <a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Slides</a> | <a href="javascript:unhide('triggers19');">Citation</a>
+<li>
+<div class="thumb">
+<img src="triggers.png" />
+</div>
+<div class="text">
+<a href="https://arxiv.org/abs/1908.07125" target="_blank">
+<h3>Universal Adversarial Triggers for Attacking and Analyzing NLP</h3>
+</a>
+<p class="authors">
+Eric Wallace, Shi Feng, Nikhil Kandpal, Matt Gardner, Sameer Singh
+</p>
+<p class="venues">EMNLP 2019</p>
+<p class="buttons">
+<a href="javascript:unhide('triggers19tldr');">TLDR</a>| 
+<a href="https://vimeo.com/396789889" target="_blank">Video</a>| 
+<a href="http://ericswallace.com/triggers" target="_blank">Blog</a>| 
+<a href="https://twitter.com/Eric_Wallace_/status/1168907518623571974" target="_blank">Twitter</a>| 
+<a href="https://arxiv.org/abs/1908.07125" target="_blank">Paper</a>| 
+<a href="https://github.com/Eric-Wallace/universal-triggers" target="_blank">Code</a>| 
+<a href="slides_and_posters/Universal_Adversarial_Triggers.pdf" target="_blank">Slides</a>| 
+<a href="javascript:unhide('triggers19');">Citation</a>
           <div id="triggers19tldr" class="hidden"><b>TLDR:</b> We create phrases that cause a model to produce a specific prediction when concatenated to <i>any</i> input. Triggers reveal egregious and insightful errors for text classification, reading comprehension, and text generation.<br> </div>
                 <div id="triggers19" class="hidden">
                     <pre>@inproceedings{Wallace2019Triggers,
     Author = {Eric Wallace and Shi Feng and Nikhil Kandpal and Matt Gardner and Sameer Singh},
     Booktitle = {Empirical Methods in Natural Language Processing},
     Year = {2019},
-    Title = {Universal Adversarial Triggers for Attacking and Analyzing {NLP}}}
-                    </pre>
-                </div>
-            </li>
-            <li>
-                <a href="https://arxiv.org/abs/1909.07940" target="_blank" style="color:black;font-size:1.0em">Do NLP Models Know Numbers? Probing Numeracy in Embeddings</a><br>
-                Eric Wallace*, Yizhong Wang*, Sujian Li, Sameer Singh, and Matt Gardner<br>
-                <i>EMNLP 2019</i><br>
-                 <a href="javascript:unhide('numeracy19tldr');">TLDR</a> | <a href="https://twitter.com/Eric_Wallace_/status/1174360279624192000" target="_blank">Twitter</a> | <a href="https://arxiv.org/abs/1909.07940" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/numeracy" target="_blank">Code</a> | <a href="slides_and_posters/NumeracyPoster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('numeracy19');">Citation</a>
-                 <div id="numeracy19tldr" class="hidden"><b>TLDR:</b> We show that pre-trained word embeddings (e.g., BERT, word2vec, ELMo, GloVe) capture number magnitude and order, e.g., they know that "74" is smaller than "eighty-two". This facilitates basic numerical reasoning tasks. <br></div>
-                <div id="numeracy19" class="hidden">
-                    <pre>@inproceedings{Wallace2019Numeracy,
-    Author = {Eric Wallace and Yizhong Wang and Sujian Li and Sameer Singh and Matt Gardner},
-    Booktitle = {Empirical Methods in Natural Language Processing},
-    Year = {2019},
-    Title = {Do {NLP} Models Know Numbers? Probing Numeracy in Embeddings}}
-                    </pre>
-                </div>
-            </li>
+    Title = {Universal Adversarial Triggers for Attacking and Analyzing {NLP}}}</pre>
+</div>
+</p>
+</div>
+</li>
 
-            <li>
-                <a href="https://arxiv.org/abs/1909.09251" target="_blank" style="color:black;font-size:1.0em">AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models</a><br>
-                Eric Wallace, Jens Tuyls, Junlin Wang, Sanjay Subramanian, Matt Gardner, and Sameer Singh<br>
-          <i>Demo at EMNLP 2019</i> &nbsp;&nbsp;&nbsp; <b><i>Best Demo Award</i></b><br>
-                <a href="javascript:unhide('interpret19tldr');">TLDR</a> | <a href="https://allennlp.org/interpret" target="_blank">Landing Page</a> | <a href="https://twitter.com/Eric_Wallace_/status/1176886627852898309" target="_blank">Twitter</a> | <a href="https://demo.allennlp.org/reading-comprehension" target="_blank">Demo</a> | <a href="https://arxiv.org/abs/1909.09251" target="_blank">Paper</a> | <a href="slides_and_posters/InterpretPoster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('interpret19');">Citation</a>
-                <div id="interpret19tldr" class="hidden"><b>TLDR:</b> An open-source toolkit built on top of AllenNLP that makes it easy to interpret NLP models.<br> </div>
-                <div id="interpret19" class="hidden">
-                    <pre>@inproceedings{Wallace2019AllenNLP,
-    Author = {Eric Wallace and Jens Tuyls and Junlin Wang and Sanjay Subramanian and Matt Gardner and Sameer Singh},
-    Booktitle = {Empirical Methods in Natural Language Processing},
-    Year = {2019},
-    Title = {{AllenNLP Interpret}: A Framework for Explaining Predictions of {NLP} Models}}
-                    </pre>
-                </div>
-            </li>
+<li>
+    <div class="thumb">
+    <img src="https://production-media.paperswithcode.com/libraries/allennlp-icon.png-0000000007-e01b7380.png" />
+    </div>
+    <div class="text">
+        <a href="https://arxiv.org/abs/1909.09251" target="_blank">
+            <h3>AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models</h3>
+        </a>
+        <p class="authors">Eric Wallace, Jens Tuyls, Junlin Wang, Sanjay Subramanian, Matt Gardner, Sameer Singh</p>
+        <p class="venues">EMNLP 2019. <font color="#1772d0">Best Demo Award</font></p>
+        <p class="buttons">
+            <a href="javascript:unhide('interpret19tldr');">TLDR</a>|
+            <a href="https://allennlp.org/interpret" target="_blank">Landing Page</a>|
+            <a href="https://twitter.com/Eric_Wallace_/status/1176886627852898309" target="_blank">Twitter</a>|
+            <a href="https://demo.allennlp.org/reading-comprehension" target="_blank">Demo</a>|
+            <a href="https://arxiv.org/abs/1909.09251" target="_blank">Paper</a>|
+            <a href="slides_and_posters/InterpretPoster.pdf" target="_blank">Poster</a>|
+            <a href="javascript:unhide('interpret19');">Citation</a>
+            <div id="interpret19tldr" class="hidden"><b>TLDR:</b> We build an open-source toolkit on top of AllenNLP that makes it easy to interpret NLP models.<br> </div>
+            <div id="interpret19" class="hidden">
+                <pre>@inproceedings{Wallace2019AllenNLP,
+                     Author = {Eric Wallace and Jens Tuyls and Junlin Wang and Sanjay Subramanian and Matt Gardner and Sameer Singh},
+                     Booktitle = {Empirical Methods in Natural Language Processing},
+                     Year = {2019},
+                     Title = {{AllenNLP Interpret}: A Framework for Explaining Predictions of {NLP} Models}}</pre>
+            </div>
+        </p>
+    </div>
+</li>
 
-            <li>
-                <a href="http://arxiv.org/abs/1906.02900" target="_blank" style="color:black;font-size:1.0em">Compositional Questions Do Not Necessitate Multi-hop Reasoning</a><br>
-                Sewon Min*, Eric Wallace*, Sameer Singh, Matt Gardner, Hannaneh Hajishirzi, and Luke Zettlemoyer<br>
-                <i>ACL 2019</i><br>
-        <a href="javascript:unhide('multihop19tldr');">TLDR</a> | <a href="https://arxiv.org/abs/1906.02900" target="_blank">Paper</a> | <a href="slides_and_posters/Compositional_Slides.pdf" target="_blank">Slides</a> | <a href="https://github.com/shmsw25/single-hop-rc" target="_blank">Code</a> | <a href="javascript:unhide('multihop19');">Citation</a>
-        <div id="multihop19tldr" class="hidden"><b>TLDR:</b> We argue that constructing multi-hop QA datasets is non-trivial, and that existing datasets are simpler than expected. For instance, single-hop models can solve most of HotpotQA due to weak distractor paragraphs.<br></div>
-                <div id="multihop19" class="hidden">
-          <pre>@inproceedings{Min2019Multihop,
-    Author = {Sewon Min and Eric Wallace and Sameer Singh and Matt Gardner and Hannaneh Hajishirzi and Luke Zettlemoyer},
-    Booktitle = {Association for Computational Linguistics},
-    Year = {2019},
-    Title = {Compositional Questions Do Not Necessitate Multi-hop Reasoning}}
-                  </pre>
-                </div>
-            </li>
-            <li>
-                <a href="https://arxiv.org/abs/1809.02701" target="_blank" style="color:black;font-size:1.0em">Trick Me If You Can: Human-in-the-loop Generation of Adversarial Examples for Question Answering</a><br>
-                Eric Wallace, Pedro Rodriguez, Shi Feng, Ikuya Yamada, and Jordan Boyd-Graber<br>
-                <i>TACL 2019</i><br>
-                <a href="javascript:unhide('trick19tldr');">TLDR</a> | <a href="https://arxiv.org/abs/1809.02701" target="_blank">Paper</a> | <a href="https://github.com/Eric-Wallace/trickme-interface" target="_blank">Code</a> | <a href="slides_and_posters/TrickMe_Poster.pdf" target="_blank">Poster</a> | <a href="javascript:unhide('trick19');">Citation</a>
-                <div id="trick19tldr" class="hidden"><b>TLDR:</b> We use a human-in-the-loop approach for generating adversarial examples in NLP. We display model intepretations and predictions in a UI, which enables collaborative + interactive attacks on question answering systems .<br></div>
-                <div id="trick19" class="hidden">
-          <pre>@inproceedings{Wallace2019Trick,
-    Author = {Eric Wallace and Pedro Rodriguez and Shi Feng and Ikuya Yamada and Jordan Boyd-Graber},
-    Booktitle = {Transactions of the Association for Computational Linguistics},
-    Year = {2019},
-    Title = {Trick Me If You Can: Human-in-the-loop Generation of Adversarial Examples for Question Answering}}
-                  </pre>
-                </div>
-            </li>
 
-     <li>
-                <a href="https://arxiv.org/abs/1804.07781" target="_blank" style="color:black;font-size:1.0em">Pathologies of Neural Models Make Interpretations Difficult</a><br>
-                Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber<br>
-                <i>EMNLP 2018</i><br>
-                <a href="javascript:unhide('pathological18tldr');">TLDR</a> | <a href="https://vimeo.com/306158589" target="_blank">Video</a> | <a href="https://arxiv.org/abs/1804.07781" target="_blank">Paper</a> |
-                <a href="slides_and_posters/pathologies_slides.pdf" target="_blank">Slides</a> | <a href="https://github.com/allenai/allennlp/blob/master/allennlp/interpret/attackers/input_reduction.py" target="_blank">Code</a> | <a href="javascript:unhide('pathological18');">Citation</a>
-                <div id="pathological18tldr" class="hidden"><b>TLDR:</b> Saliency maps are a popular interpretation technique. We show that certain pathological behavior present in neural models (namely prediction overconfidence) can negatively impact these interpretations.<br> </div>
-                <div id="pathological18" class="hidden">
-                    <pre>@inproceedings{Feng2018Pathological,
-    Author = {Shi Feng and Eric Wallace and Alvin Grissom II and Mohit Iyyer and Pedro Rodriguez and Jordan Boyd-Graber},
-    Booktitle = {Empirical Methods in Natural Language Processing},
-    Year = {2018},
-    Title = {Pathologies of Neural Models Make Interpretations Difficult}}
-                  </pre>
-                </div>
-            </li>
-        </ul>
+<li>
+    <div class="thumb">
+    <img src="pathologies.png" />
+    </div>
+    <div class="text">
+        <a href="https://arxiv.org/abs/1804.07781" target="_blank">
+            <h3>Pathologies of Neural Models Make Interpretations Difficult</h3>
+        </a>
+        <p class="authors">Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber</p>
+        <p class="venues">EMNLP 2018</p>
+        <p class="buttons">
+            <a href="javascript:unhide('pathological18tldr');">TLDR</a>| 
+            <a href="https://vimeo.com/306158589" target="_blank">Video</a>| 
+            <a href="https://arxiv.org/abs/1804.07781" target="_blank">Paper</a>| 
+            <a href="slides_and_posters/pathologies_slides.pdf" target="_blank">Slides</a>| 
+            <a href="https://github.com/allenai/allennlp/blob/master/allennlp/interpret/attackers/input_reduction.py" target="_blank">Code</a>| 
+            <a href="javascript:unhide('pathological18');">Citation</a>
+            <div id="pathological18tldr" class="hidden"><b>TLDR:</b> Saliency maps, a popular interpretation technique, can be negatively impacted by certain pathological behavior present in neural models, such as prediction overconfidence.<br> </div>
+            <div id="pathological18" class="hidden">
+                <pre>@inproceedings{Feng2018Pathological,
+                    Author = {Shi Feng and Eric Wallace and Alvin Grissom II and Mohit Iyyer and Pedro Rodriguez and Jordan Boyd-Graber},
+                    Booktitle = {Empirical Methods in Natural Language Processing},
+                    Year = {2018},
+                    Title = {Pathologies of Neural Models Make Interpretations Difficult}}</pre>
+            </div>
+        </p>
+    </div>
+</li>
+</ul>
+
+<h2>Teaching</h2>
+<p></p>
+<ul class="collection">
+
+
+
+<li>
+  <div class="thumb2">
+    <img style="width: 100%;" src="berkeley_nlp_logo.png" />
+  </div>
+  <div class="text">
+    <a href="https://cal-cs288.github.io/sp23/" target="_blank">
+      <h3>CS288: Natural Language Processing</h3>
+    </a>
+    <p class="venues">Spring 2023</p>
+    <p class="authors">
+     Co-taught with Dan Klein and Kevin Lin. In the second half of the course, I covered many cutting-edge topics including LM scaling, systems, risks, RLHF, retrieval, and more. 
     </p>
+    <p class="buttons">
+      <a href="https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020/blob/master/tutorial_slides.pdf" target="_blank">Slides</a>| 
+      <a href="HW4.pdf" target="_blank">Finetuning HW</a>|
+      <a href="HW5.pdf" target="_blank">Finetuning HW</a>
+    </p>
+  </div>
+</li>
 
 
-</div>
-</div>
+<li>
+  <div class="thumb2">
+    <img style="width: 100%;" src="https://2021.emnlp.org/img/acl-logo.png" />
+  </div>
+  <div class="text">
+    <a href="https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020" target="_blank">
+      <h3>Interpreting Predictions of NLP Models</h3>
+    </a>
+    <p class="venues">EMNLP 2020</p>
+    <p class="authors">
+    Sameer Singh, Matt Gardner, and I taught a tutorial on existing methods for interpreting the predictions and behavior of NLP and language models. 
+    </p>
+    <p class="buttons">
+      <a href="https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020/raw/master/tutorial_slides.pdf" target="_blank">Slides</a>| 
+      <a href="https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020" target="_blank">Website</a>
+    </p>
+  </div>
+</li>
 
+
+
+<h2>Selected Media Coverage</h2>
+<p>Here are some notable news articles that feature my work, including interviews with me or my colleagues.</p>
+
+<ul class="tiles">
+
+<li>
+<a target="_blank" href="https://www.technologyreview.com/2023/02/03/1067786/ai-models-spit-out-photos-of-real-people-and-copyrighted-images/">
+<div class="image" style="background-image: url(https://www.seekpng.com/png/detail/637-6376853_mit-technology-review.png)"></div>
+</a>
+<a target="_blank" href="https://www.technologyreview.com/2023/02/03/1067786/ai-models-spit-out-photos-of-real-people-and-copyrighted-images/">
+<h3>AI models spit out photos of people and copyrighted images</h3>
+</a>
+</li>
+
+<li>
+<a target="_blank" href="https://twimlai.com/podcast/twimlai/privacy-and-security-for-stable-diffusion-and-llms/">
+<div class="image" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAwFBMVEX///8cKmgAufEAvfIPIWQAGmEAAFkYJ2cAu/L5+vyUmK5pcJUnNG33/P7y/P7a8vzP8PxfzfXq+f4AEF4AAFYAFV8Sw/MUJGXt7vPn6O3C7Pvh4ukRImQTv/IACFyx5fpgaJC5vMyU3vgAF2DLzdlTy/WJjaiqrsEiMG2Nk612fJ3Aw9Gdori0t8hJUoA0QHaI1vdv1fdzeZtbYos+SHpLVILW2OKl4/kyyfRk0/Z+hKKiprm56foAAE8tOXBBS30UiBnNAAAN50lEQVR4nO1cC1viOhMO5daKCIKFcilU5H5RLooKLP7/f/UlmVyL7uoKuOd75j1nkabpdN7MZDIJaQlBIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQiH8V2/6o3298R0I+ny+VSoVisb5rP3c6c0Dpq2IuqCKj2ncUeR+DTDqd9hPfkJDPX5UKBUrvuTN/7b1Uki6Ds/iimBFTpPz2DUU+wEU6QXHj/b0ExrDEGLY788XrSyVMMji7L4rJpage2eE3FPkAwDDzDQkfMPyqGGB4+Z9h6H7VSf91hqwftqEfhq5DUflyoPmHGVJ4NJxeUUtSWwrkvyzj32Z4DCDDvwYyPBtOzLDV4ICigH19J32qNd5J7njlQB9zOVpN711JjXcknZhh4s6nKD8x+d6+TL/6mwMV/HL5MYgVzlJl/+7OVyxyLYrMUh6uh+WyP45d4z2Vy+XoQPyJGQIyXabAQ5Xdi383MMnQ0jhvr8nr+pL4gFVKpBTD+5SUat6yzLxmEFPkPAzLXJcRL0rHyIAGe1uDCVM20VzJ47cq9/mJOKxxSamYJF6peh9T5JwM1zfse9aeb3i0QNVQWDK1Ev5MHNZa/MqUPL31E4dqN7idE36sf56HYQv0v8waBwK33Foxy3otcG6p1vbOrnNfTRxKGomeP7UVOTXD9B2FnwmMspQVIbgCVIU7s1A4aSSPn5qWnWtgrZibPvD2S1SfbEVOzDA95RAxvFE+cC4vY5sZEHHa5VvJCJz0Up6eCv/INo1r1mUZ1uwR47wjPniX2edupV6mZYMsM0c2KyPpFJy0L89D3IlJGslukbbd9LwMQVUd9JWT2rNwoJ3KyWM+zCQya3HYkK1iNcs+KyU9WPc8L0PRgcqqIGhKvfRQQJ0Uup0saPi24jqIGc2ylu5Oo+maGDhzXircVJFRTmpa1ou1wwU46UgeX6pWMXpvX8duXZPhzAwHvu1/YK2EzWjm24yh25WlZQxrGW6617Sze/OWZ2YIyUg2Ie4X+FpZbdm4k2ZstUVIyVpu2i3rQt1jf4AhWYH2YhwAayWGWdNoQdruYiBJD+Qw7l3urVxoAxfBOR11f4Ch7aYw7t0NhjA6gBazsu1/oHVLjnJrPjg2VwOIy2LQT0Gl9R0QNficm6GVjwWQAWTtER4SGBVDYCTXmQqEFH8QQJYLuWpX0BahzEwfzj7HN8kIay2tAVDRFhjFnBSsRfPAR4PMGKTOZHJgpHNnZyjIROy7spYnkmamBvix7kqXkhFAWUs6POu9Hrh5KhAjrpnlnp1hUIVgEFghJactu7KzbBgb9KxvI5yUxmU9hdK05UxSu+n5V6Jy0qGktZhHaTcVTqqy7L5ixOGBSVOB1RZLJVNMHY107vwM9fTdsJZwU987cNIHZXIOw1rSTSkZI3zVYmPNDzD0IFSUgyBjBMNIWuHezrLXseWMsbYWCWSfmxh9W3ZulRj+wHqpXKGYaSeVbtqMAjGgycrCSeVyBklD84C+KxGpluZgE08Mf4ChcNPcCmICWCsAyw6Bkc6dYe6hljMsa5EBDJUR9+RsFTwZLJto/SBDLwspJXzK9ENMFOFTZdnQ7bRB7BUq0SwQnSXtWGL4I6v6YznrNUOKMY8yIimMDUpbr2rHnZU5NZGVYm76EwzBMAAVUjyDYfpCFvKxQU1FrHSBYWZcdCcrgWWzshl+gqGnp7A6ORPRFPqQzLLjTpozQwox1rHMStJNZ8Y1p2AICWLr3Q01ej5uTMe1m+oEBvxZRX5hnZTWVi3zGOsGwrLVlSmjGv9h5PuYxOZAJrqKTFnPVWGBjfubyrIhL1NL3fEVKqNZsk3jdymYdYofPUQKYa1sHAWByFJy71lRkqk+GoXKHhm5Li9aSU0URFqgrSWzXJu2kCQyPbHY39ocfVuU6Fep9ON4O5jZ3UCubaqQwiDtoWmLkVxm0SIY3ZmyZO81acv0QbgprEUm0um3DVXkiAzVglE2dedncvY5EU2t5WkZNvytLODLLtmhrDCLZSuajOWkLMuFGT+46a0M3VWmyMHPl99AzvhtRo9wAJi9Wk6q3PTOdlKdhK9iGadBxlxkVpJkU62M8bd6zA1u3oOmaC/wHU7cOYRzqfUK0FONmAE/1IMjYHnQN4lsGxmTg2bqNAzZr85qpT1mQ+j+vh2FIJrqqWAsCR/EllENMtl07M4Qyu6E/NqjUuS4DKlSqVY6xZCOC370Uyk/9jsYWbZoVb1ekUk1m82MsvPKZ5JuYj9teyl6h1Z8UNrcsLoZ1aMvfKGIvyJHRne6zOWiKFrHyr1NFG0O8oxRFOnRxcutKLbq5ISKiXKT+DW1ZRQdDnYjVjcyfKQ74orkTrCVFoFAIBCIs6Lw1ScRzgN7Z3bePLyS+KSoilM4mlrHQymsmIcvFU1xHkpUroufkfVvMly45lMuV6GjGV7z5wsEOp+Q9T2Gu8/c4uu4SibdnnFoMXR2efDSIm2H+p+FfY9hxfnysxqfwbNTCQ29Ygw1q4XTI3/EtxjmT8Sw4tQXxuNmHzIsOeGf482/aMOiE9J/rmL1IUPqzeL+hSJFwVSmVBTQDHmlolEpD5cZVxXERdBwV+zqXazKMXDNIkjFeVZEPmQYcoal1yQPP65bkefaFVdGpCQwvFokHagUCsHFnqgSzsVV9VCUuO4ru+MLvRpEfypqfxol16V6tx01YPyBYSmkilQo6F/RLHOmdwUgGFao3rISj487x+WXMVYv/KqCqMIq8Ug3DytJLvnrj4b9Fh3nmn7mQ9Vwf+iHPacnvOiq4/BuQ11cOYDoh3OnIsV1nGSeyXcXohPXQ+C84DeWZEvi6hP0wxA4zNX9PmQ4Z7H0yklqJXrciHPzqVhgGBqOxksKtLNL7OD7tTEI96D+SWLpTrhnSTZjnGG7BCgseP+oO0b+8+y8cgpGv+F8Sm6oRZT42Y5Rx2H9grLSjZcHtzgJw57MVNSXWE6TBLiiQ+3MQREOQtcIfsDQsdJAQGnXFkjyC651cJM4BcOSk5TdQ/rR+wzDyiu3Qlv3HsXQ+QTDq57O/oBh20l2dnWKXV1efwqGRh+qiH4Rz9rYM/d5Nd/4W4Y9N/nyKgAMicE5BIc9AcN8mHzpCVREcvphpOH4S4Y0rdCV5AXtxTVHjw4hnNkJGLZdY+7gisH6yww/0Q87ZrwNDzI7EQROwLDizus7gfo1aPF7hp+NNLHHnTvm1Ct5wFC229EZFvlorI5cnpz+nmHRNA9Yxgz7YJ9SMqlz9HqH15wbIniTdAzOO8Gw95kJ2lewsN9gAcnp7xnmHdcczNvETBao2uDqcALALfZsmP6FR5qrpGEvGFgPFPo2SjF3geT09wypEuFzgecA9Z7LB5iS67wWeVLw/CIy7zYdPKFS4ZpXotlvB447SRfcuuf2RDJRKoaiRWj6tiiUPrsm9Gc8x6a0kJz+gWH+hY1okAMIc7ZZmIKkYCFmT6+iEpth8EGoAwXsojowLLBcPCkqSdfvcFFH64xtN6Z+J8lUtlaikoeTtedeyN5/Eb6o99AUFuyNGGFlUSSvIRTWr/lLMmiZELDr8eNe54r0YCZduA5lNjFXZitSUeHxws3B+x3yB8XvvgLCygF0kX3BQaX8QZ18/h1JJH6MQCAQ/0XkIXR7tVpNPqFnfJLAs057nlkFDmriXED/BqIO1INPUVzjCHSBLeWIMHWkaPOEsba/ubkZ8r0gA9jsM+TbZjx4wHXSpKfTE0Iu+DaSBuxsu+Tb/Na/xKUP9G9mQMiI1rng23UuNvRGjxla3CfBTSZTztykPShg24ze+C0e4vtevk3wF21sQtQGNmDYZzt8+nx30xA2bO1v2EaX3A2/f4YVTTKKId/otc5wol0mahQRb1hjb2nwSJ8xvGGb30aU4ZhJDm5Y43l8g/KSFXj7W0Ke+Gaj/dEYeuL/gNyOPPIkvQMYjqeiClV4wHcpXebuKan95ZqrxusOtA3ZcW7wxnY/dx+ApsddQDAcbdK3wPCeb5maMZ8JuJg9L+hT+99v2GbF49mw32V3W3n0v/sxeXtavk00w9lwMJvxW+W2hDd4tfaw9crrN1YYtNTjo7nuZNIdsE3atHD2JBlyGza0DUfTNZWiGXIAw6Fi+LgePR6T4XrjPfW9HFmR7pbe2CPeSjMkg9VqVR6AFhvmYalGo7zawP01w2ni/u3t7ZG9+GSao97bgK2pw0SDvQsmO0xR0ZzhBZkOeT9kDBtPUe09hl3ytjlmP3y67a62E8GQtr7FkIFZYzocTDds02+qQbaUSIzhBQ8uNealieV2+0gpdPeNLmPqXU5qj8yJBUOyGk8Fw2CW7b7PMGhN3o7H8GJP+nt6Y2pNemObYcRDB40cidxyOR7OOEMGaOFfvBv5Zj/spsbL5TLr8Xbprwj30jXbxygZepf7PmtXImkBQ955yXLLGZK1nzoew8aGdOktaSjbrAgNm95YM3zIzWaDpzGZ8HfVzGj3EFtNeaQhq6fBjPox1ZzvD143PRJxaz4MqA3Zw8QT4lVp1TF13X4fRgzaKWlTztLT2axf5k3EX0s5SNGCEevrD4z29NexR4s46ny+7fWjKLrwyIRvLGfcNzBiwntGvSmcJhNugKAvz3dnpMZIT0ZQQuMYuaV1bnm9WybtNhdF44YUKwvWSnYft18iEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEP9/+B/gRFvMuTJgKwAAAABJRU5ErkJggg==)"></div>
+</a>
+<a target="_blank" href="https://twimlai.com/podcast/twimlai/privacy-and-security-for-stable-diffusion-and-llms/">
+<h3>Privacy & Security for Diffusion and LMs</h3>
+</a>
+</li>
+
+<li>
+<a target="_blank" href="https://www.discovermagazine.com/technology/neural-crossword-solver-outperforms-humans-for-the-first-time">
+<div class="image" style="background-image: url(https://getlogo.net/wp-content/uploads/2019/09/discover-magazine-logo-vector.png)"></div>
+</a>
+<a target="_blank" href="https://www.discovermagazine.com/technology/neural-crossword-solver-outperforms-humans-for-the-first-time">
+<h3>Neural Crossword Solver Outperforms Humans For First Time</h3>
+</a>
+</li>
+
+<li>
+<a target="_blank" href="https://www.youtube.com/watch?v=SNAfkCiBpq0">
+<div class="image" style="background-image: url(https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91FQAqfjhwL._AC_UF1000,1000_QL80_.jpg)"></div>
+</a>
+<a target="_blank" href="https://www.youtube.com/watch?v=SNAfkCiBpq0">
+<h3>Neil deGrasse Tyson Podcast (Crosswords)</h3>
+</a>
+</li>
+
+<li>
+<a target="_blank" href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/">
+<div class="image" style="background-image: url(data:image/png;base64,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)"></div>
+</a>
+<a target="_blank" href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/">
+<h3>Does GPT-2 Know Your Phone Number?</h3>
+</a>
+</li>
+
+<li>
+<a target="_blank" href="https://www.wired.com/story/crossword-ai-humans-way-with-words/">
+<div class="image" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRaEppQxkFEhXcasdUEiOnciVSmnPNqTAtRw&usqp=CAU)"></div>
+</a>
+
+
+<a target="_blank" href="https://www.wired.com/story/crossword-ai-humans-way-with-words/">
+<h3>What a Crossword AI Reveals About Humans</h3>
+</a>
+</li>
+
+
+<li>
+<a target="_blank" href="https://ai.googleblog.com/2020/12/privacy-considerations-in-large.html">
+<div class="image" style="background-image: url(https://ai.google/static/images/share.png)"></div>
+</a>
+<a target="_blank" href="https://ai.googleblog.com/2020/12/privacy-considerations-in-large.html">
+<h3>Privacy Considerations in Language Models</h3>
+</a>
+</li>
+
+<li>
+<a target="_blank" href="https://www.technologyreview.com/2022/08/31/1058800/what-does-gpt-3-know-about-me/">
+<div class="image" style="background-image: url(https://www.seekpng.com/png/detail/637-6376853_mit-technology-review.png)"></div>
+</a>
+<a target="_blank" href="https://www.technologyreview.com/2022/08/31/1058800/what-does-gpt-3-know-about-me/">
+<h3>What does GPT-3 “know” about me?</h3>
+</a>
+</li>
+</ul>
+<br>
+<br>
+
+
+
+</article>
+
+</main>
 </body>
 </html>
