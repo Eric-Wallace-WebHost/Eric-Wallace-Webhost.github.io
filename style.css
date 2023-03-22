@@ -491,8 +491,13 @@ article>h1:first-child {
     width: 25%
 }
 
+.intro .centerphoto {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .intro .center {
-    width: 90%;
+    width: 92%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -507,10 +512,16 @@ article>h1:first-child {
     .intro .center {
         display: block
     }
+    .intro .centerphoto {
+        display: block
+    }
 }
 
 @media (min-width: 481px) {
     .intro .center {
+        display: none
+    }
+    .intro .centerphoto {
         display: none
     }
 }
