@@ -525,6 +525,13 @@ article>h1:first-child {
     text-align: left
 }
 
+@media (max-width: 480px) {
+    .intro .right {
+        margin-left:  0rem;
+    }
+}
+
+
 .intro .right .contact {
     width: 100%;
     margin-bottom: 0;
