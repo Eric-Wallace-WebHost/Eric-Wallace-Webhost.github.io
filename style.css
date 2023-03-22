@@ -491,9 +491,27 @@ article>h1:first-child {
     width: 25%
 }
 
+.intro .center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media (max-width: 480px) {
     .intro .left {
         display:none
+    }
+    .intro .right {
+        display:none
+    }
+    .intro .center {
+        display: block
+    }
+}
+
+@media (min-width: 481px) {
+    .intro .center {
+        display: none
     }
 }
 
@@ -523,12 +541,6 @@ article>h1:first-child {
 
 .intro .right p {
     text-align: left
-}
-
-@media (max-width: 480px) {
-    .intro .right {
-        margin-left:  0rem;
-    }
 }
 
 
