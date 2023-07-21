@@ -68,8 +68,7 @@
 
 <h2 style="margin: 1.3em 0 .8em 0">Current Research Interests</h2>
 
-<p>I focus on improving language models, enhancing the security/privacy/reliability of ML, and the intersection of these topics. Some of my recent research includes:</p>
-
+<p>My research focuses on enhancing the security/privacy/robustness of ML, improving language models, and the intersection of these topics. Some of my recent work includes:</p>
 <ul>
   <li><strong>Memorization & Privacy</strong> We've shown that LMs and diffusion models can memorize their training data <a href="https://arxiv.org/abs/2012.07805" target="_blank" style="font-size: 0.95em">[1,</a><a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/" target="_blank" style="font-size: 0.95em">2,</a><a href="https://arxiv.org/abs/2202.06539" target="_blank" style="font-size: 0.95em">3</a>,</a><a href="https://arxiv.org/abs/2301.13188" target="_blank" style="font-size: 0.95em">4]</a>, raising concerns regarding privacy, copyright agreements, GDPR statutes, and more.
   <li><strong>Prompting & Decoding</strong> We've done some of the early work on prompting LMs, including prompt design <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[4,</a><a href="https://arxiv.org/abs/2010.15980" target="_blank" style="font-size: 0.95em">5]</a>, parameter efficiency <a href="https://arxiv.org/abs/2106.13353" target="_blank" style="font-size: 0.95em">[6]</a>, and understanding failure modes <a href="https://arxiv.org/abs/2102.09690" target="_blank" style="font-size: 0.95em">[7]</a>.
@@ -95,7 +94,7 @@
     <p class="authors">
       Nicholas Carlini, Jamie Hayes, Milad Nasr, Matthew Jagielski, Vikash Sehwag, Florian Tramèr, Borja Balle, Daphne Ippolito, Eric Wallace
     </p>
-    <p class="venues">arXiv preprint</p>
+    <p class="venues">USENIX 2023</p>
     <p class="buttons">
       <a href="javascript:unhide('diffusion2023tldr');">TLDR</a> | 
       <a href="https://twitter.com/Eric_Wallace_/status/1620449934863642624" target="_blank">Twitter</a> | 
@@ -103,16 +102,44 @@
       <a href="javascript:unhide('diffusion23');">Citation</a>
       <div id="diffusion2023tldr" class="hidden"><b>TLDR:</b> We show how to extract hundreds of memorized images from popular diffusion models like Imagen and Stable Diffusion.<br></div>
       <div id="diffusion23" class="hidden">
-        <pre>@article{carlini2023extracting,
+        <pre>@inproceedings{carlini2023extracting,
           title={Extracting training data from diffusion models},
           author={Carlini, Nicholas and Hayes, Jamie and Nasr, Milad and Jagielski, Matthew and Sehwag, Vikash and Tram{\`e}r, Florian and Balle, Borja and Ippolito, Daphne and Wallace, Eric},
-          journal={arXiv preprint arXiv:2301.13188},
+          booktitle={USENIX Security Symposium},
           year={2023}}</pre>
       </div>
     </p>
   </div>
 </li>
 
+<li>
+  <div class="thumb">
+    <img src="url(https://pbs.twimg.com/media/FvIwsxlaUAIDLgC?format=jpg&name=medium)" />
+  </div>
+  <div class="text">
+    <a href="https://arxiv.org/abs/2301.13188" target="_blank">
+      <h3>Poisoning Language Models During Instruction Tuning</h3>
+    </a>
+    <p class="authors">
+      Alexander Wan*, Eric Wallace*, Sheng Shen, Dan Klein
+    </p>
+    <p class="venues">ICML 2023</p>
+    <p class="buttons">
+      <a href="javascript:unhide('poisoning23tldr');">TLDR</a> | 
+      <a href="https://twitter.com/alexwan55/status/1653437581768663040" target="_blank">Twitter</a> | 
+      <a href="https://arxiv.org/abs/2305.00944" target="_blank">Paper</a>|
+      <a href="javascript:unhide('poisoning23');">Citation</a>
+      <div id="poisoning23tldr" class="hidden"><b>TLDR:</b> We show that adversaries can poison training sets to manipulate LLM predictions whenever a desired trigger phrase appears, regardless of the task.<br></div>
+      <div id="poisoning23" class="hidden">
+        <pre>@inproceedings{Wan2023Poisoning,
+    Author = {Alexander Wan and Eric Wallace and Sheng Shen and Dan Klein},
+    Booktitle = {International Conference on Machine Learning},                            
+    Year = {2023},
+    Title = {Poisoning Language Models During Instruction Tuning}}</pre>
+      </div>
+    </p>
+  </div>
+</li>
 
 <li>
 <div class="thumb">
@@ -305,36 +332,6 @@ Eric Wallace, Shi Feng, Nikhil Kandpal, Matt Gardner, Sameer Singh
                      Booktitle = {Empirical Methods in Natural Language Processing},
                      Year = {2019},
                      Title = {{AllenNLP Interpret}: A Framework for Explaining Predictions of {NLP} Models}}</pre>
-            </div>
-        </p>
-    </div>
-</li>
-
-
-<li>
-    <div class="thumb">
-    <img src="pathologies.png" />
-    </div>
-    <div class="text">
-        <a href="https://arxiv.org/abs/1804.07781" target="_blank">
-            <h3>Pathologies of Neural Models Make Interpretations Difficult</h3>
-        </a>
-        <p class="authors">Shi Feng, Eric Wallace, Alvin Grissom II, Mohit Iyyer, Pedro Rodriguez, Jordan Boyd-Graber</p>
-        <p class="venues">EMNLP 2018</p>
-        <p class="buttons">
-            <a href="javascript:unhide('pathological18tldr');">TLDR</a>| 
-            <a href="https://vimeo.com/306158589" target="_blank">Video</a>| 
-            <a href="https://arxiv.org/abs/1804.07781" target="_blank">Paper</a>| 
-            <a href="slides_and_posters/pathologies_slides.pdf" target="_blank">Slides</a>| 
-            <a href="https://github.com/allenai/allennlp/blob/master/allennlp/interpret/attackers/input_reduction.py" target="_blank">Code</a>| 
-            <a href="javascript:unhide('pathological18');">Citation</a>
-            <div id="pathological18tldr" class="hidden"><b>TLDR:</b> Saliency maps, a popular interpretation technique, can be negatively impacted by certain pathological behavior present in neural models, such as prediction overconfidence.<br> </div>
-            <div id="pathological18" class="hidden">
-                <pre>@inproceedings{Feng2018Pathological,
-                    Author = {Shi Feng and Eric Wallace and Alvin Grissom II and Mohit Iyyer and Pedro Rodriguez and Jordan Boyd-Graber},
-                    Booktitle = {Empirical Methods in Natural Language Processing},
-                    Year = {2018},
-                    Title = {Pathologies of Neural Models Make Interpretations Difficult}}</pre>
             </div>
         </p>
     </div>
