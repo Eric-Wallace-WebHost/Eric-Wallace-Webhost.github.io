@@ -538,8 +538,8 @@ article>h1:first-child {
 .intro .right {
     flex: 1;
     margin-left: 2rem;
-    margin-top: 0.2rem;
-/*    margin-bottom: 0.35rem;*/
+    margin-top: -0.6rem;
+    margin-bottom: 0.35rem;
 }
 
 .intro .right h2 {
