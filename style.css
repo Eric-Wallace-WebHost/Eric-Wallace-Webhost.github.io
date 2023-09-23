@@ -349,7 +349,8 @@ h4 {
 
 p,ul,ol,td {
     margin: 1em 0;
-    line-height: 1.3
+    line-height: 1.3;
+    font-size: 1.1em;
 }
 
 @media (max-width: 480px) {
@@ -537,8 +538,8 @@ article>h1:first-child {
 .intro .right {
     flex: 1;
     margin-left: 2rem;
-    margin-top: 1rem;*/
-/*    margin-bottom: 0.1rem;*/
+    margin-top: 0.2rem;
+/*    margin-bottom: 0.35rem;*/
 }
 
 .intro .right h2 {
@@ -841,7 +842,7 @@ pre {
 
 .collection p {
     margin: 0;
-    font-size: .95em
+    font-size: 0.95em
 }
 
 .collection .date {
