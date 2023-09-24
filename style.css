@@ -675,6 +675,9 @@ article>h1:first-child {
     text-decoration: underline
 }
 
+.authors {
+    font-size:  0.6em;
+}
 .cover .venues {
     margin: 1em 0;
     color: #000
