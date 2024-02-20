@@ -9,6 +9,10 @@ ul {
     list-style: square;
 }
 
+body {
+    zoom: 110%;
+}
+
 .highlight .hll {
     background-color: #222
 }
