@@ -56,41 +56,91 @@
 </div>
 
 <div class="right">
-  <p style="font-size: 1.1em; margin-top: 0.8em">Hello! I am a researcher at OpenAI, where I work to make the next-generation of LLMs more safe, robust, and private. Before this, I did a PhD at UC Berkeley with <a href="https://people.eecs.berkeley.edu/~klein/" target="_blank">Dan Klein</a> and <a href="https://people.eecs.berkeley.edu/~dawnsong/" target="_blank">Dawn Song</a>.</p>
-  <p style="font-size: 1.1em; margin-top: -0.0em">Feel free to reach out if you are interested in jobs at OpenAI, looking to disclose vulnerabilities of OpenAI models, or interested in our external red teaming program.</p>
+  <p style="font-size: 1.1em; margin-top: 0.1em">Hello! I am a researcher at OpenAI, where I work to make the next-generation of LLMs more safe, robust, and private. Before this, I did a PhD at UC Berkeley with <a href="https://people.eecs.berkeley.edu/~klein/" target="_blank">Dan Klein</a> and <a href="https://people.eecs.berkeley.edu/~dawnsong/" target="_blank">Dawn Song</a>.</p>
+  <p style="font-size: 1.1em; margin-top: -0.0em">These days, I co-lead a team named "Alignment Training" that encompasses many research directions in safety, alignment, and capabilities. Feel free to reach out if you are interested in working at OpenAI or looking to disclose vulnerabilities of our models.</p>
   </p>
 
 </div>
 
 </div>
 
-<h2 style="margin: 1em 0 .8em 0">Current Work</h2>
+<h2 style="margin: 1em 0 .8em 0">Current Research</h2>
 
-<p>At OpenAI, I work on safety and capabilities research. I am an individual contributor who is heavily involved in the post-training and alignment for our major models, including:</p>
+<p>At OpenAI, I work on a variety of research directions on safety, alignment, and capabilities:
 <ul>
-  <li><a href="https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/" target="_blank">GPT-4o mini:</a> where we pushed the limits of cost-efficient models. I was part of the core research team that built the pre-training and fine-tuning data.</li>
-  <li><a href="https://openai.com/index/learning-to-reason-with-llms/" target="_blank">o1 and o1-preview</a>: where we released the first major reasoning model by leveraging RL and chain-of-thought. I led large parts of the safety work and helped out with certain aspects of capabilities.</li>
-  <li><a href="https://openai.com/index/openai-o1-mini-advancing-cost-efficient-reasoning/" target="_blank">o1-mini</a>: where we combined the above two ideas into a highly-efficient reasoning model. I helped build some of the pre-training data, and led large parts of the safety work.</li>
-  <li><a href="https://arxiv.org/abs/2404.13208" target="_blank">Instruction Hierarchy</a>: where we improved model and agent robustness by teaching LLMs to prioritize privileged instructions. I led the work here.</li>
-  <li><a href="https://openai.com/index/introducing-o3-and-o4-mini/" target="_blank">o3 and o4-mini</a> : where we pushed the frontier of reasoning models with agentic tool use. I was the overall lead for safety.</li>
-  <li><a href="https://openai.com/index/introducing-deep-research/" target="_blank">Deep Research</a>: where we trained browsing agents to navigate and understand the web. I was a core contributor to the model's safety and capabilities.</li>
+<li><strong>Robustness to adversarial examples</strong> in the form of jailbreaks and prompt injections.</li>
+<li><strong>Memorization</strong>, unlearning, and synthetic data techniques for protecting privacy + copyright.</li>
+<li><strong>Distillation</strong>, both for creating efficient models and preventing adversarial distillation.</li>
+<li><strong>Model stealing attacks</strong> and other ways of inferring hidden properties of black-box LLMs.</li>
+<li><strong>Frontier risk evaluations</strong> in areas such as biology, and how to elicit harmful capabilities.</li>
+<li><strong>Open-source LLM safety</strong>, including safety training procedures and proper evaluation schemes.</li>
+<li><strong>Safety and refusal training</strong> of our core models, including the algorithms, data, and evaluations.</li>
 </ul>
 
-<h2 style="margin: 1.3em 0 .8em 0">Research Interests</h2>
-
-<p>My PhD research focused on enhancing the security/privacy/robustness of ML, improving large language models, and the intersection of these topics. Some of my work includes:</p>
-<ul>
-  <li><strong>Memorization & Privacy</strong> We've shown that LMs and diffusion models can memorize their training data <a href="https://arxiv.org/abs/2012.07805" target="_blank" style="font-size: 0.95em">[1,</a><a href="https://bair.berkeley.edu/blog/2020/12/20/lmmem/" target="_blank" style="font-size: 0.95em">2,</a><a href="https://arxiv.org/abs/2202.06539" target="_blank" style="font-size: 0.95em">3</a>,</a><a href="https://arxiv.org/abs/2301.13188" target="_blank" style="font-size: 0.95em">4]</a>, raising questions regarding privacy, copyright, GDPR statutes, and more.
-  <li><strong>Prompting & Decoding</strong> We've done some of the early work on prompting LMs, including prompt design <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[4,</a><a href="https://arxiv.org/abs/2010.15980" target="_blank" style="font-size: 0.95em">5]</a>, parameter efficiency <a href="https://arxiv.org/abs/2106.13353" target="_blank" style="font-size: 0.95em">[6]</a>, and understanding failure modes <a href="https://arxiv.org/abs/2102.09690" target="_blank" style="font-size: 0.95em">[7]</a>.
-  <li><strong>Robustness</strong> We've studied natural <a href="https://arxiv.org/abs/2004.06100" target="_blank" style="font-size: 0.95em">[8]</a> and adversarial distribution shifts <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[9,</a><a href="https://arxiv.org/abs/2004.02709" target="_blank" style="font-size: 0.95em">10,</a><a href="https://arxiv.org/abs/1809.02701" target="_blank" style="font-size: 0.95em">11]</a>, and we have traced model errors back to quality and diversity issues in the training data <a href="https://arxiv.org/abs/1908.07125" target="_blank" style="font-size: 0.95em">[12,</a><a href="https://arxiv.org/abs/1906.02900" target="_blank" style="font-size: 0.95em">13,</a><a href="https://arxiv.org/abs/1905.05778" target="_blank" style="font-size: 0.95em">14,</a><a href="https://arxiv.org/abs/2110.08514" target="_blank" style="font-size: 0.95em">15]</a>.
-  <li><strong>New Threat Models</strong> We've explored and refined new types of adversarial vulnerabilities, including stealing models weights <a href="https://arxiv.org/abs/2004.15015" target="_blank" style="font-size: 0.95em">[16,</a><a href="https://arxiv.org/abs/2305.15717" target="_blank" style="font-size: 0.95em">17]</a> and poisoning training sets <a href="https://arxiv.org/abs/2010.12563" target="_blank" style="font-size: 0.95em">[18,</a><a href="https://arxiv.org/abs/2305.00944" target="_blank" style="font-size: 0.95em">19]</a>.
-</ul>
+<p>The result of this research has largely been contributions to our core models, including the "o-series" models, GPT-5, deep research, ChatGPT agent mode, and GPT-oss. I've also been trying to publish as much as I can, including our work on the <a href="https://arxiv.org/abs/2404.13208" target="_blank">instruction hierarchy</a>, the <a href="https://arxiv.org/abs/2412.16339" target="_blank">deliberative alignment</a> algorithm, <a href="https://arxiv.org/abs/2501.18841" target="_blank">scaling robustness</a>, <a href="https://arxiv.org/abs/2403.06634" target="_blank">model stealing</a>, and <a href="https://arxiv.org/abs/2508.03153" target="_blank">open-source model safety</a>.</p>
 
 
 <h2 style="margin: 1.3em 0 .8em 0">Selected Publications</h2>
 <p>Here are a few of my representative papers. See my <a target="_blank" href="https://scholar.google.com/citations?user=SgST3LkAAAAJ">Google Scholar</a> page for a complete list.</p>
 <ul class="collection">
+  <li>
+    <div class="thumb">
+      <img src="IH.png" />
+    </div>
+    <div class="text">
+      <a href="https://arxiv.org/abs/2404.13208" target="_blank">
+        <h3>The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions
+        </h3>
+      </a>
+      <p class="authors">
+        <b style="font-weight: 600">Eric Wallace</b>*, Kai Xiao*, Reimar Leike*, Lilian Weng, Johannes Heidecke, Alex Beutel
+      </p>
+      <p class="venues">arXiv 2024</p>
+      <p class="buttons">
+        <a href="javascript:unhide('ih2024tldr');">TLDR</a> | 
+        <a href="https://x.com/OpenAI/status/1782849356200308820" target="_blank">Twitter</a>|
+        <a href="https://arxiv.org/abs/2404.13208" target="_blank">Paper</a>|
+        <a href="javascript:unhide('ih2024citation');">Citation</a>
+        <div id="ih2024tldr" class="hidden"><hr><b>TLDR:</b> We teach LLMs to prioritize following system and developer instructions in order to prevent prompt injections and jailbreaks.<br></div>
+        <div id="ih2024citation" class="hidden">
+          <pre>@article{wallace2024instruction,
+        title={The Instruction Hierarchy: Training {LLMs} to Prioritize Privileged Instructions},
+        author={Eric Wallace and Kai Xiao and Reimar Leike and Lilian Weng and Johannes Heidecke and Alex Beutel},
+        journal={arXiv preprint arXiv:2404.13208},
+        year={2024}}</pre>
+        </div>
+      </p>
+    </div>
+  </li>
 
+  <li>
+<div class="thumb">
+<img src="crosswords.png" />
+</div>
+<div class="text">
+<a href="https://arxiv.org/abs/2403.06634" target="_blank">
+<h3>Stealing Part of a Production Language Model</h3>
+</a>
+<p class="authors">
+Nicholas Carlini, Daniel Paleka, Krishnamurthy Dj Dvijotham, Thomas Steinke, Jonathan Hayase, A. Feder Cooper, Katherine Lee, Matthew Jagielski, Milad Nasr, Arthur Conmy, Itay Yona, <b style="font-weight: 600">Eric Wallace</b>*, David Rolnick, Florian Tramèr
+</p>
+<p class="venues">ICML 2024. <font color="#1772d0">Best Paper Award</font></p>
+<p class="buttons">
+  <a href="javascript:unhide('stealing24tldr');">TLDR</a>|
+  <a href="https://x.com/Eric_Wallace_/status/1767381134525292810" target="_blank">Twitter</a>|
+  <a href="https://arxiv.org/abs/2403.06634" target="_blank">Paper</a>|
+  <a href="javascript:unhide('stealing24');">Citation</a>
+          <div id="stealing24tldr" class="hidden"><hr><b>TLDR:</b> The final layer of an LLM up-projects from hidden dim —> vocab size. The logprobs are thus low rank, and with some clever API queries, you can recover an LLM's hidden dimension (or even the exact layer's weights).<br></div>
+        <div id="stealing24" class="hidden">
+        <pre>@inproceedings{Carlini2024Stealing,  
+    title={Stealing Part of a Production Language Model},
+    author={Carlini, Nicholas and Paleka, Daniel and Dvijotham, Krishnamurthy Dj and Steinke, Thomas and Hayase, Jonathan and Cooper, A Feder and Lee, Katherine and Jagielski, Matthew and Nasr, Milad and Conmy, Arthur and Yona, Itay and Wallace, Eric and Rolnick, David and Tram{\`e}r, Florian}, 
+    booktitle={International Conference on Machine Learning},
+    year={2024}}</pre>
+         </div>
+</p>
+</div>
+</li>
 
   <li>
     <div class="thumb">
@@ -146,36 +196,6 @@
     author={Gudibande, Arnav and Wallace, Eric and Snell, Charlie and Geng, Xinyang and Liu, Hao and Abbeel, Pieter and Levine, Sergey and Song, Dawn},
     journal={International Conference on Learning Representations},
     year={2024}}</pre>
-      </div>
-    </p>
-  </div>
-</li>
-
-
-<li>
-  <div class="thumb">
-    <img src="diffusion.png" />
-  </div>
-  <div class="text">
-    <a href="https://arxiv.org/abs/2301.13188" target="_blank">
-      <h3>Extracting Training Data from Diffusion Models</h3>
-    </a>
-    <p class="authors">
-      Nicholas Carlini, Jamie Hayes, Milad Nasr, Matthew Jagielski, Vikash Sehwag, Florian Tramèr, Borja Balle, Daphne Ippolito, <b style="font-weight: 600">Eric Wallace</b>
-    </p>
-    <p class="venues">USENIX 2023</p>
-    <p class="buttons">
-      <a href="javascript:unhide('diffusion2023tldr');">TLDR</a> | 
-      <a href="https://twitter.com/Eric_Wallace_/status/1620449934863642624" target="_blank">Twitter</a>| 
-      <a href="https://arxiv.org/abs/2301.13188" target="_blank">Paper</a>|
-      <a href="javascript:unhide('diffusion23');">Citation</a>
-      <div id="diffusion2023tldr" class="hidden"><hr><b>TLDR:</b> We show how to extract hundreds of memorized images from popular diffusion models like Imagen and Stable Diffusion.<br></div>
-      <div id="diffusion23" class="hidden">
-        <pre>@inproceedings{carlini2023extracting,
-          title={Extracting training data from diffusion models},
-          author={Carlini, Nicholas and Hayes, Jamie and Nasr, Milad and Jagielski, Matthew and Sehwag, Vikash and Tram{\`e}r, Florian and Balle, Borja and Ippolito, Daphne and Wallace, Eric},
-          booktitle={USENIX Security Symposium},
-          year={2023}}</pre>
       </div>
     </p>
   </div>
@@ -375,42 +395,30 @@ Taylor Shin*, Yasaman Razeghi*, Robert L Logan IV*, <b style="font-weight: 600">
 </p>
 </div>
 </li>
-
-<li>
-    <div class="thumb">
-    <img src="https://production-media.paperswithcode.com/libraries/allennlp-icon.png-0000000007-e01b7380.png" />
-    </div>
-    <div class="text">
-        <a href="https://arxiv.org/abs/1909.09251" target="_blank">
-            <h3>AllenNLP Interpret: A Framework for Explaining Predictions of NLP Models</h3>
-        </a>
-        <p class="authors">Eric Wallace, Jens Tuyls, Junlin Wang, Sanjay Subramanian, Matt Gardner, Sameer Singh</p>
-        <p class="venues">EMNLP 2019. <font color="#1772d0">Best Demo Award</font></p>
-        <p class="buttons">
-            <a href="javascript:unhide('interpret19tldr');">TLDR</a>|
-            <a href="https://allennlp.org/interpret" target="_blank">Landing Page</a>|
-            <a href="https://twitter.com/Eric_Wallace_/status/1176886627852898309" target="_blank">Twitter</a>|
-            <a href="https://demo.allennlp.org/reading-comprehension" target="_blank">Demo</a>|
-            <a href="https://arxiv.org/abs/1909.09251" target="_blank">Paper</a>|
-            <a href="slides_and_posters/InterpretPoster.pdf" target="_blank">Poster</a>|
-            <a href="javascript:unhide('interpret19');">Citation</a>
-            <div id="interpret19tldr" class="hidden"><hr><b>TLDR:</b> We build an open-source toolkit on top of AllenNLP that makes it easy to interpret NLP models.<br> </div>
-            <div id="interpret19" class="hidden">
-                <pre>@inproceedings{Wallace2019AllenNLP,
-                     Author = {Eric Wallace and Jens Tuyls and Junlin Wang and Sanjay Subramanian and Matt Gardner and Sameer Singh},
-                     Booktitle = {Empirical Methods in Natural Language Processing},
-                     Year = {2019},
-                     Title = {{AllenNLP Interpret}: A Framework for Explaining Predictions of {NLP} Models}}</pre>
-            </div>
-        </p>
-    </div>
-</li>
 </ul>
 
 <h2>Teaching & Mentoring</h2>
-<p>I enjoy teaching and mentoring students, and I have been involved with multiple courses at Berkeley.</p>
+<p>I enjoy teaching and mentoring students, and I was involved with multiple courses at Berkeley.</p>
 <ul class="collection">
     
+<li>
+  <div class="thumb2">
+    <img style="width: 100%;" src="berkeley_nlp_logo.png" />
+  </div>
+  <div class="text">
+    <a href="https://cal-cs288.github.io/sp23/" target="_blank">
+      <h3>CS288: Natural Language Processing</h3>
+    </a>
+    <p class="venues">UC Berkeley, Spring 2023</p>
+    <p class="authors">
+     I was a co-instructor alongside Dan Klein and Kevin Lin for Berkeley's NLP course. In the second half of the course, I covered topics such as LLM scaling, risks, RLHF, and more. 
+    </p>
+    <p class="buttons">
+      <a href="https://cal-cs288.github.io/sp23/" target="_blank">Materials</a>
+    </p>
+  </div>
+</li>
+
 <li>
   <div class="thumb2">
     <img style="width: 100%;" src="188.png" />
@@ -429,28 +437,12 @@ Taylor Shin*, Yasaman Razeghi*, Robert L Logan IV*, <b style="font-weight: 600">
   </div>
 </li>
 
-<li>
-  <div class="thumb2">
-    <img style="width: 100%;" src="berkeley_nlp_logo.png" />
-  </div>
-  <div class="text">
-    <a href="https://cal-cs288.github.io/sp23/" target="_blank">
-      <h3>CS288: Natural Language Processing</h3>
-    </a>
-    <p class="venues">UC Berkeley, Spring 2023</p>
-    <p class="authors">
-     I was a co-instructor alongside Dan Klein and Kevin Lin for Berkeley's NLP course. In the second half of the course, I covered cutting-edge topics such as LLM scaling, risks, RLHF, and more. 
-    </p>
-    <p class="buttons">
-      <a href="https://cal-cs288.github.io/sp23/" target="_blank">Materials</a>
-    </p>
-  </div>
-</li>
+
 
 
 <li>
   <div class="thumb2">
-    <img style="width: 100%;" src="https://2021.emnlp.org/img/acl-logo.png" />
+    <img style="width: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Association_for_Computational_Linguistics_logo.svg/1200px-Association_for_Computational_Linguistics_logo.svg.png" />
   </div>
   <div class="text">
     <a href="https://github.com/Eric-Wallace/interpretability-tutorial-emnlp2020" target="_blank">
@@ -536,7 +528,7 @@ Taylor Shin*, Yasaman Razeghi*, Robert L Logan IV*, <b style="font-weight: 600">
 
 <li>
 <a target="_blank" href="https://ai.googleblog.com/2020/12/privacy-considerations-in-large.html">
-<div class="image" style="background-image: url(https://ai.google/static/images/share.png)"></div>
+<div class="image" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/01/Google_AI.png)"></div>
 </a>
 <a target="_blank" href="https://ai.googleblog.com/2020/12/privacy-considerations-in-large.html">
 <h3>Privacy Considerations in Language Models</h3>
